@@ -58,7 +58,7 @@ export default function Navbar() {
                     <a href="#" className="nav-link" onClick={e => { e.preventDefault(); toggleDropdown('industries'); }}>
                       Industries <i className="fas fa-chevron-down dropdown-icon"></i>
                     </a>
-                    <div className="mega-menu" style={{right: "-80px", left: "auto", width: "500px"}}>
+                    <div className="mega-menu">
                         <div className="mega-grid">
                             <div className="mega-col">
                               <Link to="/industries/manufacturing" onClick={closeAll}>Manufacturing</Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
                     <a href="#" className="nav-link" onClick={e => { e.preventDefault(); toggleDropdown('systems'); }}>
                       Systems <i className="fas fa-chevron-down dropdown-icon"></i>
                     </a>
-                    <div className="mega-menu" style={{right: "-100px", left: "auto", width: "560px"}}>
+                    <div className="mega-menu">
                         <div className="mega-grid">
                             <div className="mega-col">
                               <Link to="/systems/automation-ecosystems" onClick={closeAll}>Automation Ecosystems</Link>

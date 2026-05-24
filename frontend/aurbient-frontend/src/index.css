@@ -125,6 +125,18 @@ body {
   transition: 0.25s ease;
   z-index: 1001;
 }
+@media (min-width: 981px) {
+  .dropdown-item:nth-of-type(5) .mega-menu {
+    right: -80px !important;
+    left: auto !important;
+    width: 500px !important;
+  }
+  .dropdown-item:nth-of-type(6) .mega-menu {
+    right: -100px !important;
+    left: auto !important;
+    width: 560px !important;
+  }
+}
 .nav-item:hover .mega-menu {
   opacity: 1;
   visibility: visible;
@@ -488,10 +500,12 @@ section.hero, section[style*="minHeight"], section[style*="75vh"], section[style
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: 100% !important;
+    box-sizing: border-box !important;
     background: #FFFFFF;
     border-bottom: 1.5px solid var(--color-border);
-    flex-direction: column;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
     align-items: stretch !important;
     gap: 0 !important;
     padding: 12px 28px 24px !important;
