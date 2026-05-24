@@ -168,11 +168,61 @@ export default async function handler(req, res) {
       padding: 24px;
       text-align: center;
       border-top: 1px solid #1A3547;
-    }
     .footer p {
       color: #58798C;
       margin: 0;
       font-size: 12px;
+    }
+    @media only screen and (max-width: 480px) {
+      .wrapper {
+        padding: 10px 0 !important;
+      }
+      .container {
+        border-radius: 8px !important;
+        border: none !important;
+        box-shadow: 0 4px 15px rgba(17, 35, 48, 0.05) !important;
+      }
+      .header {
+        padding: 28px 16px !important;
+      }
+      .header h1 {
+        font-size: 20px !important;
+      }
+      .header p {
+        font-size: 11px !important;
+        letter-spacing: 1px !important;
+      }
+      .content {
+        padding: 24px 16px !important;
+      }
+      .lead-card, .message-card {
+        padding: 16px !important;
+        margin-bottom: 20px !important;
+        border-radius: 8px !important;
+      }
+      .responsive-table td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .responsive-table td.label-cell {
+        padding-bottom: 4px !important;
+        font-size: 12px !important;
+      }
+      .responsive-table td.value-cell {
+        padding-bottom: 16px !important;
+      }
+      .responsive-table tr:last-child td.value-cell {
+        padding-bottom: 0 !important;
+      }
+      .btn-reply {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 16px 20px !important;
+        text-align: center !important;
+        font-size: 14px !important;
+      }
     }
   </style>
 </head>
@@ -186,18 +236,18 @@ export default async function handler(req, res) {
       <div class="content">
         <div class="section-title">Lead Information</div>
         <div class="lead-card">
-          <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+          <table cellpadding="0" cellspacing="0" width="100%" class="responsive-table" style="border-collapse: collapse;">
             <tr>
-              <td style="padding-bottom: 12px; font-weight: 600; color: #58798C; font-size: 14px; width: 110px; vertical-align: top;">Full Name</td>
-              <td style="padding-bottom: 12px; color: #112330; font-size: 14px; font-weight: 600; vertical-align: top;">${name}</td>
+              <td class="label-cell" style="padding-bottom: 12px; font-weight: 600; color: #58798C; font-size: 14px; width: 110px; vertical-align: top;">Full Name</td>
+              <td class="value-cell" style="padding-bottom: 12px; color: #112330; font-size: 14px; font-weight: 600; vertical-align: top;">${name}</td>
             </tr>
             <tr>
-              <td style="padding-bottom: 12px; font-weight: 600; color: #58798C; font-size: 14px; vertical-align: top;">Email Address</td>
-              <td style="padding-bottom: 12px; color: #13AAB3; font-size: 14px; font-weight: 600; vertical-align: top;"><a href="mailto:${email}" style="color: #13AAB3; text-decoration: none;">${email}</a></td>
+              <td class="label-cell" style="padding-bottom: 12px; font-weight: 600; color: #58798C; font-size: 14px; vertical-align: top;">Email Address</td>
+              <td class="value-cell" style="padding-bottom: 12px; color: #13AAB3; font-size: 14px; font-weight: 600; vertical-align: top;"><a href="mailto:${email}" style="color: #13AAB3; text-decoration: none;">${email}</a></td>
             </tr>
             <tr>
-              <td style="font-weight: 600; color: #58798C; font-size: 14px; vertical-align: top;">Company</td>
-              <td style="color: #112330; font-size: 14px; font-weight: 600; vertical-align: top;">${company || 'Individual / Not Specified'}</td>
+              <td class="label-cell" style="font-weight: 600; color: #58798C; font-size: 14px; vertical-align: top;">Company</td>
+              <td class="value-cell" style="color: #112330; font-size: 14px; font-weight: 600; vertical-align: top;">${company || 'Individual / Not Specified'}</td>
             </tr>
           </table>
         </div>
