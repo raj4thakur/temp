@@ -6,12 +6,33 @@ export default function Footer() {
     <footer style={{ padding: "40px 0 0" }}>
       <div className="container">
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "1.5rem", paddingBottom: "28px" }}>
+
           {/* Brand */}
           <div style={{ maxWidth: "240px" }}>
             <img src={logoImg} alt="Aurbient Technologies" style={{ height: '38px', objectFit: 'contain', marginBottom: "10px" }} />
             <p style={{ lineHeight: "1.55", fontSize: "0.88rem" }}>
               Engineering the invisible intelligence for modern enterprise operations.
             </p>
+            {/* Social */}
+            <div style={{ marginTop: "14px" }}>
+              <a
+                href="https://www.linkedin.com/company/aurbient/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex", alignItems: "center", gap: "8px",
+                  color: "var(--color-accent)", textDecoration: "none",
+                  fontSize: "0.88rem", fontWeight: "600",
+                  border: "1px solid rgba(19,170,179,0.3)",
+                  padding: "6px 14px", borderRadius: "20px",
+                  transition: "all 0.2s"
+                }}
+                onMouseOver={e => { e.currentTarget.style.background = "rgba(19,170,179,0.1)"; }}
+                onMouseOut={e => { e.currentTarget.style.background = "transparent"; }}
+              >
+                <i className="fab fa-linkedin" style={{ fontSize: "1rem" }} /> LinkedIn
+              </a>
+            </div>
           </div>
 
           {/* Company */}
@@ -30,6 +51,11 @@ export default function Footer() {
                 <Link to={item.to} style={{ color: "inherit", textDecoration: "none", fontSize: "0.88rem" }}>{item.label}</Link>
               </p>
             ))}
+            {/* Company email */}
+            <div style={{ marginTop: "12px", paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+              <p style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "6px" }}>Company Email</p>
+              <a href="mailto:aurbient@gmail.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.85rem" }}>aurbient@gmail.com</a>
+            </div>
           </div>
 
           {/* Industries */}
@@ -86,19 +112,39 @@ export default function Footer() {
           {/* Connect */}
           <div>
             <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Connect</h4>
-            <p style={{ marginBottom: "0.4rem" }}>
-              <Link to="/contact" style={{ color: "inherit", textDecoration: "none", fontWeight: "600", fontSize: "0.88rem", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: "2px" }}>Let's Build</Link>
+            <p style={{ marginBottom: "0.5rem" }}>
+              <Link to="/contact" style={{ color: "inherit", textDecoration: "none", fontWeight: "600", fontSize: "0.88rem", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: "2px" }}>Let's Build →</Link>
             </p>
-            <p style={{ marginBottom: "0.4rem", marginTop: "10px" }}>
-              <a href="mailto:rajthakur.aurbient@gmail.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.85rem" }}>rajthakur.aurbient@gmail.com</a>
-            </p>
-            <p style={{ marginBottom: "0.4rem" }}>
+
+            {/* Phone */}
+            <p style={{ marginTop: "14px", marginBottom: "0.4rem" }}>
               <a href="tel:+918629919873" style={{ color: "inherit", textDecoration: "none", fontSize: "0.85rem" }}>+91 8629919873</a>
             </p>
-            <p style={{ fontSize: "0.82rem", color: "#bbb", marginTop: "10px", lineHeight: "1.4" }}>
+
+            {/* Address */}
+            <p style={{ fontSize: "0.82rem", color: "#bbb", marginTop: "8px", lineHeight: "1.4", marginBottom: "14px" }}>
               Indore, Madhya Pradesh-452001, India
             </p>
+
+            {/* Management & Support */}
+            <div style={{ paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+              <p style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "6px" }}>Management & Support</p>
+              <a href="mailto:rajthakur.aurbient@gmail.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.83rem", display: "block" }}>rajthakur.aurbient@gmail.com</a>
+            </div>
+
+            {/* LinkedIn */}
+            <div style={{ marginTop: "14px" }}>
+              <a
+                href="https://www.linkedin.com/company/aurbient/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--color-accent)", textDecoration: "none", fontSize: "0.85rem", display: "inline-flex", alignItems: "center", gap: "6px" }}
+              >
+                <i className="fab fa-linkedin" /> Follow on LinkedIn
+              </a>
+            </div>
           </div>
+
         </div>
 
         <div style={{ textAlign: "center", padding: "18px 0", borderTop: "1px solid rgba(255,255,255,0.1)", fontSize: "0.82rem" }}>
