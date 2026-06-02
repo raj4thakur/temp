@@ -9,24 +9,16 @@ export default function Footer() {
 
           {/* Brand */}
           <div style={{ maxWidth: "240px" }}>
-            <div style={{ 
-              background: "rgba(255, 255, 255, 0.98)", 
-              padding: "10px 16px", 
-              borderRadius: "8px", 
-              display: "inline-block",
-              marginBottom: "16px",
-              boxShadow: "0 4px 15px rgba(0,0,0,0.2)"
-            }}>
-              <img 
-                src={logoImg} 
-                alt="Aurbient Technologies" 
-                style={{ 
-                  height: '32px', 
-                  objectFit: 'contain', 
-                  display: 'block'
-                }} 
-              />
-            </div>
+            <img 
+              src={logoImg} 
+              alt="Aurbient Technologies" 
+              style={{ 
+                height: '38px', 
+                objectFit: 'contain', 
+                marginBottom: "16px",
+                display: 'block'
+              }} 
+            />
             <p style={{ lineHeight: "1.55", fontSize: "0.88rem" }}>
               Engineering the invisible intelligence for modern enterprise operations.
             </p>
