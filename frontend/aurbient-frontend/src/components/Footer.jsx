@@ -11,7 +11,7 @@ export default function Footer() {
           <div style={{ maxWidth: "240px" }}>
             
             <div style={{ position: 'relative', width: '200px', height: '38px', marginBottom: "16px" }}>
-              {/* Bottom layer: Pure white silhouette, strictly clipped to ONLY show the text (right 78%) */}
+              {/* Bottom layer: Pure white silhouette, strictly clipped to ONLY show the text (right 84%) */}
               <img 
                 src={logoImg} 
                 alt="" 
@@ -24,10 +24,10 @@ export default function Footer() {
                   objectFit: 'contain',
                   objectPosition: 'left center',
                   filter: 'brightness(0) invert(1)',
-                  clipPath: 'polygon(23% 0, 100% 0, 100% 100%, 23% 100%)'
+                  clipPath: 'polygon(16% 0, 100% 0, 100% 100%, 16% 100%)'
                 }} 
               />
-              {/* Top layer: Original untouched logo, strictly clipped to ONLY show the cyan 'a' (left 23%) */}
+              {/* Top layer: Original untouched logo, strictly clipped to ONLY show the cyan 'a' (left 16%) */}
               <img 
                 src={logoImg} 
                 alt="Aurbient Technologies" 
@@ -39,7 +39,7 @@ export default function Footer() {
                   width: '100%',
                   objectFit: 'contain',
                   objectPosition: 'left center',
-                  clipPath: 'polygon(0 0, 23% 0, 23% 100%, 0 100%)'
+                  clipPath: 'polygon(0 0, 16% 0, 16% 100%, 0 100%)'
                 }} 
               />
             </div>
