@@ -9,7 +9,16 @@ export default function Footer() {
 
           {/* Brand */}
           <div style={{ maxWidth: "240px" }}>
-            <img src={logoImg} alt="Aurbient Technologies" style={{ height: '38px', objectFit: 'contain', marginBottom: "10px" }} />
+            <img 
+              src={logoImg} 
+              alt="Aurbient Technologies" 
+              style={{ 
+                height: '38px', 
+                objectFit: 'contain', 
+                marginBottom: "10px",
+                filter: "invert(1) hue-rotate(180deg) brightness(1.5)"
+              }} 
+            />
             <p style={{ lineHeight: "1.55", fontSize: "0.88rem" }}>
               Engineering the invisible intelligence for modern enterprise operations.
             </p>
