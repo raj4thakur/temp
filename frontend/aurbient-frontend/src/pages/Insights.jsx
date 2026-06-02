@@ -276,7 +276,7 @@ const thoughtArticles = [
     readTime: "5 min read",
     summary: "Strategic artificial intelligence implementation focuses on augmenting operational capability rather than replacing teams, combining AI with connected dashboards for real enterprise yield.",
     icon: "fa-brain",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/cobot-psychology.jpeg",
     content: [
       { type: "paragraph", text: "Artificial Intelligence has become one of the most influential technologies shaping modern business environments. Across industries, organizations are exploring AI-powered tools, automation systems, predictive analytics, and intelligent digital platforms to improve efficiency and remain competitive." },
       { type: "paragraph", text: "However, despite the growing interest around AI, many businesses still misunderstand where real value is created." },
