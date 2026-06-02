@@ -51,11 +51,6 @@ export default function Footer() {
                 <Link to={item.to} style={{ color: "inherit", textDecoration: "none", fontSize: "0.88rem" }}>{item.label}</Link>
               </p>
             ))}
-            {/* Company email */}
-            <div style={{ marginTop: "12px", paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-              <p style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "6px" }}>Company Email</p>
-              <a href="mailto:aurbient@gmail.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.85rem" }}>aurbient@gmail.com</a>
-            </div>
           </div>
 
           {/* Industries */}
@@ -127,9 +122,15 @@ export default function Footer() {
             </p>
 
             {/* Management & Support */}
-            <div style={{ paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+            <div style={{ paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)", marginBottom: "14px" }}>
               <p style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "6px" }}>Management & Support</p>
               <a href="mailto:rajthakur.aurbient@gmail.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.83rem", display: "block" }}>rajthakur.aurbient@gmail.com</a>
+            </div>
+
+            {/* Company email */}
+            <div style={{ paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+              <p style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "6px" }}>Company Email</p>
+              <a href="mailto:aurbient@gmail.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.85rem" }}>aurbient@gmail.com</a>
             </div>
 
             {/* LinkedIn */}
