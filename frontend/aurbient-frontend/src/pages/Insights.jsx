@@ -856,7 +856,7 @@ export default function Insights() {
         <div style={{
           position: "absolute",
           inset: 0,
-          background: "linear-gradient(180deg, rgba(14,25,33,0.75) 0%, rgba(14,25,33,0.95) 100%)",
+          background: "radial-gradient(circle at center, rgba(14,25,33,0.4) 0%, rgba(14,25,33,0.95) 100%)",
           zIndex: 1
         }}></div>
 
