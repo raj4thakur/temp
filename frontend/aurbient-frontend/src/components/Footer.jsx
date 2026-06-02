@@ -16,7 +16,8 @@ export default function Footer() {
                 height: '38px', 
                 objectFit: 'contain', 
                 marginBottom: "16px",
-                display: 'block'
+                display: 'block',
+                filter: 'drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.9)) drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.5)) drop-shadow(0px 0px 8px rgba(19, 170, 179, 0.3))'
               }} 
             />
             <p style={{ lineHeight: "1.55", fontSize: "0.88rem" }}>
