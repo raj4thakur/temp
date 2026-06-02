@@ -479,7 +479,8 @@ export default function Home() {
                 gap: '30px', 
                 overflowX: 'auto', 
                 scrollSnapType: 'x mandatory',
-                paddingBottom: '20px',
+                padding: '20px 20px 80px 20px',
+                margin: '-20px -20px 0 -20px',
                 scrollbarWidth: 'none',
                 msOverflowStyle: 'none'
               }}
@@ -492,25 +493,15 @@ export default function Home() {
               { path: "/industries/healthcare", title: "Healthcare", desc: "Next-gen patient data orchestration, smart facilities, connected care operations.", img: "/images/industry_healthcare.png" },
               { path: "/industries/finance", title: "Finance", desc: "Autonomous compliance, real-time risk modeling, resilient banking ecosystems.", img: "/images/industry_finance.png" }
             ].map((ind, i) => (
-              <div key={i} className="service-hex-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start' }}>
-                <div className="service-hex-content" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                  <div style={{ flex: 1 }}>
-                    <h3 style={{ margin: "0 0 16px 0", fontSize: '1.6rem', color: 'var(--color-primary)', fontWeight: '800', lineHeight: '1.3' }}>{ind.title}</h3>
-                    <p style={{ color: "#58798C", margin: 0, fontSize: '1.05rem', lineHeight: '1.75' }}>{ind.desc}</p>
-                  </div>
-                  <div style={{ marginTop: '32px', display: 'flex', alignItems: 'center', color: 'var(--color-accent)', fontWeight: '700', fontSize: '0.9rem', letterSpacing: '1px', textTransform: 'uppercase' }}>
+              <Link key={i} to={ind.path} className="industry-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start', backgroundImage: `url(${ind.img})` }}>
+                <div className="industry-card-content">
+                  <h3>{ind.title}</h3>
+                  <p>{ind.desc}</p>
+                  <span className="industry-card-link">
                     Explore <i className="fas fa-arrow-right" style={{ marginLeft: '10px' }}></i>
-                  </div>
+                  </span>
                 </div>
-                
-                <Link to={ind.path} className="service-hex-overlay" style={{ backgroundImage: `url(${ind.img})` }}>
-                  <div style={{ position: 'relative', zIndex: 1 }}>
-                    <h3>{ind.title}</h3>
-                    <p>{ind.desc}</p>
-                    <span className="service-hex-link">Learn More <i className="fas fa-arrow-right"></i></span>
-                  </div>
-                </Link>
-              </div>
+              </Link>
             ))}
             </div>
           </div>

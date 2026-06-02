@@ -126,28 +126,6 @@ const allCaseStudiesList = [
     result_label: "Delivery latency reduction",
     published: "Mar 2026",
     pillarId: "workflow-strategy"
-  },
-  {
-    id: "07",
-    client: "Vela Financial",
-    industry: "Quantitative Finance",
-    title: "Deploying Vela Financial's Neural Portfolio Analyzer",
-    body: "Utilized a proprietary neural pattern mapping layer to analyze massive volumes of unstructured audio transcript logs in under 200ms.",
-    result_stat: "150+",
-    result_label: "Alpha indicators discovered weekly",
-    published: "Apr 2026",
-    pillarId: "ai-in-business"
-  },
-  {
-    id: "08",
-    client: "Orbit Systems",
-    industry: "Aerospace Systems",
-    title: "Scaling Orbit Space Systems' Realtime Telemetry Nodes",
-    body: "Created low-latency trajectories synchronization nodes designed to handle heavy payload data transfers with zero packet loss.",
-    result_stat: "<10ms",
-    result_label: "Global data sync latency",
-    published: "May 2026",
-    pillarId: "future-infrastructure"
   }
 ];
 
@@ -703,8 +681,8 @@ export default function Insights() {
               <div className="article-modal-body" style={{ padding: "44px 52px 20px" }}>
                 {/* Author / Meta row */}
                 <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "28px", paddingBottom: "24px", borderBottom: "1px solid #EDF2F4" }}>
-                  <div style={{ width: "48px", height: "48px", borderRadius: "50%", background: "linear-gradient(135deg, var(--color-primary), #13AAB3)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", flexShrink: 0 }}>
-                    <img src={logoImg} alt="Aurbient Technologies" style={{ width: "38px", height: "38px", objectFit: "contain", filter: "brightness(0) invert(1)", transform: "scale(1.5)" }} />
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", flexShrink: 0 }}>
+                    <img src={logoImg} alt="Aurbient Technologies" style={{ width: "160px", height: "auto", objectFit: "contain" }} />
                   </div>
                   <div>
                     <div style={{ fontWeight: "700", color: "var(--color-primary)", fontSize: "0.95rem" }}>Aurbient Technologies</div>

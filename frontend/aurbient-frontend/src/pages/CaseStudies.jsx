@@ -39,16 +39,6 @@ const fallbackImages = {
     "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
     "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1200&q=80",
     "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80"
-  ],
-  "07": [
-    "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
-  ],
-  "08": [
-    "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=80"
   ]
 };
 
@@ -305,80 +295,6 @@ export default function CaseStudies() {
         "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1600&q=80",
         "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80"
       ]
-    },
-    {
-      id: "07",
-      title: "Deploying Vela Financial's Neural Portfolio Analyzer",
-      industry: "Quantitative Finance",
-      overview: "Vela Financial needed a way to instantly parse and analyze massive amounts of unstructured earnings call data to uncover hidden alpha indicators before market shifts.",
-      challenges: [
-        "Massive volumes of unstructured audio/text",
-        "High latency in traditional NLP processing",
-        "Missed trading opportunities",
-        "Inconsistent data extraction"
-      ],
-      strategy: "We leveraged Aurbient's proprietary pattern map layer to allow Vela to analyze unstructured transcripts globally in under 200 milliseconds.",
-      components: [
-        "Neural Portfolio Analyzer",
-        "Proprietary Pattern Map Layer",
-        "High-Frequency Data Ingestion",
-        "Semantic Extraction Engine"
-      ],
-      tech: [
-        "Large Language Models (LLMs)",
-        "Ultra-low latency architecture",
-        "Semantic vector search",
-        "Financial modeling algorithms"
-      ],
-      outcomes: [
-        "150+ Alpha Indicators Discovered Weekly",
-        "<200ms unstructured data analysis",
-        "Significant increase in quantitative yield",
-        "Automated earnings call summarization"
-      ],
-      insight: "Applying neural pattern mapping to unstructured financial data uncovers alpha indicators invisible to traditional quantitative models.",
-      images: [
-        "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80"
-      ]
-    },
-    {
-      id: "08",
-      title: "Scaling Orbit Space Systems' Realtime Telemetry Nodes",
-      industry: "Aerospace Systems",
-      overview: "Orbit Space Systems struggled with maintaining telemetry accuracy and data synchronization between orbital satellites and backend databases during periods of high latency.",
-      challenges: [
-        "High latency telemetry drops",
-        "Inconsistent orbital trajectory tracking",
-        "Database synchronization failures",
-        "Heavy payload data transfers"
-      ],
-      strategy: "We developed an offline-first client node framework that dynamically synchronizes orbital trajectory files with backend databases via light-weight gRPC packages.",
-      components: [
-        "Offline-First Client Node Framework",
-        "Dynamic Trajectory Synchronizer",
-        "gRPC Package Layer",
-        "Backend Telemetry Database"
-      ],
-      tech: [
-        "gRPC communication protocols",
-        "Offline-first edge architecture",
-        "High-availability databases",
-        "Aerospace telemetry standards"
-      ],
-      outcomes: [
-        "98% Telemetry Processing Accuracy",
-        "Zero data loss during network blackouts",
-        "Massively reduced payload sizes",
-        "Real-time trajectory synchronization"
-      ],
-      insight: "Offline-first edge architectures are essential for maintaining data integrity in extreme latency environments like aerospace.",
-      images: [
-        "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1600&q=80"
-      ]
     }
   ];
 
@@ -434,10 +350,6 @@ export default function CaseStudies() {
         return <ERPIntelligence />;
       case "06":
         return <Logistics />;
-      case "07":
-        return <RetailCommerce />;
-      case "08":
-        return <CloudInfrastructure />;
       default:
         return null;
     }

@@ -81,28 +81,6 @@ const MOCK_CASE_STUDIES = [
     thumbnail: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
     body: "We integrated a localized vector retrieval network that processes routing paths in parallel, resolving dispatch conflicts before they arise.",
     published: "2026-04-12"
-  },
-  {
-    id: 2,
-    title: "Deploying Vela Financial's Neural Portfolio Analyzer",
-    client: "Vela Financial",
-    industry: "Quantitative Finance",
-    result_stat: "150+",
-    result_label: "Alpha Indicators Discovered Weekly",
-    thumbnail: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80",
-    body: "Leveraging Aurbient's proprietary pattern map layer, Vela now analyses unstructured earnings call transcripts globally in less than 200 milliseconds.",
-    published: "2026-05-01"
-  },
-  {
-    id: 3,
-    title: "Scaling Orbit Space Systems' Realtime Telemetry Nodes",
-    client: "Orbit Space Systems",
-    industry: "Aerospace Systems",
-    result_stat: "98%",
-    result_label: "Telemetry Processing Accuracy",
-    thumbnail: "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&w=800&q=80",
-    body: "We developed an offline-first client node framework that dynamically synchronizes orbital trajectory files with backend databases via light-weight gRPC packages.",
-    published: "2026-05-18"
   }
 ];
 

@@ -6,6 +6,17 @@ export default function MissionEcosystem() {
     hero: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
   };
 
+  const [activeBelief, setActiveBelief] = useState(0);
+
+  const beliefs = [
+    { num: "01", icon: "fa-network-wired", title: "Intelligent Systems Create Better Businesses", desc: "Businesses grow more effectively when workflows, reporting environments, operational systems, and communication layers function together as connected ecosystems.", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" },
+    { num: "02", icon: "fa-robot", title: "Automation Should Improve Human Efficiency", desc: "Automation should support teams by reducing repetitive operational dependency and improving execution speed.", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80" },
+    { num: "03", icon: "fa-server", title: "Scalability Requires Structure", desc: "Long-term business growth requires scalable systems, operational clarity, and intelligent digital infrastructure.", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" },
+    { num: "04", icon: "fa-brain", title: "AI Should Solve Real Operational Problems", desc: "Artificial Intelligence becomes valuable when integrated into real business operations capable of improving visibility, efficiency, and decision-making.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80" },
+    { num: "05", icon: "fa-eye", title: "Operational Visibility is Essential", desc: "Leadership requires real-time insight into performance metrics. We build unified dashboards that eliminate data silos and expose core business truths.", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" },
+    { num: "06", icon: "fa-tachometer-alt", title: "Execution Must Be Frictionless", desc: "We engineer workflow systems that remove administrative bottlenecks, ensuring your workforce can focus strictly on high-value strategic execution.", img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" }
+  ];
+
   return (
     <main style={{ background: "#F4F9FB" }}>
       <section className="hero" style={{ 
@@ -37,96 +48,59 @@ export default function MissionEcosystem() {
             </p>
           </div>
 
-          <div className="bento-grid">
-            
-            {/* Item 1 (Span 2) - Network Image */}
-            <div className="bento-item-span-2 bento-item" style={{ position: "relative", borderRadius: "24px", overflow: "hidden", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "40px", boxShadow: "0 10px 40px rgba(0,0,0,0.1)" }}>
-              <div className="bento-bg-image" style={{ position: "absolute", inset: 0, backgroundImage: "url(/images/belief_network.png)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,25,33,0.95) 0%, rgba(14,25,33,0.2) 100%)" }}></div>
-              <div className="bento-text-content" style={{ position: "relative", zIndex: 1 }}>
-                <span className="bento-badge" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(10px)", padding: "6px 14px", borderRadius: "20px", color: "var(--color-accent)", fontSize: "0.85rem", fontWeight: "700", marginBottom: "16px", display: "inline-block", border: "1px solid rgba(255,255,255,0.15)" }}>01 <i className="fas fa-network-wired" style={{ marginLeft: "6px" }}></i></span>
-                <h4 className="bento-title" style={{ fontSize: "1.8rem", fontWeight: "700", color: "white", marginBottom: "12px" }}>Intelligent Systems Create Better Businesses</h4>
-                <div className="bento-details">
-                  <div className="bento-details-inner">
-                    <p style={{ color: "#E4F1F3", lineHeight: "1.6", margin: 0, fontSize: "1.05rem", maxWidth: "90%" }}>Businesses grow more effectively when workflows, reporting environments, operational systems, and communication layers function together as connected ecosystems.</p>
-                  </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'start' }}>
+            {/* Left Column: Titles/Descriptions */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              {beliefs.map((belief, idx) => (
+                <div 
+                  key={idx}
+                  onMouseEnter={() => setActiveBelief(idx)}
+                  style={{
+                    padding: '32px',
+                    borderRadius: '20px',
+                    background: activeBelief === idx ? 'var(--color-primary)' : 'rgba(255, 255, 255, 0.7)',
+                    border: activeBelief === idx ? '1px solid transparent' : '1px solid #E2EBE7',
+                    boxShadow: activeBelief === idx ? '0 15px 40px rgba(14,25,33,0.1)' : 'none',
+                    cursor: 'pointer',
+                    transition: 'all 0.4s ease'
+                  }}
+                >
+                  <span style={{ 
+                    background: activeBelief === idx ? 'rgba(255,255,255,0.1)' : '#F4F9FB',
+                    padding: '6px 14px',
+                    borderRadius: '20px',
+                    color: activeBelief === idx ? 'var(--color-accent)' : 'var(--color-primary)', 
+                    fontWeight: '700', 
+                    fontSize: '0.85rem', 
+                    marginBottom: '16px', 
+                    display: 'inline-block' 
+                  }}>
+                    {belief.num} <i className={`fas ${belief.icon}`} style={{ marginLeft: '6px' }}></i>
+                  </span>
+                  <h4 style={{ color: activeBelief === idx ? 'white' : 'var(--color-primary)', fontSize: '1.5rem', fontWeight: '700', margin: '0 0 12px 0', transition: 'color 0.4s ease' }}>{belief.title}</h4>
+                  <p style={{ color: activeBelief === idx ? '#E4F1F3' : '#58798C', margin: 0, fontSize: '1.05rem', lineHeight: '1.7', transition: 'color 0.4s ease' }}>{belief.desc}</p>
                 </div>
-              </div>
+              ))}
             </div>
 
-            {/* Item 2 (Span 1) - Automation Image */}
-            <div className="bento-item" style={{ position: "relative", borderRadius: "24px", overflow: "hidden", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "40px", boxShadow: "0 10px 40px rgba(0,0,0,0.1)" }}>
-              <div className="bento-bg-image" style={{ position: "absolute", inset: 0, backgroundImage: "url(/images/belief_automation.png)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,25,33,0.95) 0%, rgba(14,25,33,0.2) 100%)" }}></div>
-              <div className="bento-text-content" style={{ position: "relative", zIndex: 1 }}>
-                <span className="bento-badge" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(10px)", padding: "6px 14px", borderRadius: "20px", color: "var(--color-accent)", fontSize: "0.85rem", fontWeight: "700", marginBottom: "16px", display: "inline-block", border: "1px solid rgba(255,255,255,0.15)" }}>02 <i className="fas fa-robot" style={{ marginLeft: "6px" }}></i></span>
-                <h4 className="bento-title" style={{ fontSize: "1.4rem", fontWeight: "700", color: "white", marginBottom: "12px" }}>Automation Should Improve Human Efficiency</h4>
-                <div className="bento-details">
-                  <div className="bento-details-inner">
-                    <p style={{ color: "#E4F1F3", lineHeight: "1.6", margin: 0, fontSize: "1.05rem" }}>Automation should support teams by reducing repetitive operational dependency and improving execution speed.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Item 3 (Span 1) - Scalability Image */}
-            <div className="bento-item" style={{ position: "relative", borderRadius: "24px", overflow: "hidden", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "40px", boxShadow: "0 10px 40px rgba(0,0,0,0.1)" }}>
-              <div className="bento-bg-image" style={{ position: "absolute", inset: 0, backgroundImage: "url(/images/belief_scalability.png)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,25,33,0.95) 0%, rgba(14,25,33,0.2) 100%)" }}></div>
-              <div className="bento-text-content" style={{ position: "relative", zIndex: 1 }}>
-                <span className="bento-badge" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(10px)", padding: "6px 14px", borderRadius: "20px", color: "var(--color-accent)", fontSize: "0.85rem", fontWeight: "700", marginBottom: "16px", display: "inline-block", border: "1px solid rgba(255,255,255,0.15)" }}>03 <i className="fas fa-server" style={{ marginLeft: "6px" }}></i></span>
-                <h4 className="bento-title" style={{ fontSize: "1.4rem", fontWeight: "700", color: "white", marginBottom: "12px" }}>Scalability Requires Structure</h4>
-                <div className="bento-details">
-                  <div className="bento-details-inner">
-                    <p style={{ color: "#E4F1F3", lineHeight: "1.6", margin: 0, fontSize: "1.05rem" }}>Long-term business growth requires scalable systems, operational clarity, and intelligent digital infrastructure.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Item 4 (Span 2) - AI Core Image */}
-            <div className="bento-item-span-2 bento-item" style={{ position: "relative", borderRadius: "24px", overflow: "hidden", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "40px", boxShadow: "0 10px 40px rgba(0,0,0,0.1)" }}>
-              <div className="bento-bg-image" style={{ position: "absolute", inset: 0, backgroundImage: "url(/images/belief_ai_core.png)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,25,33,0.95) 0%, rgba(14,25,33,0.2) 100%)" }}></div>
-              <div className="bento-text-content" style={{ position: "relative", zIndex: 1 }}>
-                <span className="bento-badge" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(10px)", padding: "6px 14px", borderRadius: "20px", color: "var(--color-accent)", fontSize: "0.85rem", fontWeight: "700", marginBottom: "16px", display: "inline-block", border: "1px solid rgba(255,255,255,0.15)" }}>04 <i className="fas fa-brain" style={{ marginLeft: "6px" }}></i></span>
-                <h4 className="bento-title" style={{ fontSize: "1.8rem", fontWeight: "700", color: "white", marginBottom: "12px" }}>AI Should Solve Real Operational Problems</h4>
-                <div className="bento-details">
-                  <div className="bento-details-inner">
-                    <p style={{ color: "#E4F1F3", lineHeight: "1.6", margin: 0, fontSize: "1.05rem", maxWidth: "90%" }}>Artificial Intelligence becomes valuable when integrated into real business operations capable of improving visibility, efficiency, and decision-making.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Item 5 (Span 2) - Dashboard Image */}
-            <div className="bento-item-span-2 bento-item" style={{ position: "relative", borderRadius: "24px", overflow: "hidden", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "40px", boxShadow: "0 10px 40px rgba(0,0,0,0.1)" }}>
-              <div className="bento-bg-image" style={{ position: "absolute", inset: 0, backgroundImage: "url(/images/belief_dashboard.png)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,25,33,0.95) 0%, rgba(14,25,33,0.2) 100%)" }}></div>
-              <div className="bento-text-content" style={{ position: "relative", zIndex: 1 }}>
-                <span className="bento-badge" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(10px)", padding: "6px 14px", borderRadius: "20px", color: "var(--color-accent)", fontSize: "0.85rem", fontWeight: "700", marginBottom: "16px", display: "inline-block", border: "1px solid rgba(255,255,255,0.15)" }}>05 <i className="fas fa-eye" style={{ marginLeft: "6px" }}></i></span>
-                <h4 className="bento-title" style={{ fontSize: "1.8rem", fontWeight: "700", color: "white", marginBottom: "12px" }}>Operational Visibility is Essential</h4>
-                <div className="bento-details">
-                  <div className="bento-details-inner">
-                    <p style={{ color: "#E4F1F3", lineHeight: "1.6", margin: 0, fontSize: "1.05rem", maxWidth: "90%" }}>Leadership requires real-time insight into performance metrics. We build unified dashboards that eliminate data silos and expose core business truths.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Item 6 (Span 1) - Execution Image */}
-            <div className="bento-item" style={{ position: "relative", borderRadius: "24px", overflow: "hidden", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "40px", boxShadow: "0 10px 40px rgba(0,0,0,0.1)" }}>
-              <div className="bento-bg-image" style={{ position: "absolute", inset: 0, backgroundImage: "url(/images/belief_execution.png)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(14,25,33,0.95) 0%, rgba(14,25,33,0.2) 100%)" }}></div>
-              <div className="bento-text-content" style={{ position: "relative", zIndex: 1 }}>
-                <span className="bento-badge" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(10px)", padding: "6px 14px", borderRadius: "20px", color: "var(--color-accent)", fontSize: "0.85rem", fontWeight: "700", marginBottom: "16px", display: "inline-block", border: "1px solid rgba(255,255,255,0.15)" }}>06 <i className="fas fa-tachometer-alt" style={{ marginLeft: "6px" }}></i></span>
-                <h4 className="bento-title" style={{ fontSize: "1.4rem", fontWeight: "700", color: "white", marginBottom: "12px" }}>Execution Must Be Frictionless</h4>
-                <div className="bento-details">
-                  <div className="bento-details-inner">
-                    <p style={{ color: "#E4F1F3", lineHeight: "1.6", margin: 0, fontSize: "1.05rem", fontWeight: "500" }}>We engineer workflow systems that remove administrative bottlenecks, ensuring your workforce can focus strictly on high-value strategic execution.</p>
-                  </div>
-                </div>
-              </div>
+            {/* Right Column: Sticky Image Viewer */}
+            <div style={{ position: 'sticky', top: '120px', height: '600px', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 25px 60px rgba(14, 25, 33, 0.15)', background: 'var(--color-primary)' }}>
+              {beliefs.map((belief, idx) => (
+                <div 
+                  key={idx}
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    backgroundImage: `url(${belief.img})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    opacity: activeBelief === idx ? 1 : 0,
+                    transition: 'opacity 0.6s ease',
+                    zIndex: activeBelief === idx ? 1 : 0
+                  }}
+                />
+              ))}
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(14,25,33,0.6) 0%, transparent 40%)', zIndex: 2, pointerEvents: 'none' }}></div>
             </div>
           </div>
         </div>
