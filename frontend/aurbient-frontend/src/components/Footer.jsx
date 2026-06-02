@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoImg from "../../../../staticfiles/images/AurbientT.webp";
+import logoImg from "../assets/logo.png";
 
 export default function Footer() {
   return (

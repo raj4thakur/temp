@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { getCaseStudies } from "../utils/api";
-import logoImg from "../../../../staticfiles/images/AurbientT.webp";
+import logoImg from "../assets/logo.png";
 
 const pillarsList = [
   {
