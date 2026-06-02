@@ -16,7 +16,7 @@ export default function Footer() {
                 height: '38px', 
                 objectFit: 'contain', 
                 marginBottom: "10px",
-                filter: "invert(1) hue-rotate(180deg) brightness(1.5)"
+                filter: "invert(1) sepia(0.3) hue-rotate(180deg) saturate(2) brightness(1.1)"
               }} 
             />
             <p style={{ lineHeight: "1.55", fontSize: "0.88rem" }}>
