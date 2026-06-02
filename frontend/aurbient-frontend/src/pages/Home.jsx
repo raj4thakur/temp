@@ -1,10 +1,27 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
   const [buildFeedback, setBuildFeedback] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+
+  const servicesSliderRef = useRef(null);
+  const industrySliderRef = useRef(null);
+
+  const scrollServices = (direction) => {
+    if (servicesSliderRef.current) {
+      const scrollAmount = 380;
+      servicesSliderRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const scrollIndustries = (direction) => {
+    if (industrySliderRef.current) {
+      const scrollAmount = 380;
+      industrySliderRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   const handleBuildSubmit = (e) => {
     e.preventDefault();
@@ -243,40 +260,110 @@ export default function Home() {
             <p style={{ color: "#58798C", fontSize: "1.1rem", margin: 0 }}>High-performance engineering designed to unify your enterprise operations.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
+          <div style={{ position: 'relative', margin: '0 auto', maxWidth: '100%', padding: '0 20px' }}>
+            <button 
+              className="testimonial-arrow"
+              onClick={() => scrollServices('left')}
+              aria-label="Scroll left"
+              style={{ 
+                position: "absolute", 
+                left: "-30px", 
+                top: "50%", 
+                transform: "translateY(-50%)", 
+                width: "50px", 
+                height: "50px", 
+                borderRadius: "50%", 
+                background: "white", 
+                border: "1px solid #E2EBE7", 
+                color: "var(--color-primary)", 
+                fontSize: "1.1rem", 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                cursor: "pointer", 
+                boxShadow: "0 4px 15px rgba(0,0,0,0.05)",
+                zIndex: 10,
+                transition: "all 0.3s ease",
+                outline: "none"
+              }}
+            >
+              <i className="fas fa-chevron-left"></i>
+            </button>
+
+            <button 
+              className="testimonial-arrow"
+              onClick={() => scrollServices('right')}
+              aria-label="Scroll right"
+              style={{ 
+                position: "absolute", 
+                right: "-30px", 
+                top: "50%", 
+                transform: "translateY(-50%)", 
+                width: "50px", 
+                height: "50px", 
+                borderRadius: "50%", 
+                background: "white", 
+                border: "1px solid #E2EBE7", 
+                color: "var(--color-primary)", 
+                fontSize: "1.1rem", 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                cursor: "pointer", 
+                boxShadow: "0 4px 15px rgba(0,0,0,0.05)",
+                zIndex: 10,
+                transition: "all 0.3s ease",
+                outline: "none"
+              }}
+            >
+              <i className="fas fa-chevron-right"></i>
+            </button>
+
+            <div 
+              ref={servicesSliderRef}
+              className="hide-scrollbar"
+              style={{ 
+                display: 'flex', 
+                gap: '30px', 
+                overflowX: 'auto', 
+                scrollSnapType: 'x mandatory',
+                paddingBottom: '20px',
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none'
+              }}
+            >
             {[
-              { icon: "fa-code", title: "Custom Software", desc: "Premium, highly reliable custom web apps, mobile apps, and dashboard platforms designed for maximum execution speed." },
-              { icon: "fa-network-wired", title: "Systems Integration", desc: "Connecting legacy databases, CRM, ERP, and API endpoints into one unified network layer with zero latency." },
-              { icon: "fa-cloud", title: "Cloud & AI Automation", desc: "Secure cloud deployment and intelligent self-healing AI agents that automate 24/7 business workflows." }
+              { icon: "fa-project-diagram", title: "Automation Ecosystems", desc: "Intelligent autonomous workflows reducing manual operations by up to 80%.", path: "/systems/automation-ecosystems", img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" },
+              { icon: "fa-database", title: "ERP Intelligence", desc: "Unifying fragmented data silos into a singular intelligent architecture.", path: "/systems/erp-intelligence", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" },
+              { icon: "fa-brain", title: "AI Workflow Systems", desc: "Self-healing AI agents that automate 24/7 complex business decisions.", path: "/systems/ai-workflow-systems", img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=600&q=80" },
+              { icon: "fa-eye", title: "Operational Visibility", desc: "Real-time enterprise observability with predictive reporting and metrics.", path: "/systems/operational-visibility", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" },
+              { icon: "fa-cloud", title: "Cloud Infrastructure", desc: "Secure, highly scalable cloud environments built for execution speed.", path: "/systems/cloud-infrastructure", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" },
+              { icon: "fa-layer-group", title: "Business Operating Layer", desc: "A unified connective tissue linking legacy systems and modern APIs.", path: "/systems/business-operating-layer", img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" }
             ].map((serv, idx) => (
-              <div key={idx} className="eco-card" style={{ 
-                background: '#FFFFFF', 
-                padding: '48px 40px', 
-                borderRadius: '24px', 
-                boxShadow: '0 15px 40px rgba(14,25,33,0.03)', 
-                border: '1.5px solid #E2EBE7', 
-                transition: 'all 0.3s ease'
-              }}>
-                <div style={{ 
-                  width: '64px', 
-                  height: '64px', 
-                  marginBottom: '28px', 
-                  background: 'rgba(19,170,179,0.08)', 
-                  borderRadius: '16px', 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center',
-                  color: 'var(--color-accent)'
-                }}>
-                  <i className={`fas ${serv.icon}`} style={{ fontSize: "1.8rem" }}></i>
+              <div key={idx} className="service-hex-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start' }}>
+                <div className="service-hex-content" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ flex: 1 }}>
+                    <h3 style={{ margin: "0 0 16px 0", fontSize: '1.6rem', color: 'var(--color-primary)', fontWeight: '800', lineHeight: '1.3' }}>{serv.title}</h3>
+                    <p style={{ color: "#58798C", margin: 0, fontSize: '1.05rem', lineHeight: '1.75' }}>{serv.desc}</p>
+                  </div>
+                  <div style={{ marginTop: '32px', display: 'flex', alignItems: 'center', color: 'var(--color-accent)', fontWeight: '700', fontSize: '0.9rem', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                    Explore <i className="fas fa-arrow-right" style={{ marginLeft: '10px' }}></i>
+                  </div>
                 </div>
-                <h3 style={{ margin: "0 0 16px 0", fontSize: '1.4rem', color: 'var(--color-primary)', fontWeight: '700' }}>{serv.title}</h3>
-                <p style={{ color: "#58798C", margin: 0, fontSize: '1.05rem', lineHeight: '1.7' }}>{serv.desc}</p>
+                
+                <Link to={serv.path} className="service-hex-overlay" style={{ backgroundImage: `url(${serv.img})` }}>
+                  <div style={{ position: 'relative', zIndex: 1 }}>
+                    <h3>{serv.title}</h3>
+                    <p>{serv.desc}</p>
+                    <span className="service-hex-link">Learn More <i className="fas fa-arrow-right"></i></span>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* 4. Transformation Layer Section */}
       <section style={{ padding: "100px 0", background: "#F4F9FB" }}>
@@ -314,41 +401,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. How Future-Ready Businesses Function */}
-      <section style={{ padding: "100px 0", background: "white" }}>
-        <div className="container">
-          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
-            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Operational Directives</span>
-            <h2 style={{ fontSize: "2.4rem", fontWeight: "700", color: "var(--color-primary)", margin: "0 0 16px 0" }}>How future-ready businesses function</h2>
-            <p style={{ color: "#395568", margin: 0, fontSize: "1.1rem" }}>Visibility. Automation. Intelligence. Synchronized infrastructure. Operational confidence.</p>
-          </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
-            {[
-              { icon: "fa-eye", border: "var(--color-accent)", title: "Total visibility", desc: "No blind spots. Real-time operational observability across every layer of your enterprise architecture." },
-              { icon: "fa-microchip", border: "var(--color-primary)", title: "Adaptive automation", desc: "Workflows that organically evolve with business conditions, breaking away from static rules." },
-              { icon: "fa-chart-line", border: "#85D4D9", title: "Systemic intelligence", desc: "Invisible AI woven directly into decision architecture, creating exponential leverage." }
-            ].map((item, idx) => (
-              <div key={idx} className="eco-card" style={{ 
-                padding: '48px 40px', 
-                background: 'white', 
-                borderRadius: '24px', 
-                borderTop: `4px solid ${item.border}`, 
-                boxShadow: '0 15px 40px rgba(14,25,33,0.03)',
-                borderLeft: '1px solid #E2EBE7',
-                borderRight: '1px solid #E2EBE7',
-                borderBottom: '1px solid #E2EBE7',
-              }}>
-                <div style={{ width: '60px', height: '60px', background: '#F4F9FB', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '28px', color: 'var(--color-accent)' }}>
-                  <i className={`fas ${item.icon}`} style={{ fontSize: "1.6rem" }}></i>
-                </div>
-                <h3 style={{ margin: "0 0 16px 0", fontSize: '1.45rem', color: 'var(--color-primary)', fontWeight: '700' }}>{item.title}</h3>
-                <p style={{ color: "#58798C", fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 6. Industries as Living Ecosystems */}
       <section style={{ padding: "100px 0", background: "#F4F9FB", borderTop: "1px solid #E2EBE7" }}>
@@ -359,33 +412,107 @@ export default function Home() {
             <p style={{ color: "#395568", marginTop: "16px", fontSize: "1.1rem" }}>Connected workflows, operational depth, and intelligence scaled across domains</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px' }}>
+          <div style={{ position: 'relative', margin: '0 auto', maxWidth: '100%', padding: '0 20px' }}>
+            <button 
+              className="testimonial-arrow"
+              onClick={() => scrollIndustries('left')}
+              aria-label="Scroll left"
+              style={{ 
+                position: "absolute", 
+                left: "-30px", 
+                top: "50%", 
+                transform: "translateY(-50%)", 
+                width: "50px", 
+                height: "50px", 
+                borderRadius: "50%", 
+                background: "white", 
+                border: "1px solid #E2EBE7", 
+                color: "var(--color-primary)", 
+                fontSize: "1.1rem", 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                cursor: "pointer", 
+                boxShadow: "0 4px 15px rgba(0,0,0,0.05)",
+                zIndex: 10,
+                transition: "all 0.3s ease",
+                outline: "none"
+              }}
+            >
+              <i className="fas fa-chevron-left"></i>
+            </button>
+
+            <button 
+              className="testimonial-arrow"
+              onClick={() => scrollIndustries('right')}
+              aria-label="Scroll right"
+              style={{ 
+                position: "absolute", 
+                right: "-30px", 
+                top: "50%", 
+                transform: "translateY(-50%)", 
+                width: "50px", 
+                height: "50px", 
+                borderRadius: "50%", 
+                background: "white", 
+                border: "1px solid #E2EBE7", 
+                color: "var(--color-primary)", 
+                fontSize: "1.1rem", 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                cursor: "pointer", 
+                boxShadow: "0 4px 15px rgba(0,0,0,0.05)",
+                zIndex: 10,
+                transition: "all 0.3s ease",
+                outline: "none"
+              }}
+            >
+              <i className="fas fa-chevron-right"></i>
+            </button>
+
+            <div 
+              ref={industrySliderRef}
+              className="hide-scrollbar"
+              style={{ 
+                display: 'flex', 
+                gap: '30px', 
+                overflowX: 'auto', 
+                scrollSnapType: 'x mandatory',
+                paddingBottom: '20px',
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none'
+              }}
+            >
             {[
-              { icon: "fa-industry", path: "/industries/manufacturing", title: "Manufacturing", desc: "Intelligent production flow, IIoT synchronization, autonomous quality layers." },
-              { icon: "fa-boxes", path: "/industries/logistics", title: "Logistics", desc: "Orchestrated supply chains, demand intelligence, real-time fleet adaptation." },
-              { icon: "fa-store", path: "/industries/retail-commerce", title: "Retail", desc: "Inventory ecosystems, unified commerce, predictive customer operations." },
-              { icon: "fa-building", path: "/industries/enterprise-operations", title: "Enterprise", desc: "Finance & HR automation, cognitive processes, enterprise operating layer." }
+              { path: "/industries/manufacturing", title: "Manufacturing", desc: "Intelligent production flow, IIoT synchronization, autonomous quality layers.", img: "/images/industry_manufacturing.png" },
+              { path: "/industries/logistics", title: "Logistics", desc: "Orchestrated supply chains, demand intelligence, real-time fleet adaptation.", img: "/images/industry_logistics.png" },
+              { path: "/industries/retail-commerce", title: "Retail", desc: "Inventory ecosystems, unified commerce, predictive customer operations.", img: "/images/industry_retail.png" },
+              { path: "/industries/enterprise-operations", title: "Enterprise", desc: "Finance & HR automation, cognitive processes, enterprise operating layer.", img: "/images/industry_enterprise.png" },
+              { path: "/industries/healthcare", title: "Healthcare", desc: "Next-gen patient data orchestration, smart facilities, connected care operations.", img: "/images/industry_healthcare.png" },
+              { path: "/industries/finance", title: "Finance", desc: "Autonomous compliance, real-time risk modeling, resilient banking ecosystems.", img: "/images/industry_finance.png" }
             ].map((ind, i) => (
-              <Link key={i} to={ind.path} style={{ textDecoration: 'none' }}>
-                <div className="eco-card" style={{ 
-                  padding: '36px', 
-                  background: '#FFFFFF', 
-                  borderRadius: '20px', 
-                  border: '1.5px solid #E2EBE7', 
-                  transition: 'all 0.3s ease',
-                  height: '100%',
-                  boxSizing: 'border-box'
-                }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
-                    <div style={{ background: 'rgba(19, 170, 179, 0.08)', padding: '14px', borderRadius: '14px', color: 'var(--color-accent)' }}>
-                      <i className={`fas ${ind.icon}`} style={{ fontSize: "1.3rem" }}></i>
-                    </div>
-                    <h3 style={{ fontSize: '1.3rem', margin: 0, color: 'var(--color-primary)', fontWeight: 700 }}>{ind.title}</h3>
+              <div key={i} className="service-hex-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start' }}>
+                <div className="service-hex-content" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ flex: 1 }}>
+                    <h3 style={{ margin: "0 0 16px 0", fontSize: '1.6rem', color: 'var(--color-primary)', fontWeight: '800', lineHeight: '1.3' }}>{ind.title}</h3>
+                    <p style={{ color: "#58798C", margin: 0, fontSize: '1.05rem', lineHeight: '1.75' }}>{ind.desc}</p>
                   </div>
-                  <p style={{ color: "#58798C", margin: 0, lineHeight: '1.65', fontSize: '0.95rem' }}>{ind.desc}</p>
+                  <div style={{ marginTop: '32px', display: 'flex', alignItems: 'center', color: 'var(--color-accent)', fontWeight: '700', fontSize: '0.9rem', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                    Explore <i className="fas fa-arrow-right" style={{ marginLeft: '10px' }}></i>
+                  </div>
                 </div>
-              </Link>
+                
+                <Link to={ind.path} className="service-hex-overlay" style={{ backgroundImage: `url(${ind.img})` }}>
+                  <div style={{ position: 'relative', zIndex: 1 }}>
+                    <h3>{ind.title}</h3>
+                    <p>{ind.desc}</p>
+                    <span className="service-hex-link">Learn More <i className="fas fa-arrow-right"></i></span>
+                  </div>
+                </Link>
+              </div>
             ))}
+            </div>
           </div>
         </div>
       </section>
@@ -459,41 +586,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 8. Thought Leadership (The Intelligence Horizon) */}
-      <section style={{ padding: "100px 0", background: "#F4F9FB", borderTop: "1px solid #E2EBE7" }}>
-        <div className="container">
-          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
-            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Knowledge Streams</span>
-            <h2 style={{ fontSize: "2.4rem", fontWeight: "700", color: "var(--color-primary)", margin: 0 }}>The intelligence horizon</h2>
-            <p style={{ color: "#395568", marginTop: "16px", fontSize: "1.1rem" }}>Perspectives on the future of operational infrastructure</p>
-          </div>
-          
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
-            {[
-              { icon: "fa-microphone-alt", border: "var(--color-primary)", title: "The rise of intelligent operations", desc: "Why ambient intelligence will replace fragmented automation stacks in enterprise management." },
-              { icon: "fa-chart-bar", border: "var(--color-accent)", title: "Beyond AI: systemic visibility", desc: "Organizations need unified operational memory and analytics, not just local chat assistants." },
-              { icon: "fa-cloud", border: "#85D4D9", title: "Future operating layer", desc: "Unified, predictable, and highly adaptive enterprise infrastructure as a modern competitive advantage." }
-            ].map((item, idx) => (
-              <div key={idx} className="eco-card" style={{ 
-                background: 'white', 
-                padding: '40px', 
-                borderRadius: '24px', 
-                borderBottom: `4px solid ${item.border}`, 
-                boxShadow: '0 10px 30px rgba(14,25,33,0.03)',
-                borderLeft: '1px solid #E2EBE7',
-                borderRight: '1px solid #E2EBE7',
-                borderTop: '1px solid #E2EBE7',
-              }}>
-                <div style={{ width: '50px', height: '50px', background: 'rgba(19,170,179,0.06)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px', color: 'var(--color-accent)' }}>
-                  <i className={`fas ${item.icon}`} style={{ fontSize: "1.3rem" }}></i>
-                </div>
-                <h3 style={{ margin: "0 0 16px 0", fontSize: '1.3rem', color: 'var(--color-primary)', fontWeight: '700' }}>{item.title}</h3>
-                <p style={{ color: "#58798C", lineHeight: '1.65', margin: 0, fontSize: '0.95rem' }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* 9. Testimonials (Operational Impact) */}
       <section style={{ padding: "100px 0", background: "white" }}>

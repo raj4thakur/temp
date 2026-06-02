@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { getCaseStudies } from "../utils/api";
+import logoImg from "../../../../staticfiles/images/AurbientT.webp";
 
 const pillarsList = [
   {
@@ -16,9 +17,9 @@ const pillarsList = [
     id: "ai-in-business",
     name: "AI in Business",
     icon: "fa-brain",
-    color: "#8E44AD",
+    color: "#2980B9",
     description: "Deploying production-grade machine learning and autonomous execution modules that augment team execution.",
-    themeColor: "rgba(142, 68, 173, 0.1)",
+    themeColor: "rgba(41, 128, 185, 0.1)",
     pillarImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80"
   },
   {
@@ -588,6 +589,7 @@ export default function Insights() {
       {/* Immersive Article Modal Reader */}
       {activeArticle && (
         <div
+          className="article-modal-overlay"
           style={{
             position: "fixed", inset: 0,
             background: "rgba(10, 18, 24, 0.75)",
@@ -609,7 +611,7 @@ export default function Insights() {
             .article-scroll::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
           `}</style>
 
-          <div style={{
+          <div className="article-modal-card" style={{
             background: "#FFFFFF",
             width: "100%", maxWidth: "860px",
             height: "92vh", borderRadius: "28px",
@@ -632,7 +634,7 @@ export default function Insights() {
             </div>
 
             {/* Top Navigation Bar */}
-            <div style={{
+            <div className="article-modal-header" style={{
               padding: "18px 32px",
               background: "#FFFFFF",
               borderBottom: "1px solid #EDF2F4",
@@ -653,7 +655,7 @@ export default function Insights() {
               >
                 <i className="fas fa-arrow-left"></i> All Articles
               </button>
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <div className="article-modal-meta" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                 <span style={{
                   fontSize: "0.72rem", textTransform: "uppercase", fontWeight: "700",
                   letterSpacing: "1.2px", background: "rgba(19,170,179,0.08)",
@@ -677,7 +679,7 @@ export default function Insights() {
               style={{ overflowY: "auto", flex: 1, lineHeight: "1.9" }}
             >
               {/* Cinematic Cover Image with gradient overlay */}
-              <div style={{ width: "100%", height: "320px", position: "relative", overflow: "hidden" }}>
+              <div className="article-modal-hero" style={{ width: "100%", height: "320px", position: "relative", overflow: "hidden" }}>
                 <div style={{
                   position: "absolute", inset: 0,
                   backgroundImage: `url(${activeArticle.image})`,
@@ -688,7 +690,7 @@ export default function Insights() {
                   background: "linear-gradient(to top, rgba(14,25,33,0.92) 0%, rgba(14,25,33,0.3) 60%, transparent 100%)"
                 }} />
                 {/* Category badge on image */}
-                <div style={{ position: "absolute", bottom: "28px", left: "40px", zIndex: 2 }}>
+                <div className="article-modal-hero-badge" style={{ position: "absolute", bottom: "28px", left: "40px", zIndex: 2 }}>
                   <span style={{
                     background: "var(--color-accent)", color: "var(--color-primary)",
                     padding: "6px 16px", borderRadius: "20px",
@@ -698,11 +700,11 @@ export default function Insights() {
               </div>
 
               {/* Article Body */}
-              <div style={{ padding: "44px 52px 20px" }}>
+              <div className="article-modal-body" style={{ padding: "44px 52px 20px" }}>
                 {/* Author / Meta row */}
                 <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "28px", paddingBottom: "24px", borderBottom: "1px solid #EDF2F4" }}>
-                  <div style={{ width: "44px", height: "44px", borderRadius: "50%", background: "linear-gradient(135deg, var(--color-primary), #13AAB3)", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "1.1rem", flexShrink: 0 }}>
-                    <i className="fas fa-pen-nib"></i>
+                  <div style={{ width: "48px", height: "48px", borderRadius: "50%", background: "linear-gradient(135deg, var(--color-primary), #13AAB3)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", flexShrink: 0 }}>
+                    <img src={logoImg} alt="Aurbient Technologies" style={{ width: "38px", height: "38px", objectFit: "contain", filter: "brightness(0) invert(1)", transform: "scale(1.5)" }} />
                   </div>
                   <div>
                     <div style={{ fontWeight: "700", color: "var(--color-primary)", fontSize: "0.95rem" }}>Aurbient Technologies</div>
@@ -710,7 +712,7 @@ export default function Insights() {
                   </div>
                 </div>
 
-                <h1 style={{
+                <h1 className="article-modal-title" style={{
                   fontSize: "clamp(1.8rem, 3vw, 2.6rem)",
                   fontWeight: "800", lineHeight: "1.2",
                   color: "var(--color-primary)",
@@ -727,7 +729,7 @@ export default function Insights() {
                   }
                   if (block.type === "highlight") {
                     return (
-                      <div key={i} style={{
+                      <div className="article-modal-highlight" key={i} style={{
                         background: "linear-gradient(135deg, #0E1921 0%, #1A2D3A 100%)",
                         color: "#FFFFFF", padding: "32px 40px",
                         borderRadius: "20px", fontSize: "1.2rem",
@@ -763,7 +765,7 @@ export default function Insights() {
                 })}
 
                 {/* Bottom CTA Banner */}
-                <div style={{ marginTop: "52px", background: "linear-gradient(135deg, var(--color-primary) 0%, #1A3344 100%)", borderRadius: "20px", padding: "36px 40px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "20px" }}>
+                <div className="article-modal-footer-cta" style={{ marginTop: "52px", background: "linear-gradient(135deg, var(--color-primary) 0%, #1A3344 100%)", borderRadius: "20px", padding: "36px 40px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "20px" }}>
                   <div>
                     <div style={{ color: "var(--color-accent)", fontSize: "0.8rem", fontWeight: "700", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px" }}>Ready to Transform Your Operations?</div>
                     <div style={{ color: "white", fontSize: "1.15rem", fontWeight: "600" }}>Talk to our engineering team about implementing these strategies.</div>
@@ -800,7 +802,7 @@ export default function Insights() {
             </div>
 
             {/* Footer bar */}
-            <div style={{
+            <div className="article-modal-bottom-bar" style={{
               padding: "14px 32px",
               background: "#F8FCFD",
               borderTop: "1px solid #EDF2F4",
@@ -1493,7 +1495,7 @@ export default function Insights() {
 
                       {/* Right: Case Studies */}
                       <div>
-                        <h3 style={{ fontSize: "1.3rem", fontWeight: "700", color: "var(--color-primary)", marginBottom: "24px", borderBottom: "2px solid #8E44AD", paddingBottom: "10px", width: "fit-content" }}>
+                        <h3 style={{ fontSize: "1.3rem", fontWeight: "700", color: "var(--color-primary)", marginBottom: "24px", borderBottom: "2px solid #2980B9", paddingBottom: "10px", width: "fit-content" }}>
                           Quantitative Proofs ({matchingCases.length})
                         </h3>
                         {matchingCases.length === 0 ? (

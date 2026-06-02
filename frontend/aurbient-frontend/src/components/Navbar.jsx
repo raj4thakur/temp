@@ -46,17 +46,15 @@ export default function Navbar() {
                         <div className="mega-grid">
                             <div className="mega-col">
                                 <h4>Intelligence Layers</h4>
-                                <Link to="/systems/ai-workflow-systems" onClick={closeAll}>AI Automation</Link>
-                                <Link to="/systems/operational-visibility" onClick={closeAll}>Operational Intelligence</Link>
-                                <Link to="/systems/erp-intelligence" onClick={closeAll}>Business Systems</Link>
-                                <Link to="/systems/operational-visibility" onClick={closeAll}>Data Intelligence</Link>
+                                <Link to="/solutions/ai-automation" onClick={closeAll}>AI Automation</Link>
+                                <Link to="/solutions/operational-intelligence" onClick={closeAll}>Operational Intelligence</Link>
+                                <Link to="/solutions/business-systems" onClick={closeAll}>Business Systems</Link>
                             </div>
                             <div className="mega-col">
                                 <h4>Infrastructure</h4>
-                                <Link to="/systems/cloud-infrastructure" onClick={closeAll}>Enterprise Infrastructure</Link>
-                                <Link to="/systems/ai-workflow-systems" onClick={closeAll}>Workflow Architecture</Link>
-                                <Link to="/systems/automation-ecosystems" onClick={closeAll}>Process Optimization</Link>
-                                <Link to="/systems/business-operating-layer" onClick={closeAll}>System Integration</Link>
+                                <Link to="/solutions/enterprise-infrastructure" onClick={closeAll}>Enterprise Infrastructure</Link>
+                                <Link to="/solutions/process-optimization" onClick={closeAll}>Process Optimization</Link>
+                                <Link to="/solutions/system-integration" onClick={closeAll}>System Integration</Link>
                             </div>
                         </div>
                     </div>
@@ -147,7 +145,6 @@ export default function Navbar() {
                         <div className="mega-grid">
                             <div className="mega-col">
                                 <Link to="/company/vision-philosophy" onClick={closeAll}>Vision & Philosophy</Link>
-                                <Link to="/company/leadership" onClick={closeAll}>Leadership</Link>
                                 <Link to="/company/engineering-culture" onClick={closeAll}>Engineering Culture</Link>
                             </div>
                             <div className="mega-col">

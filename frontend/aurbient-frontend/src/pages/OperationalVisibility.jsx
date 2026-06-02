@@ -56,7 +56,7 @@ export default function OperationalVisibility() {
         
         <div className="container" style={{ position: "relative", zIndex: 2, color: "white" }}>
           <Link 
-            to="/solutions" 
+            to="/" 
             style={{ 
               display: "inline-flex", 
               alignItems: "center", 
@@ -71,7 +71,7 @@ export default function OperationalVisibility() {
             onMouseOver={e => e.currentTarget.style.color = "#FFFFFF"}
             onMouseOut={e => e.currentTarget.style.color = "rgba(255, 255, 255, 0.75)"}
           >
-            <i className="fas fa-arrow-left"></i> Back to Solutions
+            <i className="fas fa-arrow-left"></i> Back to Home
           </Link>
           <span style={{ fontSize: "1rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Architecture 03</span>
           <h1 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", marginBottom: "30px", maxWidth: "900px", lineHeight: "1.15", textShadow: "0 4px 20px rgba(0,0,0,0.4)", fontWeight: "600" }}>Operational Intelligence Systems</h1>
@@ -155,11 +155,11 @@ export default function OperationalVisibility() {
               <div className="eco-card" style={{ background: "white", padding: "30px", borderRadius: "20px", border: "1.5px solid #E2EBE7", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
                   <span style={{ fontSize: "0.85rem", color: "#58798C", fontWeight: "700", textTransform: "uppercase" }}>Connected Nodes</span>
-                  <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "rgba(142, 68, 173, 0.1)", color: "#8E44AD", display: "flex", alignItems: "center", justifyCenter: "center", fontSize: "1rem", justifyContent: "center" }}><i className="fas fa-network-wired"></i></div>
+                  <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "rgba(41, 128, 185, 0.1)", color: "#2980B9", display: "flex", alignItems: "center", justifyCenter: "center", fontSize: "1rem", justifyContent: "center" }}><i className="fas fa-network-wired"></i></div>
                 </div>
                 <div>
                   <h3 style={{ fontSize: "2.2rem", fontWeight: "800", color: "var(--color-primary)", margin: "0 0 4px 0", fontFamily: "monospace" }}>32 Channels</h3>
-                  <span style={{ color: "#8E44AD", fontSize: "0.85rem", fontWeight: "bold" }}>Central Sync Routing</span>
+                  <span style={{ color: "#2980B9", fontSize: "0.85rem", fontWeight: "bold" }}>Central Sync Routing</span>
                 </div>
               </div>
             </div>
@@ -223,9 +223,9 @@ export default function OperationalVisibility() {
           </div>
 
           {/* Business Outcomes Column */}
-          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 10px 30px rgba(0,0,0,0.02)", borderTop: "4px solid #8E44AD" }}>
+          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 10px 30px rgba(0,0,0,0.02)", borderTop: "4px solid #2980B9" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "20px", marginBottom: "30px" }}>
-              <div style={{ width: "56px", height: "56px", borderRadius: "16px", background: "rgba(142, 68, 173, 0.1)", color: "#8E44AD", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.8rem" }}>
+              <div style={{ width: "56px", height: "56px", borderRadius: "16px", background: "rgba(41, 128, 185, 0.1)", color: "#2980B9", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.8rem" }}>
                 <i className="fas fa-chart-line"></i>
               </div>
               <h4 style={{ fontSize: "1.6rem", color: "var(--color-primary)", margin: 0, fontWeight: "600" }}>Business Outcomes</h4>
@@ -239,8 +239,8 @@ export default function OperationalVisibility() {
                 "Increased operational transparency",
                 "Smarter operational decision-making"
               ].map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "16px", color: "#1a2a35", fontWeight: "600", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
-                  <span style={{ color: "#8E44AD", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
+                <li key={i} style={{ display: "flex", gap: "16px", color: "#1a2a35", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
+                  <span style={{ color: "#2980B9", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
                   {item}
                 </li>
               ))}

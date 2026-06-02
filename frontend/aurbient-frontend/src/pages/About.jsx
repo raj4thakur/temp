@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function About() {
   const images = {
     hero: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
-    ecosystem: "https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=900&q=80"
+    ecosystem: "/images/philosophy_ecosystem.png"
   };
 
   return (
@@ -337,10 +337,12 @@ export default function About() {
               ))}
             </div>
 
-            <div style={{ background: "linear-gradient(135deg, rgba(19,170,179,0.15) 0%, rgba(19,170,179,0.05) 100%)", padding: "50px", borderRadius: "30px", border: "1px solid rgba(19,170,179,0.3)" }}>
-              <h3 style={{ fontSize: "1.6rem", fontWeight: "700", margin: "0 0 20px 0", color: "var(--color-accent)" }}>Final Company Statement</h3>
-              <p style={{ fontSize: "1.2rem", lineHeight: "1.8", color: "white", margin: 0, fontStyle: "italic" }}>
-                "Aurbient Technologies develops intelligent operational ecosystems designed to improve business visibility, workflow coordination, automation efficiency, and scalable enterprise growth through modern technology infrastructure and AI-driven transformation."
+            <div style={{ background: "rgba(9, 32, 39, 0.7)", backdropFilter: "blur(20px)", padding: "50px", borderRadius: "30px", border: "1px solid rgba(19,170,179,0.4)", boxShadow: "0 20px 50px rgba(0,0,0,0.5), inset 0 0 30px rgba(19,170,179,0.1)" }}>
+              <h3 style={{ fontSize: "1.6rem", fontWeight: "700", margin: "0 0 20px 0", color: "white", textShadow: "0 2px 10px rgba(0,0,0,0.1)" }}>Final Company Statement</h3>
+              <p style={{ fontSize: "1.2rem", lineHeight: "1.8", color: "#E4F1F3", margin: 0, fontStyle: "italic", fontWeight: "400", letterSpacing: "0.5px" }}>
+                <span style={{ color: "var(--color-accent)", fontSize: "1.8rem", lineHeight: "0", verticalAlign: "middle", marginRight: "8px" }}>"</span>
+                Aurbient Technologies develops intelligent operational ecosystems designed to improve business visibility, workflow coordination, automation efficiency, and scalable enterprise growth through modern technology infrastructure and AI-driven transformation.
+                <span style={{ color: "var(--color-accent)", fontSize: "1.8rem", lineHeight: "0", verticalAlign: "middle", marginLeft: "4px" }}>"</span>
               </p>
             </div>
             

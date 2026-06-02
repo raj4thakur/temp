@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function VisionPhilosophy() {
   const images = {
     hero: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
-    ecosystem: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80"
+    ecosystem: "/images/philosophy_ecosystem.png"
   };
 
   return (

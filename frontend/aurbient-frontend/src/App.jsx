@@ -4,7 +4,6 @@ import { HashRouter as Router, Routes, Route, useLocation } from "react-router-d
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Solutions from "./pages/Solutions";
 import Industries from "./pages/Industries";
 import Technology from "./pages/Technology";
 import Insights from "./pages/Insights";
@@ -27,9 +26,16 @@ import OperationalVisibility from "./pages/OperationalVisibility";
 import CloudInfrastructure from "./pages/CloudInfrastructure";
 import BusinessOperatingLayer from "./pages/BusinessOperatingLayer";
 
+// Solutions Pages
+import SolutionsAIAutomation from "./pages/SolutionsAIAutomation";
+import SolutionsOperationalIntelligence from "./pages/SolutionsOperationalIntelligence";
+import SolutionsBusinessSystems from "./pages/SolutionsBusinessSystems";
+import SolutionsEnterpriseInfrastructure from "./pages/SolutionsEnterpriseInfrastructure";
+import SolutionsProcessOptimization from "./pages/SolutionsProcessOptimization";
+import SolutionsSystemIntegration from "./pages/SolutionsSystemIntegration";
+
 // Company Subpages
 import VisionPhilosophy from "./pages/VisionPhilosophy";
-import Leadership from "./pages/Leadership";
 import EngineeringCulture from "./pages/EngineeringCulture";
 import MissionEcosystem from "./pages/MissionEcosystem";
 import Careers from "./pages/Careers";
@@ -48,8 +54,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/solutions" element={<Solutions />} />
-      <Route path="/industries" element={<Industries />} />
+            <Route path="/industries" element={<Industries />} />
       
       {/* Specific Industry Pages */}
       <Route path="/industries/manufacturing" element={<Manufacturing />} />
@@ -61,6 +66,14 @@ function AppRoutes() {
 
       <Route path="/technology" element={<Technology />} />
       
+      {/* Specific Solutions Pages */}
+      <Route path="/solutions/ai-automation" element={<SolutionsAIAutomation />} />
+      <Route path="/solutions/operational-intelligence" element={<SolutionsOperationalIntelligence />} />
+      <Route path="/solutions/business-systems" element={<SolutionsBusinessSystems />} />
+      <Route path="/solutions/enterprise-infrastructure" element={<SolutionsEnterpriseInfrastructure />} />
+      <Route path="/solutions/process-optimization" element={<SolutionsProcessOptimization />} />
+      <Route path="/solutions/system-integration" element={<SolutionsSystemIntegration />} />
+      
       {/* Specific Technology/System Pages */}
       <Route path="/systems/automation-ecosystems" element={<AutomationEcosystems />} />
       <Route path="/systems/erp-intelligence" element={<ERPIntelligence />} />
@@ -71,7 +84,6 @@ function AppRoutes() {
 
       {/* Specific Company Pages */}
       <Route path="/company/vision-philosophy" element={<VisionPhilosophy />} />
-      <Route path="/company/leadership" element={<Leadership />} />
       <Route path="/company/engineering-culture" element={<EngineeringCulture />} />
       <Route path="/company/mission-ecosystem" element={<MissionEcosystem />} />
       <Route path="/company/careers" element={<Careers />} />

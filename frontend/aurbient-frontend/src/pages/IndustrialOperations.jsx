@@ -99,9 +99,9 @@ export default function IndustrialOperations() {
           </div>
 
           {/* Business Outcomes Column */}
-          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 10px 30px rgba(0,0,0,0.02)", borderTop: "4px solid #8E44AD" }}>
+          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 10px 30px rgba(0,0,0,0.02)", borderTop: "4px solid #2980B9" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "20px", marginBottom: "30px" }}>
-              <div style={{ width: "56px", height: "56px", borderRadius: "16px", background: "rgba(142, 68, 173, 0.1)", color: "#8E44AD", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.8rem" }}>
+              <div style={{ width: "56px", height: "56px", borderRadius: "16px", background: "rgba(41, 128, 185, 0.1)", color: "#2980B9", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.8rem" }}>
                 <i className="fas fa-chart-line"></i>
               </div>
               <h4 style={{ fontSize: "1.6rem", color: "var(--color-primary)", margin: 0, fontWeight: "600" }}>Business Outcomes</h4>
@@ -115,8 +115,8 @@ export default function IndustrialOperations() {
                 "Elimination of manual sensor checks",
                 "Predictive safety response loops"
               ].map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "16px", color: "#1a2a35", fontWeight: "600", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
-                  <span style={{ color: "#8E44AD", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
+                <li key={i} style={{ display: "flex", gap: "16px", color: "#1a2a35", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
+                  <span style={{ color: "#2980B9", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
                   {item}
                 </li>
               ))}

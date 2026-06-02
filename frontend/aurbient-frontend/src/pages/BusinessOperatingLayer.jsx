@@ -46,7 +46,7 @@ export default function BusinessOperatingLayer() {
         
         <div className="container" style={{ position: "relative", zIndex: 2, color: "white" }}>
           <Link 
-            to="/solutions" 
+            to="/" 
             style={{ 
               display: "inline-flex", 
               alignItems: "center", 
@@ -61,7 +61,7 @@ export default function BusinessOperatingLayer() {
             onMouseOver={e => e.currentTarget.style.color = "#FFFFFF"}
             onMouseOut={e => e.currentTarget.style.color = "rgba(255, 255, 255, 0.75)"}
           >
-            <i className="fas fa-arrow-left"></i> Back to Solutions
+            <i className="fas fa-arrow-left"></i> Back to Home
           </Link>
           <span style={{ fontSize: "1rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Architecture 06</span>
           <h1 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", marginBottom: "30px", maxWidth: "900px", lineHeight: "1.15", textShadow: "0 4px 20px rgba(0,0,0,0.4)", fontWeight: "600" }}>Web & Enterprise Solutions</h1>
@@ -244,9 +244,9 @@ export default function BusinessOperatingLayer() {
           </div>
 
           {/* Business Outcomes Column */}
-          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 10px 30px rgba(0,0,0,0.02)", borderTop: "4px solid #8E44AD" }}>
+          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 10px 30px rgba(0,0,0,0.02)", borderTop: "4px solid #2980B9" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "20px", marginBottom: "30px" }}>
-              <div style={{ width: "56px", height: "56px", borderRadius: "16px", background: "rgba(142, 68, 173, 0.1)", color: "#8E44AD", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.8rem" }}>
+              <div style={{ width: "56px", height: "56px", borderRadius: "16px", background: "rgba(41, 128, 185, 0.1)", color: "#2980B9", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.8rem" }}>
                 <i className="fas fa-chart-line"></i>
               </div>
               <h4 style={{ fontSize: "1.6rem", color: "var(--color-primary)", margin: 0, fontWeight: "600" }}>Business Outcomes</h4>
@@ -260,8 +260,8 @@ export default function BusinessOperatingLayer() {
                 "Scalable digital operations",
                 "Structured online business ecosystems"
               ].map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "16px", color: "#1a2a35", fontWeight: "600", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
-                  <span style={{ color: "#8E44AD", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
+                <li key={i} style={{ display: "flex", gap: "16px", color: "#1a2a35", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
+                  <span style={{ color: "#2980B9", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
                   {item}
                 </li>
               ))}
