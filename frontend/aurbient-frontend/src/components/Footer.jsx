@@ -3,23 +3,41 @@ import logoImg from "../assets/logo.png";
 
 export default function Footer() {
   return (
-    <footer style={{ padding: "40px 0 0", background: "#FAFCFB", color: "var(--color-text)", borderTop: "1px solid #E2EBE7" }}>
+    <footer style={{ padding: "40px 0 0" }}>
       <div className="container">
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "1.5rem", paddingBottom: "28px" }}>
 
           {/* Brand */}
           <div style={{ maxWidth: "240px" }}>
-            <img 
-              src={logoImg} 
-              alt="Aurbient Technologies" 
-              style={{ 
-                height: '38px', 
-                objectFit: 'contain', 
-                marginBottom: "16px",
-                display: 'block'
-              }} 
-            />
-            <p style={{ lineHeight: "1.55", fontSize: "0.88rem", color: "#58798C" }}>
+            
+            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', marginBottom: "16px" }}>
+              {/* Bottom layer: Pure white silhouette of the entire logo to make the text visible */}
+              <img 
+                src={logoImg} 
+                alt="" 
+                style={{ 
+                  height: '38px', 
+                  objectFit: 'contain',
+                  filter: 'brightness(0) invert(1)' 
+                }} 
+              />
+              {/* Top layer: Original untouched logo, masked to only show the cyan 'a' icon on the left */}
+              <img 
+                src={logoImg} 
+                alt="Aurbient Technologies" 
+                style={{ 
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  height: '38px', 
+                  objectFit: 'contain',
+                  WebkitMaskImage: 'linear-gradient(to right, black 15%, transparent 28%)',
+                  maskImage: 'linear-gradient(to right, black 15%, transparent 28%)'
+                }} 
+              />
+            </div>
+
+            <p style={{ lineHeight: "1.55", fontSize: "0.88rem" }}>
               Engineering the invisible intelligence for modern enterprise operations.
             </p>
             {/* Social */}
@@ -46,7 +64,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 style={{ color: "var(--color-primary)", marginBottom: "0.75rem", fontSize: "0.9rem", fontWeight: "700" }}>Company</h4>
+            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Company</h4>
             {[
               { label: "About Us", to: "/about" },
               { label: "Vision & Philosophy", to: "/company/vision-philosophy" },
@@ -64,7 +82,7 @@ export default function Footer() {
 
           {/* Industries */}
           <div>
-            <h4 style={{ color: "var(--color-primary)", marginBottom: "0.75rem", fontSize: "0.9rem", fontWeight: "700" }}>Industries</h4>
+            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Industries</h4>
             {[
               { label: "Manufacturing", to: "/industries/manufacturing" },
               { label: "Industrial Operations", to: "/industries/industrial-operations" },
@@ -81,7 +99,7 @@ export default function Footer() {
 
           {/* Systems */}
           <div>
-            <h4 style={{ color: "var(--color-primary)", marginBottom: "0.75rem", fontSize: "0.9rem", fontWeight: "700" }}>Systems</h4>
+            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Systems</h4>
             {[
               { label: "Automation Ecosystems", to: "/systems/automation-ecosystems" },
               { label: "ERP Intelligence", to: "/systems/erp-intelligence" },
@@ -98,7 +116,7 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h4 style={{ color: "var(--color-primary)", marginBottom: "0.75rem", fontSize: "0.9rem", fontWeight: "700" }}>Solutions</h4>
+            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Solutions</h4>
             {[
               { label: "AI Automation", to: "/solutions/ai-automation" },
               { label: "Operational Intelligence", to: "/solutions/operational-intelligence" },
@@ -115,9 +133,9 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h4 style={{ color: "var(--color-primary)", marginBottom: "0.75rem", fontSize: "0.9rem", fontWeight: "700" }}>Connect</h4>
+            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Connect</h4>
             <p style={{ marginBottom: "0.5rem" }}>
-              <Link to="/contact" style={{ color: "var(--color-accent)", textDecoration: "none", fontWeight: "700", fontSize: "0.88rem", borderBottom: "1px solid rgba(19, 170, 179, 0.3)", paddingBottom: "2px" }}>Let's Build →</Link>
+              <Link to="/contact" style={{ color: "inherit", textDecoration: "none", fontWeight: "600", fontSize: "0.88rem", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: "2px" }}>Let's Build →</Link>
             </p>
 
             {/* Phone */}
@@ -126,20 +144,20 @@ export default function Footer() {
             </p>
 
             {/* Address */}
-            <p style={{ fontSize: "0.82rem", color: "#6A7B87", marginTop: "8px", lineHeight: "1.4", marginBottom: "14px" }}>
+            <p style={{ fontSize: "0.82rem", color: "#bbb", marginTop: "8px", lineHeight: "1.4", marginBottom: "14px" }}>
               Indore, Madhya Pradesh-452001, India
             </p>
 
             {/* Management & Support */}
-            <div style={{ paddingTop: "10px", borderTop: "1px solid #E2EBE7", marginBottom: "14px" }}>
-              <p style={{ fontSize: "0.75rem", color: "var(--color-primary)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "6px" }}>Management & Support</p>
-              <a href="mailto:rajthakur.aurbient@gmail.com" style={{ color: "var(--color-accent)", textDecoration: "none", fontSize: "0.83rem", display: "block" }}>rajthakur.aurbient@gmail.com</a>
+            <div style={{ paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)", marginBottom: "14px" }}>
+              <p style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "6px" }}>Management & Support</p>
+              <a href="mailto:rajthakur.aurbient@gmail.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.83rem", display: "block" }}>rajthakur.aurbient@gmail.com</a>
             </div>
 
             {/* Company email */}
-            <div style={{ paddingTop: "10px", borderTop: "1px solid #E2EBE7" }}>
-              <p style={{ fontSize: "0.75rem", color: "var(--color-primary)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "6px" }}>Company Email</p>
-              <a href="mailto:aurbient@gmail.com" style={{ color: "var(--color-accent)", textDecoration: "none", fontSize: "0.85rem" }}>aurbient@gmail.com</a>
+            <div style={{ paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+              <p style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "6px" }}>Company Email</p>
+              <a href="mailto:aurbient@gmail.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.85rem" }}>aurbient@gmail.com</a>
             </div>
 
             {/* LinkedIn */}
@@ -148,16 +166,16 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/aurbient/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "var(--color-primary)", textDecoration: "none", fontSize: "0.85rem", display: "inline-flex", alignItems: "center", gap: "6px", fontWeight: "600" }}
+                style={{ color: "var(--color-accent)", textDecoration: "none", fontSize: "0.85rem", display: "inline-flex", alignItems: "center", gap: "6px" }}
               >
-                <i className="fab fa-linkedin" style={{ color: "var(--color-accent)" }} /> Follow on LinkedIn
+                <i className="fab fa-linkedin" /> Follow on LinkedIn
               </a>
             </div>
           </div>
 
         </div>
 
-        <div style={{ textAlign: "center", padding: "18px 0", borderTop: "1px solid #E2EBE7", fontSize: "0.82rem", color: "#6A7B87" }}>
+        <div style={{ textAlign: "center", padding: "18px 0", borderTop: "1px solid rgba(255,255,255,0.1)", fontSize: "0.82rem" }}>
           © 2024 Aurbient Technologies — Calm enterprise futurism. Intelligent infrastructure.
         </div>
       </div>
