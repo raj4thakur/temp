@@ -10,18 +10,24 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ maxWidth: "240px" }}>
             
-            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', marginBottom: "16px" }}>
-              {/* Bottom layer: Pure white silhouette of the entire logo to make the text visible */}
+            <div style={{ position: 'relative', width: '200px', height: '38px', marginBottom: "16px" }}>
+              {/* Bottom layer: Pure white silhouette, strictly clipped to ONLY show the text (right 78%) */}
               <img 
                 src={logoImg} 
                 alt="" 
                 style={{ 
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
                   height: '38px', 
+                  width: '100%',
                   objectFit: 'contain',
-                  filter: 'brightness(0) invert(1)' 
+                  objectPosition: 'left center',
+                  filter: 'brightness(0) invert(1)',
+                  clipPath: 'polygon(23% 0, 100% 0, 100% 100%, 23% 100%)'
                 }} 
               />
-              {/* Top layer: Original untouched logo, masked to only show the cyan 'a' icon on the left */}
+              {/* Top layer: Original untouched logo, strictly clipped to ONLY show the cyan 'a' (left 23%) */}
               <img 
                 src={logoImg} 
                 alt="Aurbient Technologies" 
@@ -30,9 +36,10 @@ export default function Footer() {
                   top: 0,
                   left: 0,
                   height: '38px', 
+                  width: '100%',
                   objectFit: 'contain',
-                  WebkitMaskImage: 'linear-gradient(to right, black 15%, transparent 28%)',
-                  maskImage: 'linear-gradient(to right, black 15%, transparent 28%)'
+                  objectPosition: 'left center',
+                  clipPath: 'polygon(0 0, 23% 0, 23% 100%, 0 100%)'
                 }} 
               />
             </div>
