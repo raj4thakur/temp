@@ -28,7 +28,7 @@ export default function Navbar() {
     <nav className="navbar">
         <div className="container nav-flex">
             <Link to="/" className="logo" onClick={closeAll} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-              <img src={logoImg} alt="Aurbient Technologies" style={{ height: '65px', objectFit: 'contain' }} />
+              <img src={logoImg} alt="Aurbient Technologies" style={{ height: '44px', objectFit: 'contain' }} />
             </Link>
             
             {/* Hamburger Button */}
