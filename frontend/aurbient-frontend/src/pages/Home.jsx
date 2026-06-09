@@ -43,35 +43,39 @@ export default function Home() {
     { img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1200&q=80", title: "AI Workflow Systems" }
   ];
 
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const testimonials = [
+  const [activeTestimonial, setActiveTestimonial] = useState(null);
+  const faqs = [
     {
-      category: "Manufacturing Operations",
-      text: "“Aurbient Technologies helped us improve operational visibility and streamline internal workflow coordination across departments. Their understanding of both technology and business operations brought structure and clarity to our reporting processes.”",
-      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200",
-      name: "Operations Management Team",
-      company: "Onix Private limited"
+      question: "How do you approach a new project?",
+      answer: "We begin by understanding your business operations, workflows, and existing systems before recommending technology. Our goal is to identify operational bottlenecks, visibility gaps, and inefficiencies, then design solutions that create measurable business impact."
     },
     {
-      category: "Business Automation & Digital Systems",
-      text: "“The team demonstrated a strong understanding of automation workflows and operational efficiency. Their ability to align technology with practical business requirements helped us improve communication flow and management accessibility.”",
-      img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200&h=200",
-      name: "Director",
-      company: "Industrial Business Solutions Pvt. Ltd."
+      question: "Do you only build software, or do you provide consulting as well?",
+      answer: "We combine consulting, architecture, and implementation. Every engagement starts with understanding business objectives and operational challenges, ensuring that technology decisions align with long-term organizational goals."
     },
     {
-      category: "Enterprise Digital Infrastructure",
-      text: "“Aurbient Technologies delivered a modern and scalable digital environment that improved our online communication structure and operational accessibility. Their strategic approach made the implementation process smooth and highly professional.”",
-      img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200",
-      name: "Management Team",
-      company: "Nexora Enterprise Group"
+      question: "What types of businesses do you work with?",
+      answer: "We primarily support organizations in manufacturing, logistics, retail, and enterprise operations that are looking to improve visibility, automate workflows, modernize systems, and scale efficiently."
     },
     {
-      category: "AI & Workflow Systems",
-      text: "“What stood out most was their systems-thinking approach. Instead of only focusing on development, they analyzed operational challenges and proposed intelligent workflow solutions that supported long-term scalability.”",
-      img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
-      name: "Operations Lead",
-      company: "Vertex Process Systems"
+      question: "How do you determine if a business needs ERP, automation, or AI?",
+      answer: "We assess existing processes, reporting structures, and operational challenges. In many cases, organizations need stronger operational foundations before introducing advanced automation or AI capabilities."
+    },
+    {
+      question: "Can you integrate with our existing systems?",
+      answer: "Yes. We design solutions that integrate with existing business applications, databases, ERP systems, and operational workflows wherever possible to minimize disruption and maximize adoption."
+    },
+    {
+      question: "What makes Aurbient different from a traditional software vendor?",
+      answer: "We focus on business operations first and technology second. Our approach combines systems thinking, operational understanding, and engineering expertise to create solutions that improve decision-making, efficiency, and scalability."
+    },
+    {
+      question: "What outcomes can organizations expect?",
+      answer: "Depending on the engagement, outcomes may include improved operational visibility, streamlined workflows, reduced manual effort, better reporting accuracy, stronger cross-department coordination, and more informed decision-making."
+    },
+    {
+      question: "How do we get started?",
+      answer: "The process begins with a strategy discussion where we review your current operations, challenges, and objectives. From there, we identify opportunities and propose a practical roadmap tailored to your business."
     }
   ];
 
@@ -82,21 +86,6 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [testimonials.length]);
-
-  const nextTestimonial = () => {
-    setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
   return (
     <main style={{ background: "#F4F9FB" }}>
       {/* 1. Cinematic Hero Section */}
@@ -104,7 +93,7 @@ export default function Home() {
         position: 'relative', 
         overflow: 'hidden', 
         background: 'linear-gradient(180deg, #FDFEFE 0%, #F4F9FB 100%)', 
-        padding: '160px 0 120px',
+        padding: '100px 0 80px',
         display: 'flex',
         alignItems: 'center'
       }}>
@@ -129,7 +118,7 @@ export default function Home() {
               marginBottom: '28px',
               border: '1.5px solid rgba(19,170,179,0.15)'
             }}>
-              <i className="fas fa-project-diagram" style={{ fontSize: '0.9rem' }}></i> Enterprise IT Services & AI Automation
+              <i className="fas fa-microchip" style={{ fontSize: '0.9rem' }}></i> Engineering & Technology Partner
             </span>
             
             <h1 style={{ 
@@ -140,7 +129,7 @@ export default function Home() {
               marginBottom: '24px',
               letterSpacing: '-0.03em'
             }}>
-              Modern IT Services & <span style={{ color: 'var(--color-accent)' }}>Intelligent Automation</span>
+              Architecting the <span style={{ color: 'var(--color-accent)' }}>Intelligent Enterprise</span>
             </h1>
             
             <p style={{ 
@@ -150,7 +139,7 @@ export default function Home() {
               maxWidth: '90%', 
               lineHeight: '1.75' 
             }}>
-              We design, build, and manage custom software, enterprise systems integration, secure cloud infrastructure, and self-healing AI workflows that unify your business operations.
+              We engineer mission-critical software, unified digital infrastructure, and AI-driven automation workflows that scale your business operations and eliminate friction.
             </p>
             
             <div style={{ display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -164,7 +153,7 @@ export default function Home() {
                 transition: 'all 0.3s ease',
                 fontWeight: '600'
               }}>
-                Contact Us →
+                Start a Project →
               </Link>
             </div>
           </div>
@@ -209,7 +198,7 @@ export default function Home() {
 
       {/* 2. Deep Midnight Blue Stat Break (Philosophy Section) */}
       <section style={{ 
-        padding: "100px 0", 
+        padding: "60px 0", 
         background: "linear-gradient(135deg, var(--color-primary) 0%, #0C171F 100%)", 
         color: "white",
         position: 'relative',
@@ -252,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* 3. Core Services Grid */}
-      <section style={{ padding: "100px 0", background: "white" }}>
+      <section style={{ padding: "60px 0", background: "white" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>High-Performance Architecture</span>
@@ -333,12 +322,10 @@ export default function Home() {
               }}
             >
             {[
-              { icon: "fa-brain", title: "AI Integration & Intelligent Workflows", desc: "AI-assisted workflow systems and intelligent operational automation designed to support scalable business execution.", path: "/solutions/ai-automation", img: "/images/cobot-psychology.jpeg" },
-              { icon: "fa-cogs", title: "Business Process Automation", desc: "Automation ecosystems focused on improving execution speed, operational consistency, and workflow efficiency.", path: "/solutions/process-optimization", img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" },
-              { icon: "fa-eye", title: "Operational Intelligence Systems", desc: "Centralized visibility environments for real-time monitoring, management reporting, and enterprise coordination.", path: "/solutions/operational-intelligence", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" },
-              { icon: "fa-sitemap", title: "ERP & Management Platforms", desc: "ERP-oriented operational systems focused on enterprise coordination, workflow scalability, and management visibility.", path: "/solutions/business-systems", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" },
-              { icon: "fa-layer-group", title: "Scalable Digital Infrastructure", desc: "Enterprise-grade infrastructure supporting scalability, performance, operational continuity, and intelligent system integration.", path: "/solutions/enterprise-infrastructure", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" },
-              { icon: "fa-globe", title: "Web & Enterprise Solutions", desc: "Enterprise web and digital systems focused on communication clarity, operational accessibility, and professional business presence.", path: "/solutions/system-integration", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" }
+              { icon: "fa-brain", title: "AI & Intelligent Automation", desc: "Self-healing AI workflows and automation pipelines designed to scale operations and eliminate manual friction.", path: "/solutions/ai-automation", img: "/images/cobot-psychology.jpeg" },
+              { icon: "fa-laptop-code", title: "Enterprise Software Engineering", desc: "Mission-critical custom applications and unified management systems engineered for reliability and performance.", path: "/solutions/business-systems", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" },
+              { icon: "fa-layer-group", title: "Cloud & Digital Infrastructure", desc: "Secure, scalable backend environments and server architectures that form the backbone of enterprise operations.", path: "/solutions/enterprise-infrastructure", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" },
+              { icon: "fa-eye", title: "Operational Intelligence", desc: "Centralized telemetry, data dashboards, and real-time monitoring solutions to unblock management visibility.", path: "/solutions/operational-intelligence", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" }
             ].map((serv, idx) => (
               <div key={idx} className="service-hex-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start' }}>
                 <div className="service-hex-content" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -366,7 +353,7 @@ export default function Home() {
     </section>
 
       {/* 4. Transformation Layer Section */}
-      <section style={{ padding: "100px 0", background: "#F4F9FB" }}>
+      <section style={{ padding: "60px 0", background: "#F4F9FB" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
@@ -404,9 +391,9 @@ export default function Home() {
 
 
       {/* 6. Industries as Living Ecosystems */}
-      <section style={{ padding: "100px 0", background: "#F4F9FB", borderTop: "1px solid #E2EBE7" }}>
+      <section style={{ padding: "60px 0", background: "#F4F9FB", borderTop: "1px solid #E2EBE7" }}>
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "60px" }}>
+          <div style={{ textAlign: "center", marginBottom: "36px" }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Cross-Industry Domain Mastery</span>
             <h2 style={{ fontSize: "2.4rem", fontWeight: "700", color: "var(--color-primary)", margin: 0 }}>Industries as living ecosystems</h2>
             <p style={{ color: "#395568", marginTop: "16px", fontSize: "1.1rem" }}>Connected workflows, operational depth, and intelligence scaled across domains</p>
@@ -509,7 +496,7 @@ export default function Home() {
       </section>
 
       {/* 7. Featured Case Studies */}
-      <section style={{ padding: "100px 0", background: "#FFFFFF" }}>
+      <section style={{ padding: "60px 0", background: "#FFFFFF" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Proven Impact</span>
@@ -580,122 +567,71 @@ export default function Home() {
 
 
       {/* 9. Testimonials (Operational Impact) */}
-      <section style={{ padding: "100px 0", background: "white" }}>
+      <section style={{ padding: "60px 0", background: "white" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
-            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Validation</span>
-            <h2 style={{ fontSize: "2.4rem", fontWeight: "700", color: "var(--color-primary)", margin: 0 }}>Operational Impact</h2>
-            <p style={{ color: "#395568", marginTop: "16px", fontSize: "1.1rem" }}>Direct feedback from enterprises transforming their digital infrastructure with Aurbient Technologies.</p>
+            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Common Queries</span>
+            <h2 style={{ fontSize: "2.4rem", fontWeight: "700", color: "var(--color-primary)", margin: 0 }}>Frequently Asked Questions</h2>
+            <p style={{ color: "#395568", marginTop: "16px", fontSize: "1.1rem" }}>Everything you need to know about partnering with Aurbient Technologies.</p>
           </div>
           
-          <div style={{ position: "relative", maxWidth: "850px", margin: "0 auto", padding: "0 20px" }}>
-            {/* Left Navigation Arrow */}
-            <button 
-              className="testimonial-arrow"
-              onClick={prevTestimonial}
-              aria-label="Previous Testimonial"
-              style={{ 
-                position: "absolute", 
-                left: "-60px", 
-                top: "50%", 
-                transform: "translateY(-50%)", 
-                width: "50px", 
-                height: "50px", 
-                borderRadius: "50%", 
-                background: "white", 
-                border: "1px solid #E2EBE7", 
-                color: "var(--color-primary)", 
-                fontSize: "1.1rem", 
-                display: "flex", 
-                alignItems: "center", 
-                justifyContent: "center", 
-                cursor: "pointer", 
-                boxShadow: "0 4px 15px rgba(0,0,0,0.05)",
-                zIndex: 10,
-                transition: "all 0.3s ease",
-                outline: "none"
-              }}
-            >
-              <i className="fas fa-chevron-left"></i>
-            </button>
-
-            {/* Right Navigation Arrow */}
-            <button 
-              className="testimonial-arrow"
-              onClick={nextTestimonial}
-              aria-label="Next Testimonial"
-              style={{ 
-                position: "absolute", 
-                right: "-60px", 
-                top: "50%", 
-                transform: "translateY(-50%)", 
-                width: "50px", 
-                height: "50px", 
-                borderRadius: "50%", 
-                background: "white", 
-                border: "1px solid #E2EBE7", 
-                color: "var(--color-primary)", 
-                fontSize: "1.1rem", 
-                display: "flex", 
-                alignItems: "center", 
-                justifyContent: "center", 
-                cursor: "pointer", 
-                boxShadow: "0 4px 15px rgba(0,0,0,0.05)",
-                zIndex: 10,
-                transition: "all 0.3s ease",
-                outline: "none"
-              }}
-            >
-              <i className="fas fa-chevron-right"></i>
-            </button>
-
-            {/* Slider Wrapper */}
-            <div style={{ overflow: "hidden", width: "100%", borderRadius: "24px", border: "1.5px solid #E2EBE7", boxShadow: "0 20px 40px rgba(14,25,33,0.04)" }}>
-              <div style={{ 
-                display: "flex", 
-                width: "100%",
-                transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)", 
-                transform: `translateX(-${activeTestimonial * 100}%)` 
-              }}>
-                {testimonials.map((item, index) => (
-                  <div key={index} style={{ flex: "0 0 100%", maxWidth: "100%", boxSizing: "border-box", padding: "40px" }}>
-                    <div style={{ position: "relative", width: "100%", boxSizing: "border-box" }}>
-                      <i className="fas fa-quote-right" style={{ position: "absolute", top: "0", right: "0", fontSize: "3rem", color: "rgba(19, 170, 179, 0.05)" }}></i>
-                      <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "1px", marginBottom: "20px", display: "block" }}>{item.category}</span>
-                      <p style={{ color: "#1a2a35", lineHeight: "1.75", fontStyle: "italic", marginBottom: "30px", fontSize: "1.1rem" }}>{item.text}</p>
-                      <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                        <img src={item.img} alt={item.name} style={{ width: "56px", height: "56px", borderRadius: "50%", objectFit: "cover", border: "2px solid #E4F1F3" }} />
-                        <div>
-                          <h4 style={{ margin: "0 0 4px", fontSize: "1.05rem", color: "var(--color-primary)", fontWeight: "700" }}>{item.name}</h4>
-                          <small style={{ color: "#58798C", fontWeight: "600", fontSize: "0.9rem" }}>{item.company}</small>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Navigation Dots */}
-            <div style={{ display: "flex", justifyContent: "center", gap: "10px", marginTop: "32px" }}>
-              {testimonials.map((_, index) => (
+          <div style={{ maxWidth: "850px", margin: "0 auto", padding: "0 20px" }}>
+            {faqs.map((item, index) => (
+              <div 
+                key={index} 
+                style={{ 
+                  marginBottom: "16px", 
+                  borderRadius: "16px", 
+                  background: activeTestimonial === index ? "var(--color-primary)" : "#F4F9FB",
+                  border: "1px solid #E2EBE7",
+                  overflow: "hidden",
+                  transition: "all 0.3s ease"
+                }}
+              >
                 <button 
-                  key={index} 
-                  onClick={() => setActiveTestimonial(index)}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                  style={{ 
-                    width: activeTestimonial === index ? "24px" : "8px", 
-                    height: "8px", 
-                    borderRadius: "8px", 
-                    background: activeTestimonial === index ? "var(--color-accent)" : "#CBE7E9", 
+                  onClick={() => setActiveTestimonial(activeTestimonial === index ? null : index)}
+                  style={{
+                    width: "100%",
+                    padding: "24px 32px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    background: "transparent",
                     border: "none",
                     cursor: "pointer",
-                    transition: "all 0.3s ease",
-                    padding: 0
+                    color: activeTestimonial === index ? "white" : "var(--color-primary)",
+                    fontSize: "1.15rem",
+                    fontWeight: "600",
+                    textAlign: "left",
+                    lineHeight: "1.5"
                   }}
-                />
-              ))}
-            </div>
+                >
+                  <span style={{ display: "flex", alignItems: "flex-start", gap: "16px" }}>
+                    <i className="fas fa-question-circle" style={{ color: activeTestimonial === index ? "var(--color-accent)" : "#CBE7E9", fontSize: "1.2rem", marginTop: "4px" }}></i>
+                    {item.question}
+                  </span>
+                  <i 
+                    className={`fas fa-chevron-down`} 
+                    style={{ 
+                      transform: activeTestimonial === index ? "rotate(180deg)" : "rotate(0)", 
+                      transition: "transform 0.3s ease",
+                      color: activeTestimonial === index ? "white" : "var(--color-primary)",
+                      marginLeft: "16px",
+                      flexShrink: 0
+                    }}
+                  ></i>
+                </button>
+                
+                <div style={{
+                  maxHeight: activeTestimonial === index ? "500px" : "0",
+                  opacity: activeTestimonial === index ? 1 : 0,
+                  transition: "all 0.4s ease",
+                  padding: activeTestimonial === index ? "0 32px 32px 32px" : "0 32px",
+                }}>
+                  <p style={{ color: activeTestimonial === index ? "rgba(255,255,255,0.9)" : "#395568", lineHeight: "1.8", marginBottom: "0", fontSize: "1.1rem" }}>{item.answer}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -768,7 +704,7 @@ export default function Home() {
       </section>
 
       {/* 11. Final CTA Layer */}
-      <section style={{ padding: "100px 0", background: "var(--color-primary)", color: "white", position: "relative", overflow: "hidden" }}>
+      <section style={{ padding: "60px 0", background: "var(--color-primary)", color: "white", position: "relative", overflow: "hidden" }}>
         <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', background: 'radial-gradient(circle at 80% 20%, rgba(19,170,179,0.15) 0%, transparent 50%)', pointerEvents: 'none' }}></div>
         <div className="container" id="build" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
           <div className="build-ecosystem" style={{ background: "transparent", border: "none", padding: 0 }}>

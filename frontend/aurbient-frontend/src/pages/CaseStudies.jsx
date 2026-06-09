@@ -1,13 +1,11 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import OperationalVisibility from "./OperationalVisibility";
-import AIWorkflowSystems from "./AIWorkflowSystems";
-import BusinessOperatingLayer from "./BusinessOperatingLayer";
-import AutomationEcosystems from "./AutomationEcosystems";
-import ERPIntelligence from "./ERPIntelligence";
+import OperationalVisibility from "../components/case-studies/OperationalVisibility";
+import AIWorkflowSystems from "../components/case-studies/AIWorkflowSystems";
+import BusinessOperatingLayer from "../components/case-studies/BusinessOperatingLayer";
+import AutomationEcosystems from "../components/case-studies/AutomationEcosystems";
+import ERPIntelligence from "../components/case-studies/ERPIntelligence";
 import Logistics from "./Logistics";
-import RetailCommerce from "./RetailCommerce";
-import CloudInfrastructure from "./CloudInfrastructure";
 
 const fallbackImages = {
   "01": [
@@ -367,7 +365,7 @@ export default function CaseStudies() {
     <main>
       <section className="hero" style={{ 
         position: "relative", 
-        padding: "160px 0 140px", 
+        padding: "100px 0 90px", 
         minHeight: "70vh",
         display: "flex",
         alignItems: "center",

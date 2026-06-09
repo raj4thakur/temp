@@ -1375,7 +1375,7 @@ export default function Insights() {
                       borderRadius: "20px",
                       border: "1.5px solid #E2EBE7",
                       padding: "40px",
-                      marginBottom: "50px",
+                      marginBottom: "30px",
                       boxShadow: "0 10px 30px rgba(0,0,0,0.01)"
                     }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "20px", marginBottom: "20px" }}>

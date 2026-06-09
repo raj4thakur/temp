@@ -29,7 +29,7 @@ const outcomes = [
 export default function SolutionsOperationalIntelligence() {
   return (
     <main style={{ background: "#F4F9FB", minHeight: "100vh" }}>
-      <section className="hero case-study-hero" style={{ position: "relative", padding: "180px 0 160px", backgroundImage: "url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80)", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="hero case-study-hero" style={{ position: "relative", padding: "110px 0 100px", backgroundImage: "url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(14,25,33,0.97) 0%, rgba(14,25,33,0.75) 55%, rgba(14,25,33,0.4) 100%)", zIndex: 1 }} />
         <div className="container" style={{ position: "relative", zIndex: 2, color: "white" }}>
           <Link to="/" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "rgba(255,255,255,0.7)", textDecoration: "none", fontSize: "0.95rem", fontWeight: "500", marginBottom: "28px" }} onMouseOver={e => e.currentTarget.style.color = "#FFFFFF"} onMouseOut={e => e.currentTarget.style.color = "rgba(255,255,255,0.7)"}>
@@ -41,8 +41,8 @@ export default function SolutionsOperationalIntelligence() {
         </div>
       </section>
 
-      <div className="container" style={{ position: "relative", zIndex: 10, marginTop: "-80px", paddingBottom: "100px" }}>
-        <div className="eco-card" style={{ background: "white", padding: "56px", borderRadius: "24px", boxShadow: "0 20px 60px rgba(0,0,0,0.06)", marginBottom: "50px" }}>
+      <div className="container" style={{ position: "relative", zIndex: 10, marginTop: "-80px", paddingBottom: "60px" }}>
+        <div className="eco-card" style={{ background: "white", padding: "56px", borderRadius: "24px", boxShadow: "0 20px 60px rgba(0,0,0,0.06)", marginBottom: "30px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
               <span style={{ fontSize: "0.8rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Section Overview</span>
@@ -61,7 +61,54 @@ export default function SolutionsOperationalIntelligence() {
           </div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "36px", marginBottom: "50px" }}>
+
+        {/* INTERACTIVE ANALYTICS UI */}
+        <div style={{ marginBottom: "48px", background: "white", padding: "60px", borderRadius: "24px", border: "1.5px solid #E2EBE7", boxShadow: "0 20px 40px rgba(0,0,0,0.03)" }}>
+          <div style={{ textAlign: "center", marginBottom: "30px" }}>
+            <span style={{ fontSize: "0.85rem", color: "#E67E22", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", display: "block", marginBottom: "12px" }}>Insights</span>
+            <h3 style={{ fontSize: "2.2rem", fontWeight: "700", color: "var(--color-primary)" }}>Real-Time Operational Telemetry</h3>
+            <p style={{ color: "#58798C", fontSize: "1.1rem", maxWidth: "600px", margin: "16px auto 0" }}>Turning raw data streams into actionable management dashboards.</p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+            <div style={{ background: "#F4F9FB", padding: "32px", borderRadius: "20px", border: "1px solid #E2EBE7" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "24px" }}>
+                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--color-primary)" }}>Resource Utilization</h4>
+                <span style={{ color: "#27AE60", fontWeight: "bold", fontSize: "0.9rem" }}>+14.2%</span>
+              </div>
+              {/* Fake Graph */}
+              <div style={{ height: "120px", display: "flex", alignItems: "flex-end", gap: "10px" }}>
+                {[40, 65, 45, 80, 55, 90, 75].map((h, i) => (
+                  <div key={i} style={{ flex: 1, height: h + "%", background: i === 6 ? "var(--color-accent)" : "#CBE7E9", borderRadius: "4px 4px 0 0", transition: "height 0.5s ease" }}></div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ background: "#F4F9FB", padding: "32px", borderRadius: "20px", border: "1px solid #E2EBE7" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "24px" }}>
+                <h4 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--color-primary)" }}>Anomaly Detections</h4>
+                <span style={{ color: "#E67E22", fontWeight: "bold", fontSize: "0.9rem" }}>Active Monitoring</span>
+              </div>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "12px" }}>
+                <li style={{ display: "flex", justifyContent: "space-between", paddingBottom: "12px", borderBottom: "1px solid #E2EBE7", fontSize: "0.95rem" }}>
+                  <span style={{ color: "#395568" }}><i className="fas fa-exclamation-circle" style={{ color: "#E67E22", marginRight: "8px" }}></i> Supply Chain Delay</span>
+                  <span style={{ color: "var(--color-primary)", fontWeight: "600" }}>Detected</span>
+                </li>
+                <li style={{ display: "flex", justifyContent: "space-between", paddingBottom: "12px", borderBottom: "1px solid #E2EBE7", fontSize: "0.95rem" }}>
+                  <span style={{ color: "#395568" }}><i className="fas fa-check-circle" style={{ color: "#27AE60", marginRight: "8px" }}></i> Database Sync</span>
+                  <span style={{ color: "var(--color-primary)", fontWeight: "600" }}>Stable</span>
+                </li>
+                <li style={{ display: "flex", justifyContent: "space-between", fontSize: "0.95rem" }}>
+                  <span style={{ color: "#395568" }}><i className="fas fa-check-circle" style={{ color: "#27AE60", marginRight: "8px" }}></i> API Response</span>
+                  <span style={{ color: "var(--color-primary)", fontWeight: "600" }}>32ms</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "36px", marginBottom: "30px" }}>
           <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", borderTop: "4px solid var(--color-accent)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
               <div style={{ width: "52px", height: "52px", borderRadius: "14px", background: "rgba(19,170,179,0.1)", color: "var(--color-accent)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem" }}><i className="fas fa-cubes" /></div>
@@ -90,7 +137,7 @@ export default function SolutionsOperationalIntelligence() {
           </div>
         </div>
 
-        <div style={{ marginBottom: "80px" }}>
+        <div style={{ marginBottom: "48px" }}>
           <div style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto 50px" }}>
             <span style={{ fontSize: "0.8rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "10px", display: "block" }}>Focus</span>
             <h2 style={{ fontSize: "2.2rem", fontWeight: "700", color: "var(--color-primary)", marginBottom: "16px" }}>Operational Focus Areas</h2>

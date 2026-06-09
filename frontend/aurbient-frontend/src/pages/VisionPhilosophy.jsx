@@ -10,7 +10,7 @@ export default function VisionPhilosophy() {
   return (
     <main style={{ background: "#F4F9FB" }}>
       <section className="hero" style={{ 
-        position: "relative", padding: "180px 0 160px", minHeight: "75vh", display: "flex", alignItems: "center", overflow: "hidden" 
+        position: "relative", padding: "110px 0 100px", minHeight: "75vh", display: "flex", alignItems: "center", overflow: "hidden" 
       }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${images.hero})`, backgroundSize: "cover", backgroundPosition: "center", zIndex: 0 }}></div>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at center, rgba(14,25,33,0.4) 0%, rgba(14,25,33,0.9) 100%)", zIndex: 1 }}></div>
@@ -28,7 +28,7 @@ export default function VisionPhilosophy() {
         </div>
       </section>
 
-      <section style={{ padding: "100px 0", background: "white" }}>
+      <section style={{ padding: "60px 0", background: "white" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
@@ -62,7 +62,7 @@ export default function VisionPhilosophy() {
         </div>
       </section>
 
-      <section style={{ padding: "100px 0", background: "linear-gradient(135deg, var(--color-primary) 0%, #111d25 100%)", color: "white" }}>
+      <section style={{ padding: "60px 0", background: "linear-gradient(135deg, var(--color-primary) 0%, #111d25 100%)", color: "white" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Foundational Layers</span>

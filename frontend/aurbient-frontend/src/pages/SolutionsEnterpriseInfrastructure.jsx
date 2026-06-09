@@ -29,7 +29,7 @@ const outcomes = [
 export default function SolutionsEnterpriseInfrastructure() {
   return (
     <main style={{ background: "#F4F9FB", minHeight: "100vh" }}>
-      <section className="hero case-study-hero" style={{ position: "relative", padding: "180px 0 160px", backgroundImage: "url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80)", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="hero case-study-hero" style={{ position: "relative", padding: "110px 0 100px", backgroundImage: "url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(14,25,33,0.97) 0%, rgba(14,25,33,0.75) 55%, rgba(14,25,33,0.4) 100%)", zIndex: 1 }} />
         <div className="container" style={{ position: "relative", zIndex: 2, color: "white" }}>
           <Link to="/" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "rgba(255,255,255,0.7)", textDecoration: "none", fontSize: "0.95rem", fontWeight: "500", marginBottom: "28px" }} onMouseOver={e => e.currentTarget.style.color = "#FFFFFF"} onMouseOut={e => e.currentTarget.style.color = "rgba(255,255,255,0.7)"}>
@@ -41,8 +41,8 @@ export default function SolutionsEnterpriseInfrastructure() {
         </div>
       </section>
 
-      <div className="container" style={{ position: "relative", zIndex: 10, marginTop: "-80px", paddingBottom: "100px" }}>
-        <div className="eco-card" style={{ background: "white", padding: "56px", borderRadius: "24px", boxShadow: "0 20px 60px rgba(0,0,0,0.06)", marginBottom: "50px" }}>
+      <div className="container" style={{ position: "relative", zIndex: 10, marginTop: "-80px", paddingBottom: "60px" }}>
+        <div className="eco-card" style={{ background: "white", padding: "56px", borderRadius: "24px", boxShadow: "0 20px 60px rgba(0,0,0,0.06)", marginBottom: "30px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
               <span style={{ fontSize: "0.8rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Section Overview</span>
@@ -61,7 +61,34 @@ export default function SolutionsEnterpriseInfrastructure() {
           </div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "36px", marginBottom: "50px" }}>
+
+        {/* INTERACTIVE CLOUD TOPOLOGY UI */}
+        <div style={{ marginBottom: "48px", background: "white", padding: "60px", borderRadius: "24px", border: "1.5px solid #E2EBE7", boxShadow: "0 20px 40px rgba(0,0,0,0.03)" }}>
+          <div style={{ textAlign: "center", marginBottom: "30px" }}>
+            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", display: "block", marginBottom: "12px" }}>Topology</span>
+            <h3 style={{ fontSize: "2.2rem", fontWeight: "700", color: "var(--color-primary)" }}>Digital Infrastructure Ecosystem</h3>
+            <p style={{ color: "#58798C", fontSize: "1.1rem", maxWidth: "600px", margin: "16px auto 0" }}>High-availability, secure, and scalable cloud networks for modern enterprises.</p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "30px" }}>
+            {[
+              { title: "Edge Network", details: "Global CDN, Load Balancing, DDoS Protection", icon: "fa-network-wired" },
+              { title: "Compute Cluster", details: "Auto-scaling containers, Serverless functions", icon: "fa-server" },
+              { title: "Data Lake", details: "Encrypted storage, Redundant backups, Analytics", icon: "fa-database" }
+            ].map((node, idx) => (
+              <div key={idx} className="eco-card" style={{ background: "white", border: "1.5px solid #E2EBE7", borderRadius: "16px", padding: "30px", transition: "transform 0.3s ease, border-color 0.3s ease", cursor: "pointer" }} onMouseOver={e => e.currentTarget.style.borderColor = 'var(--color-accent)'} onMouseOut={e => e.currentTarget.style.borderColor = '#E2EBE7'}>
+                <div style={{ width: "60px", height: "60px", borderRadius: "14px", background: "rgba(19,170,179,0.1)", color: "var(--color-accent)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.6rem", marginBottom: "20px" }}>
+                  <i className={"fas " + node.icon}></i>
+                </div>
+                <h4 style={{ fontSize: "1.3rem", fontWeight: "700", marginBottom: "12px", color: "var(--color-primary)" }}>{node.title}</h4>
+                <p style={{ color: "#58798C", fontSize: "0.95rem", lineHeight: "1.6", margin: 0 }}>{node.details}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "36px", marginBottom: "30px" }}>
           <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", borderTop: "4px solid var(--color-accent)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
               <div style={{ width: "52px", height: "52px", borderRadius: "14px", background: "rgba(19,170,179,0.1)", color: "var(--color-accent)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem" }}><i className="fas fa-cubes" /></div>
@@ -90,7 +117,7 @@ export default function SolutionsEnterpriseInfrastructure() {
           </div>
         </div>
 
-        <div style={{ marginBottom: "80px" }}>
+        <div style={{ marginBottom: "48px" }}>
           <div style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto 50px" }}>
             <span style={{ fontSize: "0.8rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "10px", display: "block" }}>Focus</span>
             <h2 style={{ fontSize: "2.2rem", fontWeight: "700", color: "var(--color-primary)", marginBottom: "16px" }}>Operational Focus Areas</h2>

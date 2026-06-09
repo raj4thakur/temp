@@ -29,7 +29,7 @@ const outcomes = [
 export default function SolutionsAIAutomation() {
   return (
     <main style={{ background: "#F4F9FB", minHeight: "100vh" }}>
-      <section className="hero case-study-hero" style={{ position: "relative", padding: "180px 0 160px", backgroundImage: "url(/images/cobot-psychology.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="hero case-study-hero" style={{ position: "relative", padding: "110px 0 100px", backgroundImage: "url(/images/cobot-psychology.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(14,25,33,0.97) 0%, rgba(14,25,33,0.75) 55%, rgba(14,25,33,0.4) 100%)", zIndex: 1 }} />
         <div className="container" style={{ position: "relative", zIndex: 2, color: "white" }}>
           <Link to="/" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "rgba(255,255,255,0.7)", textDecoration: "none", fontSize: "0.95rem", fontWeight: "500", marginBottom: "28px", transition: "all 0.2s" }} onMouseOver={e => e.currentTarget.style.color = "#FFFFFF"} onMouseOut={e => e.currentTarget.style.color = "rgba(255,255,255,0.7)"}>
@@ -41,10 +41,10 @@ export default function SolutionsAIAutomation() {
         </div>
       </section>
 
-      <div className="container" style={{ position: "relative", zIndex: 10, marginTop: "-80px", paddingBottom: "100px" }}>
+      <div className="container" style={{ position: "relative", zIndex: 10, marginTop: "-80px", paddingBottom: "60px" }}>
 
         {/* Overview + Insight */}
-        <div className="eco-card" style={{ background: "white", padding: "56px", borderRadius: "24px", boxShadow: "0 20px 60px rgba(0,0,0,0.06)", marginBottom: "50px" }}>
+        <div className="eco-card" style={{ background: "white", padding: "56px", borderRadius: "24px", boxShadow: "0 20px 60px rgba(0,0,0,0.06)", marginBottom: "30px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
               <span style={{ fontSize: "0.8rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Section Overview</span>
@@ -63,8 +63,40 @@ export default function SolutionsAIAutomation() {
           </div>
         </div>
 
+
+        {/* INTERACTIVE AI PIPELINE UI */}
+        <div style={{ marginBottom: "48px", background: "white", padding: "60px", borderRadius: "24px", border: "1.5px solid #E2EBE7", boxShadow: "0 20px 40px rgba(0,0,0,0.03)" }}>
+          <div style={{ textAlign: "center", marginBottom: "30px" }}>
+            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", display: "block", marginBottom: "12px" }}>System Architecture</span>
+            <h3 style={{ fontSize: "2.2rem", fontWeight: "700", color: "var(--color-primary)" }}>Intelligent Automation Pipeline</h3>
+            <p style={{ color: "#58798C", fontSize: "1.1rem", maxWidth: "600px", margin: "16px auto 0" }}>How our AI systems process business data and execute automated workflows.</p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px", position: "relative" }}>
+            {/* Connecting Line */}
+            <div style={{ position: "absolute", top: "40px", left: "12%", right: "12%", height: "3px", background: "linear-gradient(90deg, rgba(19,170,179,0.2) 0%, var(--color-accent) 50%, rgba(19,170,179,0.2) 100%)", zIndex: 1 }}></div>
+
+            {[
+              { step: "01", title: "Data Ingestion", desc: "Aggregating structured and unstructured data from ERPs, forms, and APIs.", icon: "fa-database" },
+              { step: "02", title: "Cognitive Processing", desc: "Applying NLP and machine learning models to extract context and intent.", icon: "fa-brain" },
+              { step: "03", title: "Automated Execution", desc: "Routing decisions, updating ledgers, and triggering external API actions.", icon: "fa-cogs" },
+              { step: "04", title: "Operational Insight", desc: "Generating real-time reporting and predictive analytics for management.", icon: "fa-chart-pie" }
+            ].map((node, idx) => (
+              <div key={idx} style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "20px" }}>
+                <div style={{ width: "80px", height: "80px", borderRadius: "50%", background: "white", border: "3px solid var(--color-accent)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 24px", fontSize: "1.8rem", color: "var(--color-primary)", boxShadow: "0 10px 25px rgba(19,170,179,0.2)", position: "relative", transition: "all 0.3s" }}>
+                  <i className={"fas " + node.icon}></i>
+                  <div style={{ position: "absolute", top: "-10px", right: "-10px", background: "var(--color-primary)", color: "white", width: "28px", height: "28px", borderRadius: "50%", fontSize: "0.75rem", fontWeight: "bold", display: "flex", alignItems: "center", justifyContent: "center" }}>{node.step}</div>
+                </div>
+                <h4 style={{ fontSize: "1.2rem", fontWeight: "700", color: "var(--color-primary)", marginBottom: "12px" }}>{node.title}</h4>
+                <p style={{ color: "#58798C", fontSize: "0.95rem", lineHeight: "1.6" }}>{node.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+
         {/* What We Deliver + Outcomes side by side */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "36px", marginBottom: "50px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "36px", marginBottom: "30px" }}>
           <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", borderTop: "4px solid var(--color-accent)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
               <div style={{ width: "52px", height: "52px", borderRadius: "14px", background: "rgba(19,170,179,0.1)", color: "var(--color-accent)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem" }}><i className="fas fa-cubes" /></div>
@@ -94,7 +126,7 @@ export default function SolutionsAIAutomation() {
         </div>
 
         {/* Operational Focus Areas */}
-        <div style={{ marginBottom: "80px" }}>
+        <div style={{ marginBottom: "48px" }}>
           <div style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto 50px" }}>
             <span style={{ fontSize: "0.8rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "10px", display: "block" }}>Focus</span>
             <h2 style={{ fontSize: "2.2rem", fontWeight: "700", color: "var(--color-primary)", marginBottom: "16px" }}>Operational Focus Areas</h2>

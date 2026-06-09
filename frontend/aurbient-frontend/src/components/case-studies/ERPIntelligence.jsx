@@ -44,7 +44,7 @@ export default function ERPIntelligence() {
       {/* Immersive Cinematic Hero Header */}
       <section className="hero case-study-hero" style={{ 
         position: "relative", 
-        padding: "160px 0 160px", 
+        padding: "100px 0 100px", 
         backgroundImage: `url(${images.hero})`,
         backgroundSize: "cover",
         backgroundPosition: "center"
@@ -82,7 +82,7 @@ export default function ERPIntelligence() {
       <div className="container" style={{ position: "relative", zIndex: 10, marginTop: "-80px", paddingBottom: "80px" }}>
         
         {/* Executive Overview */}
-        <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 20px 60px rgba(0,0,0,0.05)", marginBottom: "50px" }}>
+        <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 20px 60px rgba(0,0,0,0.05)", marginBottom: "30px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
               <h3 style={{ fontSize: "2rem", marginBottom: "24px", color: "var(--color-primary)", fontWeight: "600" }}>Section Introduction</h3>
@@ -106,7 +106,7 @@ export default function ERPIntelligence() {
         </div>
 
         {/* DEPARTMENTAL MATRIX INTERACTIVE LAYOUT */}
-        <div style={{ marginBottom: "60px" }}>
+        <div style={{ marginBottom: "36px" }}>
           <div style={{ textAlign: "center", marginBottom: "40px" }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", display: "block", marginBottom: "12px" }}>Matrix Explorer</span>
             <h3 style={{ fontSize: "2rem", fontWeight: "700", color: "var(--color-primary)" }}>ERP Department Coordination Matrix</h3>
@@ -172,7 +172,7 @@ export default function ERPIntelligence() {
         </div>
 
         {/* side-by-side deliverables & outcomes */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", marginBottom: "60px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", marginBottom: "36px" }}>
           
           {/* Deliverables Column */}
           <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 10px 30px rgba(0,0,0,0.02)", borderTop: "4px solid var(--color-accent)" }}>
@@ -227,7 +227,7 @@ export default function ERPIntelligence() {
         </div>
 
         {/* Operational Focus Areas Grid */}
-        <div style={{ marginBottom: "80px" }}>
+        <div style={{ marginBottom: "48px" }}>
           <div style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto 50px" }}>
             <h3 style={{ fontSize: "2rem", fontWeight: "700", color: "var(--color-primary)", marginBottom: "16px" }}>Operational Focus Areas</h3>
             <p style={{ color: "#58798C", fontSize: "1.1rem" }}>Targeted operational frameworks designed to scale workflows and coordinate enterprise ecosystems.</p>

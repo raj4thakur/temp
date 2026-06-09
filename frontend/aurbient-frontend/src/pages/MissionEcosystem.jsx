@@ -20,7 +20,7 @@ export default function MissionEcosystem() {
   return (
     <main style={{ background: "#F4F9FB" }}>
       <section className="hero" style={{ 
-        position: "relative", padding: "180px 0 160px", minHeight: "75vh", display: "flex", alignItems: "center", overflow: "hidden" 
+        position: "relative", padding: "110px 0 100px", minHeight: "75vh", display: "flex", alignItems: "center", overflow: "hidden" 
       }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${images.hero})`, backgroundSize: "cover", backgroundPosition: "center", zIndex: 0 }}></div>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at center, rgba(14,25,33,0.4) 0%, rgba(14,25,33,0.9) 100%)", zIndex: 1 }}></div>
@@ -38,7 +38,7 @@ export default function MissionEcosystem() {
         </div>
       </section>
 
-      <section style={{ padding: "100px 0", background: "white" }}>
+      <section style={{ padding: "60px 0", background: "white" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Operational Beliefs</span>
@@ -106,7 +106,7 @@ export default function MissionEcosystem() {
         </div>
       </section>
 
-      <section style={{ padding: "100px 0", background: "linear-gradient(135deg, var(--color-primary) 0%, #111d25 100%)", color: "white", textAlign: "center" }}>
+      <section style={{ padding: "60px 0", background: "linear-gradient(135deg, var(--color-primary) 0%, #111d25 100%)", color: "white", textAlign: "center" }}>
         <div className="container">
           <div style={{ maxWidth: "900px", margin: "0 auto" }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "16px", display: "inline-block", background: "rgba(19, 170, 179, 0.15)", padding: "6px 16px", borderRadius: "20px" }}>The Future We Are Building</span>
@@ -115,7 +115,7 @@ export default function MissionEcosystem() {
               Aurbient Technologies aims to build the operational intelligence layer for modern businesses.
             </p>
             
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", justifyContent: "center", marginBottom: "60px" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", justifyContent: "center", marginBottom: "36px" }}>
               {["AI-driven operational ecosystems", "Intelligent enterprise infrastructure", "Automation architecture", "Business intelligence environments", "Enterprise workflow systems", "Scalable digital transformation ecosystems"].map((item, i) => (
                 <span key={i} style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", padding: "10px 20px", borderRadius: "100px", fontSize: "0.95rem", color: "white", fontWeight: "500" }}>{item}</span>
               ))}

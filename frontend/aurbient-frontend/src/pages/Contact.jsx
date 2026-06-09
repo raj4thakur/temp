@@ -41,7 +41,7 @@ export default function Contact() {
     <main style={{ background: "#FAFCFB" }}>
       {/* Premium Hero Section */}
       <section style={{ 
-        padding: "140px 0 100px", 
+        padding: "90px 0 70px", 
         background: `linear-gradient(180deg, rgba(17, 35, 48, 0.85) 0%, rgba(17, 35, 48, 0.7) 100%), url('/CONTACTUS.png') center/cover no-repeat`, 
         borderBottom: "1px solid #E2EBE7",
         position: "relative",

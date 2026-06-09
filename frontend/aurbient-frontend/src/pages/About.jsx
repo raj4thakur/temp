@@ -12,7 +12,7 @@ export default function About() {
       {/* Cinematic Brand Foundation Hero */}
       <section className="hero" style={{ 
         position: "relative", 
-        padding: "180px 0 160px", 
+        padding: "110px 0 100px", 
         minHeight: "80vh",
         display: "flex",
         alignItems: "center",
@@ -139,7 +139,7 @@ export default function About() {
       </section>
 
       {/* Philosophy & Generated Ecosystem Image */}
-      <section style={{ padding: "100px 0", background: "linear-gradient(135deg, var(--color-primary) 0%, #111d25 100%)", color: "white" }}>
+      <section style={{ padding: "60px 0", background: "linear-gradient(135deg, var(--color-primary) 0%, #111d25 100%)", color: "white" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
@@ -181,7 +181,7 @@ export default function About() {
       </section>
 
       {/* Core Principles Grid */}
-      <section style={{ padding: "100px 0" }}>
+      <section style={{ padding: "60px 0" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Foundations</span>
@@ -275,7 +275,7 @@ export default function About() {
       </section>
 
       {/* Brand Identity & Culture Grid */}
-      <section style={{ padding: "100px 0" }}>
+      <section style={{ padding: "60px 0" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px" }}>
             
@@ -322,7 +322,7 @@ export default function About() {
       </section>
 
       {/* Long Term Direction & Final Statement */}
-      <section style={{ padding: "100px 0", background: "var(--color-primary)", color: "white", textAlign: "center" }}>
+      <section style={{ padding: "60px 0", background: "var(--color-primary)", color: "white", textAlign: "center" }}>
         <div className="container">
           <div style={{ maxWidth: "900px", margin: "0 auto" }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "16px", display: "inline-block", background: "rgba(19, 170, 179, 0.15)", padding: "6px 16px", borderRadius: "20px" }}>The Future We Are Building</span>
@@ -331,7 +331,7 @@ export default function About() {
               Aurbient Technologies aims to build the operational intelligence layer for modern businesses. We believe the future belongs to businesses capable of combining strategic thinking, operational clarity, intelligent automation, and scalable digital infrastructure.
             </p>
             
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", justifyContent: "center", marginBottom: "60px" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", justifyContent: "center", marginBottom: "36px" }}>
               {["AI-driven operational ecosystems", "Intelligent enterprise infrastructure", "Automation architecture", "Business intelligence environments", "Enterprise workflow systems", "Scalable digital transformation ecosystems"].map((item, i) => (
                 <span key={i} style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", padding: "10px 20px", borderRadius: "100px", fontSize: "0.95rem", color: "white", fontWeight: "500" }}>{item}</span>
               ))}

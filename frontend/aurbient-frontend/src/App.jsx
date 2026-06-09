@@ -19,20 +19,13 @@ import Logistics from "./pages/Logistics";
 import EnterpriseOperations from "./pages/EnterpriseOperations";
 import SMEs from "./pages/SMEs";
 
-import AutomationEcosystems from "./pages/AutomationEcosystems";
-import ERPIntelligence from "./pages/ERPIntelligence";
-import AIWorkflowSystems from "./pages/AIWorkflowSystems";
-import OperationalVisibility from "./pages/OperationalVisibility";
-import CloudInfrastructure from "./pages/CloudInfrastructure";
-import BusinessOperatingLayer from "./pages/BusinessOperatingLayer";
+
 
 // Solutions Pages
 import SolutionsAIAutomation from "./pages/SolutionsAIAutomation";
 import SolutionsOperationalIntelligence from "./pages/SolutionsOperationalIntelligence";
 import SolutionsBusinessSystems from "./pages/SolutionsBusinessSystems";
 import SolutionsEnterpriseInfrastructure from "./pages/SolutionsEnterpriseInfrastructure";
-import SolutionsProcessOptimization from "./pages/SolutionsProcessOptimization";
-import SolutionsSystemIntegration from "./pages/SolutionsSystemIntegration";
 
 // Company Subpages
 import VisionPhilosophy from "./pages/VisionPhilosophy";
@@ -71,16 +64,6 @@ function AppRoutes() {
       <Route path="/solutions/operational-intelligence" element={<SolutionsOperationalIntelligence />} />
       <Route path="/solutions/business-systems" element={<SolutionsBusinessSystems />} />
       <Route path="/solutions/enterprise-infrastructure" element={<SolutionsEnterpriseInfrastructure />} />
-      <Route path="/solutions/process-optimization" element={<SolutionsProcessOptimization />} />
-      <Route path="/solutions/system-integration" element={<SolutionsSystemIntegration />} />
-      
-      {/* Specific Technology/System Pages */}
-      <Route path="/systems/automation-ecosystems" element={<AutomationEcosystems />} />
-      <Route path="/systems/erp-intelligence" element={<ERPIntelligence />} />
-      <Route path="/systems/ai-workflow-systems" element={<AIWorkflowSystems />} />
-      <Route path="/systems/operational-visibility" element={<OperationalVisibility />} />
-      <Route path="/systems/cloud-infrastructure" element={<CloudInfrastructure />} />
-      <Route path="/systems/business-operating-layer" element={<BusinessOperatingLayer />} />
 
       {/* Specific Company Pages */}
       <Route path="/company/vision-philosophy" element={<VisionPhilosophy />} />

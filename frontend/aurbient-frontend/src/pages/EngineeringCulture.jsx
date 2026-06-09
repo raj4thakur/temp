@@ -9,7 +9,7 @@ export default function EngineeringCulture() {
   return (
     <main style={{ background: "#F4F9FB" }}>
       <section className="hero" style={{ 
-        position: "relative", padding: "180px 0 160px", minHeight: "75vh", display: "flex", alignItems: "center", overflow: "hidden" 
+        position: "relative", padding: "110px 0 100px", minHeight: "75vh", display: "flex", alignItems: "center", overflow: "hidden" 
       }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${images.hero})`, backgroundSize: "cover", backgroundPosition: "center", zIndex: 0 }}></div>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at center, rgba(14,25,33,0.4) 0%, rgba(14,25,33,0.9) 100%)", zIndex: 1 }}></div>
@@ -27,7 +27,7 @@ export default function EngineeringCulture() {
         </div>
       </section>
 
-      <section style={{ padding: "100px 0", background: "white" }}>
+      <section style={{ padding: "60px 0", background: "white" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
