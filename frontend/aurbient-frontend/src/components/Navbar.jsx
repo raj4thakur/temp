@@ -82,9 +82,9 @@ export default function Navbar() {
                         <div className="mega-grid" style={{ gridTemplateColumns: "1fr", gap: "24px" }}>
                             <div className="mega-col">
                                 <h4>Resources</h4>
-                                <Link to="/insights" state={{ tab: "overview" }} onClick={closeAll} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '600' }}>
+                                <Link to="/insights" state={{ tab: "articles" }} onClick={closeAll} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '600' }}>
                                   <i className="fas fa-th-large" style={{ color: 'var(--color-accent)', fontSize: '0.85rem' }}></i>
-                                  Insights Overview
+                                  Articles
                                 </Link>
                                 <Link to="/case-studies" onClick={closeAll} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '600' }}>
                                   <i className="fas fa-chart-line" style={{ color: 'var(--color-accent)', fontSize: '0.85rem' }}></i>

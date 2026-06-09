@@ -474,7 +474,7 @@ export default function Insights() {
 
   const [cases, setCases] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState("overview"); // 'overview' | 'case-studies' | 'articles' | 'pillars'
+  const [activeTab, setActiveTab] = useState("articles"); // 'overview' | 'case-studies' | 'articles' | 'pillars'
   const [activeArticle, setActiveArticle] = useState(null);
   const [readProgress, setReadProgress] = useState(0);
   const articleScrollRef = useRef(null);
@@ -875,94 +875,7 @@ export default function Insights() {
               Explore operational intelligence frameworks, case studies, and engineering strategies designed to coordinate modern enterprise execution.
             </p>
             
-            {/* Premium Glassmorphic Tab Selector */}
-            <div style={{
-              display: "inline-flex",
-              background: "rgba(255, 255, 255, 0.08)",
-              padding: "6px",
-              borderRadius: "40px",
-              boxShadow: "0 15px 35px rgba(0,0,0,0.2)",
-              border: "1.5px solid rgba(255, 255, 255, 0.15)",
-              backdropFilter: "blur(20px)",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              gap: "4px"
-            }}>
-              <button
-                onClick={() => setActiveTab("overview")}
-                onMouseEnter={(e) => {
-                  if (activeTab !== "overview") e.currentTarget.style.color = "#FFFFFF";
-                }}
-                onMouseLeave={(e) => {
-                  if (activeTab !== "overview") e.currentTarget.style.color = "rgba(255, 255, 255, 0.75)";
-                }}
-                style={{
-                  padding: "10px 22px",
-                  borderRadius: "30px",
-                  border: "none",
-                  background: activeTab === "overview" ? "var(--color-accent)" : "none",
-                  color: activeTab === "overview" ? "var(--color-primary)" : "rgba(255, 255, 255, 0.75)",
-                  fontWeight: "600",
-                  cursor: "pointer",
-                  transition: "all 0.3s ease",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px"
-                }}
-              >
-                <i className="fas fa-th-large"></i> Overview
-              </button>
-              
-              <button
-                onClick={() => setActiveTab("articles")}
-                onMouseEnter={(e) => {
-                  if (activeTab !== "articles") e.currentTarget.style.color = "#FFFFFF";
-                }}
-                onMouseLeave={(e) => {
-                  if (activeTab !== "articles") e.currentTarget.style.color = "rgba(255, 255, 255, 0.75)";
-                }}
-                style={{
-                  padding: "10px 22px",
-                  borderRadius: "30px",
-                  border: "none",
-                  background: activeTab === "articles" ? "var(--color-accent)" : "none",
-                  color: activeTab === "articles" ? "var(--color-primary)" : "rgba(255, 255, 255, 0.75)",
-                  fontWeight: "600",
-                  cursor: "pointer",
-                  transition: "all 0.3s ease",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px"
-                }}
-              >
-                <i className="fas fa-file-alt"></i> Thought Leadership ({thoughtArticles.length})
-              </button>
-              
-              <button
-                onClick={() => setActiveTab("pillars")}
-                onMouseEnter={(e) => {
-                  if (activeTab !== "pillars") e.currentTarget.style.color = "#FFFFFF";
-                }}
-                onMouseLeave={(e) => {
-                  if (activeTab !== "pillars") e.currentTarget.style.color = "rgba(255, 255, 255, 0.75)";
-                }}
-                style={{
-                  padding: "10px 22px",
-                  borderRadius: "30px",
-                  border: "none",
-                  background: activeTab === "pillars" ? "var(--color-accent)" : "none",
-                  color: activeTab === "pillars" ? "var(--color-primary)" : "rgba(255, 255, 255, 0.75)",
-                  fontWeight: "600",
-                  cursor: "pointer",
-                  transition: "all 0.3s ease",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px"
-                }}
-              >
-                <i className="fas fa-project-diagram"></i> Taxonomy Pillars ({pillarsList.length})
-              </button>
-            </div>
+
           </div>
         </div>
       </section>
@@ -1088,77 +1001,6 @@ export default function Insights() {
                   ))}
                 </div>
               </div>
-
-              {/* Six core pillars presentation */}
-              <div style={{ borderTop: "1.5px solid #E2EBE7", paddingTop: "60px" }}>
-                <div style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto 50px" }}>
-                  <h2 style={{ fontSize: "2.2rem", fontWeight: "700", color: "var(--color-primary)" }}>Our Operational Taxonomy</h2>
-                  <p style={{ color: "#58798C" }}>Click any category card below to browse all strategic studies and research corresponding to that operating discipline.</p>
-                </div>
-
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "30px" }}>
-                  {pillarsList.map((pillar) => (
-                    <div 
-                      key={pillar.id}
-                      onClick={() => {
-                        setSelectedPillar(pillar.id);
-                        setActiveTab("pillars");
-                      }}
-                      style={{
-                        background: "white",
-                        borderRadius: "16px",
-                        border: "1.5px solid #E2EBE7",
-                        padding: 0,
-                        cursor: "pointer",
-                        transition: "all 0.3s ease",
-                        display: "flex",
-                        flexDirection: "column",
-                        position: "relative",
-                        overflow: "hidden"
-                      }}
-                      onMouseOver={(e) => {
-                        e.currentTarget.style.transform = "translateY(-5px)";
-                        e.currentTarget.style.borderColor = pillar.color;
-                        e.currentTarget.style.boxShadow = `0 12px 30px rgba(0,0,0,0.04)`;
-                        const img = e.currentTarget.querySelector(".pillar-card-image");
-                        if (img) img.style.transform = "scale(1.05)";
-                      }}
-                      onMouseOut={(e) => {
-                        e.currentTarget.style.transform = "none";
-                        e.currentTarget.style.borderColor = "#E2EBE7";
-                        e.currentTarget.style.boxShadow = "none";
-                        const img = e.currentTarget.querySelector(".pillar-card-image");
-                        if (img) img.style.transform = "scale(1)";
-                      }}
-                    >
-                      {/* Top cover image banner */}
-                      <div style={{ height: "140px", overflow: "hidden" }}>
-                        <div 
-                          className="pillar-card-image"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            backgroundImage: `url(${pillar.pillarImage})`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                            transition: "transform 0.5s ease"
-                          }}
-                        />
-                      </div>
-
-                      <div style={{ padding: "24px 30px 30px 30px", flex: 1, display: "flex", flexDirection: "column" }}>
-                        <h3 style={{ fontSize: "1.3rem", fontWeight: "700", color: "var(--color-primary)", marginBottom: "12px" }}>{pillar.name}</h3>
-                        <p style={{ color: "#58798C", fontSize: "0.95rem", lineHeight: "1.6", margin: 0, flex: 1 }}>{pillar.description}</p>
-                        
-                        <div style={{ marginTop: "30px", paddingTop: "20px", borderTop: "1.5px solid #F4F9FB", display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "0.85rem" }}>
-                          <span style={{ color: pillar.color, fontWeight: "700" }}>EXPLORE CATEGORY</span>
-                          <span style={{ color: "var(--color-primary)", fontWeight: "600" }}><i className="fas fa-arrow-right"></i></span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           )}
 
@@ -1245,26 +1087,6 @@ export default function Insights() {
                         transition: "transform 0.5s ease"
                       }}
                     />
-                    {/* Icon Badge Overlay */}
-                    <div style={{
-                      position: "absolute",
-                      bottom: "-20px",
-                      right: "24px",
-                      width: "48px",
-                      height: "48px",
-                      borderRadius: "12px",
-                      background: "white",
-                      color: "var(--color-accent)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "1.2rem",
-                      boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
-                      border: "1px solid #E2EBE7",
-                      zIndex: 2
-                    }}>
-                      <i className={`fas ${article.icon}`}></i>
-                    </div>
                   </div>
 
                   <div style={{ padding: "30px", flex: 1, display: "flex", flexDirection: "column" }}>
