@@ -115,7 +115,7 @@ export default function SMEs() {
                 "Consistent client billing structures",
                 "Increased order fulfillment speeds"
               ].map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "16px", color: "#1a2a35", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
+                <li key={i} style={{ display: "flex", gap: "16px", color: "#395568", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
                   <span style={{ color: "#2980B9", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
                   {item}
                 </li>

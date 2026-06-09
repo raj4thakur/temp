@@ -109,7 +109,7 @@ export default function SolutionsBusinessSystems() {
             </div>
             <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "14px" }}>
               {outcomes.map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "14px", color: "#1a2a35", fontSize: "1.05rem", alignItems: "flex-start" }}>
+                <li key={i} style={{ display: "flex", gap: "14px", color: "#395568", fontSize: "1.05rem", alignItems: "flex-start" }}>
                   <span style={{ color: "#2980B9", marginTop: "3px", flexShrink: 0 }}><i className="fas fa-arrow-alt-circle-up" /></span>{item}
                 </li>
               ))}
