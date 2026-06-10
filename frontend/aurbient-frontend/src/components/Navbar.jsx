@@ -46,10 +46,11 @@ export default function Navbar() {
                         <div className="mega-grid" style={{ gridTemplateColumns: "1fr" }}>
                             <div className="mega-col">
                                 <h4>Core Offerings</h4>
-                                <Link to="/solutions/ai-automation" onClick={closeAll}>AI & Intelligent Automation</Link>
-                                <Link to="/solutions/enterprise-infrastructure" onClick={closeAll}>Cloud & Digital Infrastructure</Link>
-                                <Link to="/solutions/business-systems" onClick={closeAll}>Enterprise Software Engineering</Link>
-                                <Link to="/solutions/operational-intelligence" onClick={closeAll}>Operational Intelligence</Link>
+                                <Link to="/solutions/ai-automation" onClick={closeAll}>AI and Process automation</Link>
+                                <Link to="/solutions/business-systems" onClick={closeAll}>ERP & Business Management Platforms</Link>
+                                <Link to="/solutions/enterprise-infrastructure" onClick={closeAll}>Operational Intelligence Systems</Link>
+                                <Link to="/solutions/operational-intelligence" onClick={closeAll}>Enterprise Software & Digital Systems</Link>
+                                <Link to="/solutions/digital-solutions" onClick={closeAll}>Website & Digital Solutions</Link>
                             </div>
                         </div>
                     </div>

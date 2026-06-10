@@ -26,6 +26,7 @@ import SolutionsAIAutomation from "./pages/SolutionsAIAutomation";
 import SolutionsOperationalIntelligence from "./pages/SolutionsOperationalIntelligence";
 import SolutionsBusinessSystems from "./pages/SolutionsBusinessSystems";
 import SolutionsEnterpriseInfrastructure from "./pages/SolutionsEnterpriseInfrastructure";
+import SolutionsDigitalSolutions from "./pages/SolutionsDigitalSolutions";
 
 // Company Subpages
 import VisionPhilosophy from "./pages/VisionPhilosophy";
@@ -64,6 +65,7 @@ function AppRoutes() {
       <Route path="/solutions/operational-intelligence" element={<SolutionsOperationalIntelligence />} />
       <Route path="/solutions/business-systems" element={<SolutionsBusinessSystems />} />
       <Route path="/solutions/enterprise-infrastructure" element={<SolutionsEnterpriseInfrastructure />} />
+      <Route path="/solutions/digital-solutions" element={<SolutionsDigitalSolutions />} />
 
       {/* Specific Company Pages */}
       <Route path="/company/vision-philosophy" element={<VisionPhilosophy />} />

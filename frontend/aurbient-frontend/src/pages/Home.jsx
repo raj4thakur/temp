@@ -153,7 +153,7 @@ export default function Home() {
                 transition: 'all 0.3s ease',
                 fontWeight: '600'
               }}>
-                Start a Project →
+                Schedule a consultation →
               </Link>
             </div>
           </div>
@@ -322,10 +322,11 @@ export default function Home() {
               }}
             >
             {[
-              { icon: "fa-brain", title: "AI & Intelligent Automation", desc: "Self-healing AI workflows and automation pipelines designed to scale operations and eliminate manual friction.", path: "/solutions/ai-automation", img: "/images/cobot-psychology.jpeg" },
-              { icon: "fa-laptop-code", title: "Enterprise Software Engineering", desc: "Mission-critical custom applications and unified management systems engineered for reliability and performance.", path: "/solutions/business-systems", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" },
-              { icon: "fa-layer-group", title: "Cloud & Digital Infrastructure", desc: "Secure, scalable backend environments and server architectures that form the backbone of enterprise operations.", path: "/solutions/enterprise-infrastructure", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" },
-              { icon: "fa-eye", title: "Operational Intelligence", desc: "Centralized telemetry, data dashboards, and real-time monitoring solutions to unblock management visibility.", path: "/solutions/operational-intelligence", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" }
+              { icon: "fa-brain", title: "AI and Process automation", desc: "Self-healing AI workflows and automation pipelines designed to scale operations and eliminate manual friction.", path: "/solutions/ai-automation", img: "/images/cobot-psychology.jpeg" },
+              { icon: "fa-laptop-code", title: "ERP & Business Management Platforms", desc: "Mission-critical custom applications and unified management systems engineered for reliability and performance.", path: "/solutions/business-systems", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" },
+              { icon: "fa-layer-group", title: "Operational Intelligence Systems", desc: "Secure, scalable backend environments and server architectures that form the backbone of enterprise operations.", path: "/solutions/enterprise-infrastructure", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" },
+              { icon: "fa-eye", title: "Enterprise Software & Digital Systems", desc: "Centralized telemetry, data dashboards, and real-time monitoring solutions to unblock management visibility.", path: "/solutions/operational-intelligence", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" },
+              { icon: "fa-globe", title: "Website & Digital Solutions", desc: "Custom web applications and digital experiences designed to elevate your brand and drive online engagement.", path: "/solutions/digital-solutions", img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" }
             ].map((serv, idx) => (
               <div key={idx} className="service-hex-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start' }}>
                 <div className="service-hex-content" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -476,9 +477,7 @@ export default function Home() {
               { path: "/industries/manufacturing", title: "Manufacturing", desc: "Intelligent production flow, IIoT synchronization, autonomous quality layers.", img: "/images/industry_manufacturing.png" },
               { path: "/industries/logistics", title: "Logistics", desc: "Orchestrated supply chains, demand intelligence, real-time fleet adaptation.", img: "/images/industry_logistics.png" },
               { path: "/industries/retail-commerce", title: "Retail", desc: "Inventory ecosystems, unified commerce, predictive customer operations.", img: "/images/industry_retail.png" },
-              { path: "/industries/enterprise-operations", title: "Enterprise", desc: "Finance & HR automation, cognitive processes, enterprise operating layer.", img: "/images/industry_enterprise.png" },
-              { path: "/industries/healthcare", title: "Healthcare", desc: "Next-gen patient data orchestration, smart facilities, connected care operations.", img: "/images/industry_healthcare.png" },
-              { path: "/industries/finance", title: "Finance", desc: "Autonomous compliance, real-time risk modeling, resilient banking ecosystems.", img: "/images/industry_finance.png" }
+              { path: "/industries/enterprise-operations", title: "Enterprise", desc: "Finance & HR automation, cognitive processes, enterprise operating layer.", img: "/images/industry_enterprise.png" }
             ].map((ind, i) => (
               <Link key={i} to={ind.path} className="industry-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start', backgroundImage: `url(${ind.img})` }}>
                 <div className="industry-card-content">
