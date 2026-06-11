@@ -72,7 +72,7 @@ export default function ServicesSection() {
                 </div>
               </div>
               
-              <Link to={serv.path} className="service-hex-overlay" style={{ backgroundImage: `url(https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80)` }}>
+              <Link to={serv.path} className="service-hex-overlay" style={{ backgroundImage: `url(${serv.img})` }}>
                 <div style={{ position: 'relative', zIndex: 1 }}>
                   <h3>{serv.title}</h3>
                   <p>{serv.description}</p>

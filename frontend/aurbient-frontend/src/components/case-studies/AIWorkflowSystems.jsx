@@ -12,8 +12,8 @@ export default function AIWorkflowSystems() {
       title: "Lead Qualification Agent",
       prompt: "Evaluate new inquiry from website, cross-reference database for corporate records, qualify pipeline tier.",
       steps: [
-        { name: "Ingest Data Payload", status: "Completed", details: "Acquired form submit from Shlok Kharva @ Parul Chemicals" },
-        { name: "Semantic Context Matching", status: "Completed", details: "Identified match: Enterprise manufacturing group, GSTIN validated" },
+        { name: "Ingest Data Payload", status: "Completed", details: "Acquired form submit from James Carter @ Apex Manufacturing Group" },
+        { name: "Semantic Context Matching", status: "Completed", details: "Identified match: Enterprise manufacturing group, profile verified" },
         { name: "Cognitive Score Generation", status: "Completed", details: "Generated tier score: 9.8/10 (High priority enterprise lead)" },
         { name: "API Operations Dispatch", status: "Active", details: "Injecting CRM payload, triggering high-priority Slack notifications" }
       ]
@@ -56,7 +56,7 @@ export default function AIWorkflowSystems() {
         
         <div className="container" style={{ position: "relative", zIndex: 2, color: "white" }}>
           <Link 
-            to="/" 
+            to="/case-studies" 
             style={{ 
               display: "inline-flex", 
               alignItems: "center", 
@@ -71,12 +71,12 @@ export default function AIWorkflowSystems() {
             onMouseOver={e => e.currentTarget.style.color = "#FFFFFF"}
             onMouseOut={e => e.currentTarget.style.color = "rgba(255, 255, 255, 0.75)"}
           >
-            <i className="fas fa-arrow-left"></i> Back to Home
+            <i className="fas fa-arrow-left"></i> Back to Case Studies
           </Link>
-          <span style={{ fontSize: "1rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Architecture 01</span>
-          <h1 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", marginBottom: "30px", maxWidth: "900px", lineHeight: "1.15", textShadow: "0 4px 20px rgba(0,0,0,0.4)", fontWeight: "600" }}>AI Integration & Intelligent Workflows</h1>
+          <span style={{ fontSize: "1rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Architecture 02</span>
+          <h1 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", marginBottom: "30px", maxWidth: "900px", lineHeight: "1.15", textShadow: "0 4px 20px rgba(0,0,0,0.4)", fontWeight: "600" }}>Building an AI-Driven Sales &amp; Management Ecosystem</h1>
           <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19, 170, 179, 0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19, 170, 179, 0.4)" }}>
-            Cognitive Agent Console Interface
+            AI-Assisted Workflow System &amp; Lead Management Console
           </div>
         </div>
       </section>
@@ -88,12 +88,12 @@ export default function AIWorkflowSystems() {
         <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 20px 60px rgba(0,0,0,0.05)", marginBottom: "30px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
-              <h3 style={{ fontSize: "2rem", marginBottom: "24px", color: "var(--color-primary)", fontWeight: "600" }}>Intelligent Operations Ecosystem</h3>
+              <h3 style={{ fontSize: "2rem", marginBottom: "24px", color: "var(--color-primary)", fontWeight: "600" }}>Section Introduction</h3>
               <p style={{ color: "#395568", marginBottom: "20px", lineHeight: "1.9", fontSize: "1.15rem" }}>
-                Modern businesses require intelligent systems capable of improving operational clarity, workflow coordination, and decision-making efficiency.
+                The organization relied heavily on manual sales tracking, disconnected communication workflows, and inconsistent lead coordination processes. Aurbient Technologies designed an AI-assisted operational ecosystem focused on workflow visibility, centralized lead management, and scalable business coordination.
               </p>
               <p style={{ color: "#395568", marginBottom: "0", lineHeight: "1.9", fontSize: "1.15rem" }}>
-                Aurbient Technologies develops AI-integrated operational environments designed to support scalable business execution through intelligent workflows and connected digital systems.
+                Aurbient Technologies focused on creating a structured operational environment capable of supporting business growth through intelligent workflow systems. The solution integrated AI-assisted workflows, lead management systems, automated communication layers, centralized reporting systems, and operational tracking infrastructure.
               </p>
             </div>
             <div style={{ padding: "40px", background: "linear-gradient(135deg, var(--color-primary) 0%, #111d25 100%)", color: "white", borderRadius: "20px", boxShadow: "0 20px 40px rgba(26, 42, 53, 0.25)", position: "relative", overflow: "hidden" }}>
@@ -102,7 +102,7 @@ export default function AIWorkflowSystems() {
                 <i className="fas fa-lightbulb"></i> Core Insight
               </h4>
               <p style={{ fontStyle: "italic", lineHeight: "1.8", fontSize: "1.2rem", margin: 0, position: "relative", zIndex: 2 }}>
-                "AI becomes most valuable when integrated into real operational workflows capable of improving execution efficiency and business scalability."
+                "Businesses achieve scalable growth when operational workflows, communication systems, and intelligent automation environments work together as a connected ecosystem."
               </p>
             </div>
           </div>
@@ -216,13 +216,12 @@ export default function AIWorkflowSystems() {
             </div>
             <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
               {[
-                "AI-assisted workflow systems",
-                "Intelligent operational automation",
-                "Predictive process insights",
-                "AI-powered reporting environments",
-                "Smart business coordination systems",
-                "Decision-support infrastructures",
-                "Operational intelligence integration"
+                "AI-Assisted Workflow System",
+                "Lead Management Dashboard",
+                "Communication Coordination Layer",
+                "Operational Monitoring System",
+                "Centralized Reporting Environment",
+                "Workflow Automation Pipeline"
               ].map((item, i) => (
                 <li key={i} style={{ display: "flex", gap: "16px", color: "#395568", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
                   <span style={{ color: "var(--color-accent)", fontSize: "1.2rem" }}><i className="fas fa-check-circle"></i></span>
@@ -242,12 +241,12 @@ export default function AIWorkflowSystems() {
             </div>
             <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
               {[
-                "Improved operational efficiency",
-                "Faster decision-making processes",
-                "Better workflow coordination",
-                "Enhanced reporting visibility",
-                "Reduced manual process dependency",
-                "Intelligent operational scalability"
+                "Improved sales coordination",
+                "Better lead visibility",
+                "Streamlined communication workflows",
+                "Enhanced operational monitoring",
+                "Improved workflow consistency",
+                "Faster management reporting access"
               ].map((item, i) => (
                 <li key={i} style={{ display: "flex", gap: "16px", color: "#395568", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
                   <span style={{ color: "#2980B9", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
@@ -297,7 +296,7 @@ export default function AIWorkflowSystems() {
                   width: "50px",
                   height: "50px",
                   borderRadius: "12px",
-                  background: `rgba(${focus.color === "#13AAB3" ? "19,170,179" : focus.color === "#3498db" ? "52,152,219" : focus.color === "#e67e22" ? "230,126,34" : "46,204,113"}, 0.1)`,
+                  background: `rgba(${focus.color === "#13AAB3" ? "19, 170, 179" : focus.color === "#3498db" ? "52,152,219" : focus.color === "#e67e22" ? "230,126,34" : "46,204,113"}, 0.1)`,
                   color: focus.color,
                   display: "flex",
                   alignItems: "center",

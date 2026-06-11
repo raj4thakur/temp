@@ -52,7 +52,7 @@ export default function AutomationEcosystems() {
         
         <div className="container" style={{ position: "relative", zIndex: 2, color: "white" }}>
           <Link 
-            to="/" 
+            to="/case-studies" 
             style={{ 
               display: "inline-flex", 
               alignItems: "center", 
@@ -67,10 +67,10 @@ export default function AutomationEcosystems() {
             onMouseOver={e => e.currentTarget.style.color = "#FFFFFF"}
             onMouseOut={e => e.currentTarget.style.color = "rgba(255, 255, 255, 0.75)"}
           >
-            <i className="fas fa-arrow-left"></i> Back to Home
+            <i className="fas fa-arrow-left"></i> Back to Case Studies
           </Link>
-          <span style={{ fontSize: "1rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Architecture 02</span>
-          <h1 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", marginBottom: "30px", maxWidth: "900px", lineHeight: "1.15", textShadow: "0 4px 20px rgba(0,0,0,0.4)", fontWeight: "600" }}>Business Process Automation</h1>
+          <span style={{ fontSize: "1rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Architecture 04</span>
+          <h1 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", marginBottom: "30px", maxWidth: "900px", lineHeight: "1.15", textShadow: "0 4px 20px rgba(0,0,0,0.4)", fontWeight: "600" }}>Reducing Manual Operational Dependency Through Workflow Automation</h1>
           <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19, 170, 179, 0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19, 170, 179, 0.4)" }}>
             Pipeline Throughput Orchestration Interface
           </div>
@@ -86,10 +86,10 @@ export default function AutomationEcosystems() {
             <div>
               <h3 style={{ fontSize: "2rem", marginBottom: "24px", color: "var(--color-primary)", fontWeight: "600" }}>Section Introduction</h3>
               <p style={{ color: "#395568", marginBottom: "20px", lineHeight: "1.9", fontSize: "1.15rem" }}>
-                Operational inefficiencies often originate from repetitive manual processes, fragmented workflows, and disconnected reporting systems.
+                The organization experienced operational slowdowns caused by repetitive manual processes, reporting delays, and workflow inconsistencies. Aurbient Technologies designed a business process automation environment focused on improving execution efficiency and operational consistency.
               </p>
               <p style={{ color: "#395568", marginBottom: "0", lineHeight: "1.9", fontSize: "1.15rem" }}>
-                Aurbient Technologies develops automation ecosystems focused on improving execution speed, operational consistency, and workflow efficiency.
+                Aurbient Technologies developed a workflow automation strategy designed to standardize processes and improve operational efficiency across departments. The solution focused on: Workflow automation, Process standardization, Operational monitoring, Reporting accessibility, and Centralized coordination systems.
               </p>
             </div>
             <div style={{ padding: "40px", background: "linear-gradient(135deg, var(--color-primary) 0%, #111d25 100%)", color: "white", borderRadius: "20px", boxShadow: "0 20px 40px rgba(26, 42, 53, 0.25)", position: "relative", overflow: "hidden" }}>
@@ -98,7 +98,7 @@ export default function AutomationEcosystems() {
                 <i className="fas fa-lightbulb"></i> Key Insight
               </h4>
               <p style={{ fontStyle: "italic", lineHeight: "1.8", fontSize: "1.2rem", margin: 0, position: "relative", zIndex: 2 }}>
-                "Modern automation systems should improve operational intelligence and workflow efficiency rather than simply replacing tasks."
+                "Operational efficiency improves significantly when repetitive workflows are standardized and supported through intelligent automation systems."
               </p>
             </div>
           </div>
@@ -239,13 +239,12 @@ export default function AutomationEcosystems() {
             </div>
             <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
               {[
-                "Workflow automation systems",
-                "Process orchestration environments",
-                "Reporting automation infrastructure",
-                "Task coordination systems",
-                "Operational automation workflows",
-                "Process standardization systems",
-                "Automated operational monitoring"
+                "Workflow Automation Engine",
+                "Process Coordination Layer",
+                "Reporting Dashboard",
+                "Operational Tracking System",
+                "Centralized Process Infrastructure",
+                "Task Monitoring Environment"
               ].map((item, i) => (
                 <li key={i} style={{ display: "flex", gap: "16px", color: "#395568", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
                   <span style={{ color: "var(--color-accent)", fontSize: "1.2rem" }}><i className="fas fa-check-circle"></i></span>
@@ -265,12 +264,11 @@ export default function AutomationEcosystems() {
             </div>
             <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
               {[
-                "Faster operational execution",
-                "Improved workflow consistency",
-                "Reduced repetitive manual work",
-                "Better operational coordination",
-                "Enhanced process visibility",
-                "Increased efficiency across operations"
+                "Reduced manual process dependency",
+                "Improved operational execution speed",
+                "Better workflow consistency",
+                "Enhanced reporting visibility",
+                "Increased process coordination efficiency"
               ].map((item, i) => (
                 <li key={i} style={{ display: "flex", gap: "16px", color: "#395568", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
                   <span style={{ color: "#2980B9", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
@@ -320,7 +318,7 @@ export default function AutomationEcosystems() {
                   width: "50px",
                   height: "50px",
                   borderRadius: "12px",
-                  background: `rgba(${focus.color === "#13AAB3" ? "19,170,179" : focus.color === "#3498db" ? "52,152,219" : focus.color === "#e67e22" ? "230,126,34" : "46,204,113"}, 0.1)`,
+                  background: `rgba(${focus.color === "#13AAB3" ? "19, 170, 179" : focus.color === "#3498db" ? "52,152,219" : focus.color === "#e67e22" ? "230,126,34" : "46,204,113"}, 0.1)`,
                   color: focus.color,
                   display: "flex",
                   alignItems: "center",

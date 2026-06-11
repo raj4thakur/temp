@@ -11,7 +11,7 @@ const pillarsList = [
     color: "#13AAB3",
     description: "Synthesizing fragmented software layers into connected, real-time coordination and reporting environments.",
     themeColor: "rgba(19, 170, 179, 0.1)",
-    pillarImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
+    pillarImage: "/images/operational_intel_dashboard.png"
   },
   {
     id: "ai-in-business",
@@ -29,7 +29,7 @@ const pillarsList = [
     color: "#2980B9",
     description: "Designing high-performance workflows that orchestrate human talent, API interfaces, and business logic.",
     themeColor: "rgba(41, 128, 185, 0.1)",
-    pillarImage: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80"
+    pillarImage: "/images/business_systems_mockup.png"
   },
   {
     id: "automation-insights",
@@ -38,7 +38,7 @@ const pillarsList = [
     color: "#E67E22",
     description: "Evolving simple repetitive scripts into intelligent, self-healing, and end-to-end automation pipelines.",
     themeColor: "rgba(230, 126, 34, 0.1)",
-    pillarImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+    pillarImage: "/images/ai_automation_hero.png"
   },
   {
     id: "business-transformation",
@@ -47,7 +47,7 @@ const pillarsList = [
     color: "#27AE60",
     description: "Restructuring enterprise business processes, replacing legacy debt with scalable modern operating layers.",
     themeColor: "rgba(39, 174, 96, 0.1)",
-    pillarImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+    pillarImage: "/images/business_systems_mockup.png"
   },
   {
     id: "future-infrastructure",
@@ -56,7 +56,7 @@ const pillarsList = [
     color: "#E74C3C",
     description: "Optimizing cloud infrastructure, system layers, database queries, and routing matrices for maximum uptime.",
     themeColor: "rgba(231, 76, 60, 0.1)",
-    pillarImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80"
+    pillarImage: "/images/enterprise_infra_network.png"
   }
 ];
 
@@ -139,7 +139,7 @@ const thoughtArticles = [
     readTime: "5 min read",
     summary: "A strategic analysis of why adding more software applications without a connected operational ecosystem increases fragmentation, and how operational intelligence creates unified infrastructure for modern scale.",
     icon: "fa-project-diagram",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/business_systems_mockup.png",
     content: [
       { type: "paragraph", text: "In today’s business environment, technology adoption is no longer optional. Organizations across industries are investing in websites, dashboards, ERP systems, CRMs, cloud platforms, analytics tools, and automation environments to improve efficiency and remain competitive in rapidly changing markets." },
       { type: "paragraph", text: "However, despite this technological adoption, many businesses continue to face the same operational challenges:" },
@@ -205,7 +205,7 @@ const thoughtArticles = [
     readTime: "6 min read",
     summary: "Moving beyond simple task execution. How structured workflow intelligence integrates automation, AI, and reporting to establish consistent execution foundations.",
     icon: "fa-network-wired",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/careers_office_space.png",
     content: [
       { type: "paragraph", text: "Automation has evolved significantly over the past decade. What once focused primarily on reducing repetitive tasks has now become a central part of modern operational strategy." },
       { type: "paragraph", text: "Today, businesses are no longer asking whether automation is important." },
@@ -357,7 +357,7 @@ const thoughtArticles = [
     readTime: "6 min read",
     summary: "Why writing quick scripting loops creates maintenance liabilities, and how modern organizations build self-healing pipelines that intelligently handle event exceptions.",
     icon: "fa-cogs",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/ai_automation_hero.png",
     content: [
       { type: "paragraph", text: "Automation has progressed far beyond simple batch scripts running on a local server. In the early days of IT automation, engineers wrote isolated Python, Bash, or PowerShell scripts to handle individual repetitive tasks like backups, file transformations, or API data ingestion." },
       { type: "paragraph", text: "While these scripts solved short-term problems, scaling them across an enterprise reveals critical vulnerabilities:" },
@@ -391,7 +391,7 @@ const thoughtArticles = [
     readTime: "7 min read",
     summary: "Decoupling from legacy monolithic architecture is the single greatest bottleneck in modern enterprise scaling. Here is the engineering blueprint to replace legacy debt without halting operations.",
     icon: "fa-sync-alt",
-    image: "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/careers_office_space.png",
     content: [
       { type: "paragraph", text: "For established organizations, digital transformation is rarely about writing code from scratch. Instead, it is a complex migration process: extracting business logic out of rigid legacy databases, monolithic ERP systems, and undocumented manual procedures that have accumulated over decades." },
       { type: "paragraph", text: "This accumulation of outdated digital processes is known as Legacy Operational Debt." },
@@ -450,10 +450,10 @@ const thoughtArticles = [
 
 export default function Insights() {
   const insightsSliderImages = [
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80",
-    "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&q=80",
-    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80"
+    "/images/business_systems_mockup.png",
+    "/images/careers_office_space.png",
+    "/images/ai_automation_hero.png",
+    "/images/enterprise_infra_network.png"
   ];
   
   const [currentInsightsSlideIndex, setCurrentInsightsSlideIndex] = useState(0);
@@ -582,7 +582,7 @@ export default function Insights() {
           <style>{`
             @keyframes modalFadeIn { from { opacity:0 } to { opacity:1 } }
             @keyframes modalSlideUp { from { transform:translateY(48px); opacity:0 } to { transform:translateY(0); opacity:1 } }
-            @keyframes progressGlow { 0%,100%{box-shadow:0 0 8px rgba(19,170,179,0.4)} 50%{box-shadow:0 0 16px rgba(19,170,179,0.7)} }
+            @keyframes progressGlow { 0%,100%{box-shadow:0 0 8px rgba(19, 170, 179,0.4)} 50%{box-shadow:0 0 16px rgba(19, 170, 179,0.7)} }
             .article-scroll::-webkit-scrollbar { width: 6px; }
             .article-scroll::-webkit-scrollbar-track { background: #F4F9FB; }
             .article-scroll::-webkit-scrollbar-thumb { background: #C8DDE5; border-radius: 10px; }
@@ -636,9 +636,9 @@ export default function Insights() {
               <div className="article-modal-meta" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                 <span style={{
                   fontSize: "0.72rem", textTransform: "uppercase", fontWeight: "700",
-                  letterSpacing: "1.2px", background: "rgba(19,170,179,0.08)",
+                  letterSpacing: "1.2px", background: "rgba(19, 170, 179,0.08)",
                   color: "var(--color-accent)", padding: "5px 14px", borderRadius: "20px",
-                  border: "1px solid rgba(19,170,179,0.2)"
+                  border: "1px solid rgba(19, 170, 179,0.2)"
                 }}>{activeArticle.category}</span>
                 <span style={{ fontSize: "0.82rem", color: "#87A4B6", fontWeight: "500", display: "flex", alignItems: "center", gap: "5px" }}>
                   <i className="fas fa-clock" style={{ fontSize: "0.75rem" }}></i> {activeArticle.readTime}
@@ -730,7 +730,7 @@ export default function Insights() {
                       <div key={i} style={{ background: "#F8FCFD", border: "1px solid #E2EBE7", borderRadius: "16px", padding: "24px 28px", margin: "0 0 28px", display: "flex", flexDirection: "column", gap: "12px" }}>
                         {block.items.map((item, idx) => (
                           <div key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "1.05rem", color: "#2C4558" }}>
-                            <span style={{ color: "var(--color-accent)", fontSize: "0.85rem", marginTop: "4px", flexShrink: 0, background: "rgba(19,170,179,0.1)", width: "24px", height: "24px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                            <span style={{ color: "var(--color-accent)", fontSize: "0.85rem", marginTop: "4px", flexShrink: 0, background: "rgba(19, 170, 179,0.1)", width: "24px", height: "24px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
                               <i className="fas fa-check"></i>
                             </span>
                             <span style={{ lineHeight: "1.6" }}>{item}</span>
@@ -763,7 +763,7 @@ export default function Insights() {
                       <div
                         onClick={() => openArticle(next)}
                         style={{ display: "flex", alignItems: "center", gap: "20px", background: "white", border: "1.5px solid #E2EBE7", borderRadius: "16px", padding: "18px 24px", cursor: "pointer", transition: "all 0.25s" }}
-                        onMouseOver={(e) => { e.currentTarget.style.borderColor = "var(--color-accent)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(19,170,179,0.08)"; }}
+                        onMouseOver={(e) => { e.currentTarget.style.borderColor = "var(--color-accent)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(19, 170, 179,0.08)"; }}
                         onMouseOut={(e) => { e.currentTarget.style.borderColor = "#E2EBE7"; e.currentTarget.style.boxShadow = "none"; }}
                       >
                         <div style={{ width: "64px", height: "64px", borderRadius: "12px", backgroundImage: `url(${next.image})`, backgroundSize: "cover", backgroundPosition: "center", flexShrink: 0 }} />
@@ -913,7 +913,7 @@ export default function Insights() {
                     justifyContent: "space-between"
                   }}
                 >
-                  <div style={{ position: "absolute", top: 0, right: 0, width: "300px", height: "300px", background: "radial-gradient(circle, rgba(19,170,179,0.04) 0%, rgba(255,255,255,0) 70%)", zIndex: 0 }}></div>
+                  <div style={{ position: "absolute", top: 0, right: 0, width: "300px", height: "300px", background: "radial-gradient(circle, rgba(19, 170, 179,0.04) 0%, rgba(255,255,255,0) 70%)", zIndex: 0 }}></div>
                   
                   {/* Left Column: Text & CTA */}
                   <div style={{ flex: "1 1 400px", display: "flex", flexDirection: "column", justifyContent: "space-between", zIndex: 1 }}>
@@ -1369,14 +1369,14 @@ export default function Insights() {
             fontWeight: "700",
             fontSize: "1rem",
             textDecoration: "none",
-            boxShadow: "0 10px 25px rgba(19,170,179,0.2)",
+            boxShadow: "0 10px 25px rgba(19, 170, 179,0.2)",
             display: "inline-block",
             transition: "all 0.2s"
           }}
-          onMouseOver={(e) => e.currentTarget.style.boxShadow = "0 15px 35px rgba(19,170,179,0.3)"}
-          onMouseOut={(e) => e.currentTarget.style.boxShadow = "0 10px 25px rgba(19,170,179,0.2)"}
+          onMouseOver={(e) => e.currentTarget.style.boxShadow = "0 15px 35px rgba(19, 170, 179,0.3)"}
+          onMouseOut={(e) => e.currentTarget.style.boxShadow = "0 10px 25px rgba(19, 170, 179,0.2)"}
           >
-            Let's Build Together &rarr;
+            Let's Collaborate &rarr;
           </Link>
         </div>
       </section>

@@ -22,7 +22,7 @@ def aurbient_organization_schema():
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Contact",
-            "email": "aurbient@gmail.com",
+            "email": "contact@aurbient.com",
             "telephone": "+91-9131248819"
         },
         "sameAs": [

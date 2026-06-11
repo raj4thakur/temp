@@ -21,6 +21,6 @@ const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`=============================================================`);
   console.log(`🚀 Aurbient Local Mail Server listening on port ${PORT}`);
-  console.log(`📬 Forms submitted to /api/contact will email rajthakur.aurbient@gmail.com`);
+  console.log(`📬 Forms submitted to /api/contact will email rajthakur@aurbient.com, support@aurbient.com`);
   console.log(`=============================================================`);
 });

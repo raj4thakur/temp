@@ -13,7 +13,7 @@ export default function BusinessOperatingLayer() {
     },
     {
       q: "Do you integrate with SAP/Oracle ERPs?",
-      a: "Yes! Our ERP & Management platforms feature built-in sync adaptors engineered specifically to integrate with SAP, Oracle NetSuite, Microsoft Dynamics, and custom SQL databases."
+      a: "Yes! Our ERP & Business Management Platforms feature built-in sync adaptors engineered specifically to integrate with SAP, Oracle NetSuite, Microsoft Dynamics, and custom SQL databases."
     },
     {
       q: "Is operational data secure?",
@@ -46,7 +46,7 @@ export default function BusinessOperatingLayer() {
         
         <div className="container" style={{ position: "relative", zIndex: 2, color: "white" }}>
           <Link 
-            to="/" 
+            to="/case-studies" 
             style={{ 
               display: "inline-flex", 
               alignItems: "center", 
@@ -61,10 +61,10 @@ export default function BusinessOperatingLayer() {
             onMouseOver={e => e.currentTarget.style.color = "#FFFFFF"}
             onMouseOut={e => e.currentTarget.style.color = "rgba(255, 255, 255, 0.75)"}
           >
-            <i className="fas fa-arrow-left"></i> Back to Home
+            <i className="fas fa-arrow-left"></i> Back to Case Studies
           </Link>
-          <span style={{ fontSize: "1rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Architecture 06</span>
-          <h1 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", marginBottom: "30px", maxWidth: "900px", lineHeight: "1.15", textShadow: "0 4px 20px rgba(0,0,0,0.4)", fontWeight: "600" }}>Web & Enterprise Solutions</h1>
+          <span style={{ fontSize: "1rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Architecture 03</span>
+          <h1 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", marginBottom: "30px", maxWidth: "900px", lineHeight: "1.15", textShadow: "0 4px 20px rgba(0,0,0,0.4)", fontWeight: "600" }}>Modernizing Digital Infrastructure for Enterprise Communication</h1>
           <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19, 170, 179, 0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19, 170, 179, 0.4)" }}>
             Interactive Prototyping Canvas Interface
           </div>
@@ -80,10 +80,10 @@ export default function BusinessOperatingLayer() {
             <div>
               <h3 style={{ fontSize: "2rem", marginBottom: "24px", color: "var(--color-primary)", fontWeight: "600" }}>Section Introduction</h3>
               <p style={{ color: "#395568", marginBottom: "20px", lineHeight: "1.9", fontSize: "1.15rem" }}>
-                Enterprise digital environments should function as operational communication ecosystems rather than only online platforms.
+                The organization required a modern digital infrastructure capable of improving communication flow, operational accessibility, and professional enterprise presence. Aurbient Technologies developed a scalable digital environment focused on operational communication, structured inquiry systems, and business visibility.
               </p>
               <p style={{ color: "#395568", marginBottom: "0", lineHeight: "1.9", fontSize: "1.15rem" }}>
-                Aurbient Technologies develops enterprise-grade web and digital systems focused on communication clarity, operational accessibility, and professional business presence.
+                The project focused on creating a scalable enterprise-grade digital infrastructure designed to support operational communication and future expansion. The solution emphasized: Digital visibility, Structured communication systems, Inquiry coordination, Scalable architecture, and Enterprise-level digital presence.
               </p>
             </div>
             <div style={{ padding: "40px", background: "linear-gradient(135deg, var(--color-primary) 0%, #111d25 100%)", color: "white", borderRadius: "20px", boxShadow: "0 20px 40px rgba(26, 42, 53, 0.25)", position: "relative", overflow: "hidden" }}>
@@ -92,7 +92,7 @@ export default function BusinessOperatingLayer() {
                 <i className="fas fa-lightbulb"></i> Key Insight
               </h4>
               <p style={{ fontStyle: "italic", lineHeight: "1.8", fontSize: "1.2rem", margin: 0, position: "relative", zIndex: 2 }}>
-                "Modern enterprise websites should function as intelligent communication ecosystems connected to broader operational systems and business workflows."
+                "Modern digital infrastructure should function as an operational communication ecosystem rather than only an online presence."
               </p>
             </div>
           </div>
@@ -135,15 +135,15 @@ export default function BusinessOperatingLayer() {
                       required 
                       value={name} 
                       onChange={e => setName(e.target.value)} 
-                      placeholder="e.g. Shlok Kharva" 
+                      placeholder="e.g. James Carter" 
                       style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", border: "1.5px solid #E2EBE7", fontSize: "0.95rem" }} 
                     />
                   </div>
                   <div>
-                    <label style={{ display: "block", fontSize: "0.8rem", fontWeight: "bold", color: "var(--color-primary)", marginBottom: "6px" }}>GSTIN NUMBER:</label>
+                    <label style={{ display: "block", fontSize: "0.8rem", fontWeight: "bold", color: "var(--color-primary)", marginBottom: "6px" }}>COMPANY NAME:</label>
                     <input 
                       type="text" 
-                      placeholder="e.g. 24AASFP5315P1ZM" 
+                      placeholder="e.g. Apex Industries Ltd." 
                       style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", border: "1.5px solid #E2EBE7", fontSize: "0.95rem" }} 
                     />
                   </div>
@@ -164,7 +164,7 @@ export default function BusinessOperatingLayer() {
               overflow: "hidden"
             }}>
               {/* Chat Header */}
-              <div style={{ background: "linear-gradient(90deg, var(--color-primary) 0%, #111d25 100%)", padding: "20px 24px", borderBottom: "1.5px solid rgba(19,170,179,0.2)", display: "flex", alignItems: "center", gap: "12px" }}>
+              <div style={{ background: "linear-gradient(90deg, var(--color-primary) 0%, #111d25 100%)", padding: "20px 24px", borderBottom: "1.5px solid rgba(19, 170, 179,0.2)", display: "flex", alignItems: "center", gap: "12px" }}>
                 <div style={{ width: "12px", height: "12px", borderRadius: "50%", background: "#27c93f", boxShadow: "0 0 10px #27c93f" }}></div>
                 <span style={{ fontWeight: "700", fontSize: "0.95rem", letterSpacing: "1px" }}>AURBIENT AI ASSIST</span>
               </div>
@@ -196,7 +196,7 @@ export default function BusinessOperatingLayer() {
                     style={{
                       background: activeFAQ.q === faq.q ? "var(--color-accent)" : "transparent",
                       border: "1px solid",
-                      borderColor: activeFAQ.q === faq.q ? "var(--color-accent)" : "rgba(19,170,179,0.3)",
+                      borderColor: activeFAQ.q === faq.q ? "var(--color-accent)" : "rgba(19, 170, 179,0.3)",
                       borderRadius: "20px",
                       padding: "8px 16px",
                       fontSize: "0.78rem",
@@ -227,13 +227,12 @@ export default function BusinessOperatingLayer() {
             </div>
             <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
               {[
-                "Enterprise website systems",
-                "Operational communication platforms",
-                "Scalable web environments",
-                "Business accessibility systems",
-                "Digital enterprise ecosystems",
-                "Integrated inquiry systems",
-                "Professional digital infrastructure"
+                "Enterprise Website Infrastructure",
+                "Inquiry Management System",
+                "Operational Communication Layer",
+                "Scalable Content Architecture",
+                "Digital Visibility Framework",
+                "Integrated Business Access System"
               ].map((item, i) => (
                 <li key={i} style={{ display: "flex", gap: "16px", color: "#395568", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
                   <span style={{ color: "var(--color-accent)", fontSize: "1.2rem" }}><i className="fas fa-check-circle"></i></span>
@@ -253,12 +252,11 @@ export default function BusinessOperatingLayer() {
             </div>
             <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
               {[
-                "Improved business visibility",
-                "Better customer accessibility",
-                "Enhanced communication flow",
-                "Professional enterprise presence",
-                "Scalable digital operations",
-                "Structured online business ecosystems"
+                "Improved digital communication flow",
+                "Enhanced customer accessibility",
+                "Better operational coordination",
+                "Stronger enterprise visibility",
+                "Scalable infrastructure readiness"
               ].map((item, i) => (
                 <li key={i} style={{ display: "flex", gap: "16px", color: "#395568", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
                   <span style={{ color: "#2980B9", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
@@ -308,7 +306,7 @@ export default function BusinessOperatingLayer() {
                   width: "50px",
                   height: "50px",
                   borderRadius: "12px",
-                  background: `rgba(${focus.color === "#13AAB3" ? "19,170,179" : focus.color === "#3498db" ? "52,152,219" : focus.color === "#e67e22" ? "230,126,34" : "46,204,113"}, 0.1)`,
+                  background: `rgba(${focus.color === "#13AAB3" ? "19, 170, 179" : focus.color === "#3498db" ? "52,152,219" : focus.color === "#e67e22" ? "230,126,34" : "46,204,113"}, 0.1)`,
                   color: focus.color,
                   display: "flex",
                   alignItems: "center",

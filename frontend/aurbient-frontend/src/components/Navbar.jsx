@@ -47,10 +47,9 @@ export default function Navbar() {
                             <div className="mega-col">
                                 <h4>Core Offerings</h4>
                                 <Link to="/solutions/ai-automation" onClick={closeAll}>AI and Process automation</Link>
+                                <Link to="/solutions/operational-intelligence" onClick={closeAll}>Operational Intelligence Systems</Link>
                                 <Link to="/solutions/business-systems" onClick={closeAll}>ERP & Business Management Platforms</Link>
-                                <Link to="/solutions/enterprise-infrastructure" onClick={closeAll}>Operational Intelligence Systems</Link>
-                                <Link to="/solutions/operational-intelligence" onClick={closeAll}>Enterprise Software & Digital Systems</Link>
-                                <Link to="/solutions/digital-solutions" onClick={closeAll}>Website & Digital Solutions</Link>
+                                <Link to="/solutions/enterprise-infrastructure" onClick={closeAll}>Enterprise Software & Digital Systems</Link>
                             </div>
                         </div>
                     </div>

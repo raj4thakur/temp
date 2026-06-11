@@ -11,7 +11,7 @@ const deliverables = [
 ];
 
 const focusAreas = [
-  { icon: "fa-project-diagram", color: "#13AAB3", bg: "rgba(19,170,179,0.1)", title: "Intelligent Workflow Coordination", desc: "Designing systems that connect business workflows with intelligent automation and operational visibility." },
+  { icon: "fa-project-diagram", color: "#13AAB3", bg: "rgba(19, 170, 179,0.1)", title: "Intelligent Workflow Coordination", desc: "Designing systems that connect business workflows with intelligent automation and operational visibility." },
   { icon: "fa-chart-bar", color: "#2980B9", bg: "rgba(41,128,185,0.1)", title: "AI-Assisted Reporting", desc: "Creating reporting environments capable of improving management visibility and operational clarity." },
   { icon: "fa-brain", color: "#E67E22", bg: "rgba(230,126,34,0.1)", title: "Intelligent Decision Systems", desc: "Integrating AI-driven operational insights to support faster and more informed business decisions." },
   { icon: "fa-layer-group", color: "#27AE60", bg: "rgba(39,174,96,0.1)", title: "Scalable AI Infrastructure", desc: "Building scalable AI environments capable of supporting modern enterprise operations." },
@@ -37,7 +37,7 @@ export default function SolutionsAIAutomation() {
           </Link>
           <span style={{ fontSize: "0.9rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Ecosystem 01</span>
           <h1 style={{ fontSize: "clamp(2.8rem, 6vw, 4.5rem)", marginBottom: "28px", maxWidth: "860px", lineHeight: "1.1", fontWeight: "700" }}>AI Integration &amp; Intelligent Workflows</h1>
-          <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19,170,179,0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19,170,179,0.4)" }}>Operational Automation &amp; AI-Driven Execution</div>
+          <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19, 170, 179,0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19, 170, 179,0.4)" }}>Operational Automation &amp; AI-Driven Execution</div>
         </div>
       </section>
 
@@ -74,7 +74,7 @@ export default function SolutionsAIAutomation() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px", position: "relative" }}>
             {/* Connecting Line */}
-            <div style={{ position: "absolute", top: "40px", left: "12%", right: "12%", height: "3px", background: "linear-gradient(90deg, rgba(19,170,179,0.2) 0%, var(--color-accent) 50%, rgba(19,170,179,0.2) 100%)", zIndex: 1 }}></div>
+            <div style={{ position: "absolute", top: "40px", left: "12%", right: "12%", height: "3px", background: "linear-gradient(90deg, rgba(19, 170, 179,0.2) 0%, var(--color-accent) 50%, rgba(19, 170, 179,0.2) 100%)", zIndex: 1 }}></div>
 
             {[
               { step: "01", title: "Data Ingestion", desc: "Aggregating structured and unstructured data from ERPs, forms, and APIs.", icon: "fa-database" },
@@ -83,7 +83,7 @@ export default function SolutionsAIAutomation() {
               { step: "04", title: "Operational Insight", desc: "Generating real-time reporting and predictive analytics for management.", icon: "fa-chart-pie" }
             ].map((node, idx) => (
               <div key={idx} style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "20px" }}>
-                <div style={{ width: "80px", height: "80px", borderRadius: "50%", background: "white", border: "3px solid var(--color-accent)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 24px", fontSize: "1.8rem", color: "var(--color-primary)", boxShadow: "0 10px 25px rgba(19,170,179,0.2)", position: "relative", transition: "all 0.3s" }}>
+                <div style={{ width: "80px", height: "80px", borderRadius: "50%", background: "white", border: "3px solid var(--color-accent)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 24px", fontSize: "1.8rem", color: "var(--color-primary)", boxShadow: "0 10px 25px rgba(19, 170, 179,0.2)", position: "relative", transition: "all 0.3s" }}>
                   <i className={"fas " + node.icon}></i>
                   <div style={{ position: "absolute", top: "-10px", right: "-10px", background: "var(--color-primary)", color: "white", width: "28px", height: "28px", borderRadius: "50%", fontSize: "0.75rem", fontWeight: "bold", display: "flex", alignItems: "center", justifyContent: "center" }}>{node.step}</div>
                 </div>
@@ -95,33 +95,82 @@ export default function SolutionsAIAutomation() {
         </div>
 
 
-        {/* What We Deliver + Outcomes side by side */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "36px", marginBottom: "30px" }}>
-          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", borderTop: "4px solid var(--color-accent)" }}>
+        {/* Editorial Split Flow (No Boxes) */}
+        <div style={{ 
+          display: "grid", 
+          gridTemplateColumns: "1fr 1fr", 
+          gap: "80px", 
+          marginBottom: "60px",
+          padding: "60px 0",
+          borderTop: "1.5px solid rgba(17, 35, 48, 0.08)",
+          borderBottom: "1.5px solid rgba(17, 35, 48, 0.08)"
+        }}>
+          {/* Left: What We Deliver */}
+          <div style={{ position: "relative" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
-              <div style={{ width: "52px", height: "52px", borderRadius: "14px", background: "rgba(19,170,179,0.1)", color: "var(--color-accent)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem" }}><i className="fas fa-cubes" /></div>
-              <h3 style={{ fontSize: "1.5rem", color: "var(--color-primary)", margin: 0, fontWeight: "700" }}>What We Deliver</h3>
+              <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(236, 72, 153, 0.08)", color: "#EC4899", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem" }}>
+                <i className="fas fa-cogs"></i>
+              </div>
+              <h3 style={{ fontSize: "1.8rem", color: "var(--color-primary)", margin: 0, fontWeight: "700", letterSpacing: "-0.5px" }}>What We Deliver</h3>
             </div>
-            <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "14px" }}>
+            
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {deliverables.map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "14px", color: "#395568", fontSize: "1.05rem", lineHeight: "1.6", alignItems: "flex-start" }}>
-                  <span style={{ color: "var(--color-accent)", fontSize: "1.1rem", marginTop: "3px", flexShrink: 0 }}><i className="fas fa-check-circle" /></span>{item}
-                </li>
+                <div key={i} className="editorial-item" style={{ 
+                  display: "flex", 
+                  gap: "20px", 
+                  paddingBottom: "20px", 
+                  borderBottom: "1px dashed rgba(17, 35, 48, 0.06)",
+                  transition: "all 0.25s ease"
+                }}>
+                  <span style={{ 
+                    fontFamily: "monospace", 
+                    fontSize: "0.95rem", 
+                    color: "#EC4899", 
+                    fontWeight: "700", 
+                    paddingTop: "2px",
+                    letterSpacing: "1px" 
+                  }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span style={{ fontSize: "1.1rem", color: "#395568", lineHeight: "1.5", fontWeight: "500" }}>{item}</span>
+                </div>
               ))}
-            </ul>
-          </div>
-          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", borderTop: "4px solid #2980B9" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
-              <div style={{ width: "52px", height: "52px", borderRadius: "14px", background: "rgba(41,128,185,0.1)", color: "#2980B9", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem" }}><i className="fas fa-chart-line" /></div>
-              <h3 style={{ fontSize: "1.5rem", color: "var(--color-primary)", margin: 0, fontWeight: "700" }}>Business Outcomes</h3>
             </div>
-            <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "14px" }}>
+          </div>
+
+          {/* Right: Business Outcomes */}
+          <div style={{ position: "relative", borderLeft: "1.5px solid rgba(17, 35, 48, 0.08)", paddingLeft: "80px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
+              <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(139, 92, 246, 0.08)", color: "#8B5CF6", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem" }}>
+                <i className="fas fa-chart-line"></i>
+              </div>
+              <h3 style={{ fontSize: "1.8rem", color: "var(--color-primary)", margin: 0, fontWeight: "700", letterSpacing: "-0.5px" }}>Business Outcomes</h3>
+            </div>
+            
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {outcomes.map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "14px", color: "#395568", fontSize: "1.05rem", lineHeight: "1.6", alignItems: "flex-start" }}>
-                  <span style={{ color: "#2980B9", fontSize: "1.1rem", marginTop: "3px", flexShrink: 0 }}><i className="fas fa-arrow-alt-circle-up" /></span>{item}
-                </li>
+                <div key={i} className="editorial-item" style={{ 
+                  display: "flex", 
+                  gap: "20px", 
+                  paddingBottom: "20px", 
+                  borderBottom: "1px dashed rgba(17, 35, 48, 0.06)",
+                  transition: "all 0.25s ease"
+                }}>
+                  <span style={{ 
+                    fontFamily: "monospace", 
+                    fontSize: "0.95rem", 
+                    color: "#8B5CF6", 
+                    fontWeight: "700", 
+                    paddingTop: "2px",
+                    letterSpacing: "1px" 
+                  }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span style={{ fontSize: "1.1rem", color: "#395568", lineHeight: "1.5", fontWeight: "500" }}>{item}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 

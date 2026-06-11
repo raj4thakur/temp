@@ -11,7 +11,7 @@ const deliverables = [
 ];
 
 const focusAreas = [
-  { icon: "fa-sitemap", color: "#13AAB3", bg: "rgba(19,170,179,0.1)", title: "Enterprise Workflow Coordination", desc: "Building connected systems that improve cross-department operational execution." },
+  { icon: "fa-sitemap", color: "#13AAB3", bg: "rgba(19, 170, 179,0.1)", title: "Enterprise Workflow Coordination", desc: "Building connected systems that improve cross-department operational execution." },
   { icon: "fa-eye", color: "#2980B9", bg: "rgba(41,128,185,0.1)", title: "Management Visibility", desc: "Developing centralized visibility systems for operational monitoring and reporting." },
   { icon: "fa-users-cog", color: "#E67E22", bg: "rgba(230,126,34,0.1)", title: "Department Coordination Systems", desc: "Creating structured operational environments capable of supporting enterprise collaboration." },
   { icon: "fa-th-large", color: "#27AE60", bg: "rgba(39,174,96,0.1)", title: "Operational Standardization", desc: "Designing scalable workflow architectures for long-term operational efficiency." },
@@ -29,7 +29,7 @@ const outcomes = [
 export default function SolutionsBusinessSystems() {
   return (
     <main style={{ background: "#F4F9FB", minHeight: "100vh" }}>
-      <section className="hero case-study-hero" style={{ position: "relative", padding: "110px 0 100px", backgroundImage: "url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80)", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="hero case-study-hero" style={{ position: "relative", padding: "110px 0 100px", backgroundImage: "url(/images/business_systems_mockup.png", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(14,25,33,0.97) 0%, rgba(14,25,33,0.75) 55%, rgba(14,25,33,0.4) 100%)", zIndex: 1 }} />
         <div className="container" style={{ position: "relative", zIndex: 2, color: "white" }}>
           <Link to="/" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "rgba(255,255,255,0.7)", textDecoration: "none", fontSize: "0.95rem", fontWeight: "500", marginBottom: "28px" }} onMouseOver={e => e.currentTarget.style.color = "#FFFFFF"} onMouseOut={e => e.currentTarget.style.color = "rgba(255,255,255,0.7)"}>
@@ -37,7 +37,7 @@ export default function SolutionsBusinessSystems() {
           </Link>
           <span style={{ fontSize: "0.9rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Ecosystem 04</span>
           <h1 style={{ fontSize: "clamp(2.8rem, 6vw, 4.5rem)", marginBottom: "28px", maxWidth: "860px", lineHeight: "1.1", fontWeight: "700" }}>ERP &amp; Management Platforms</h1>
-          <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19,170,179,0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19,170,179,0.4)" }}>Enterprise Coordination &amp; Workflow Scalability</div>
+          <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19, 170, 179,0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19, 170, 179,0.4)" }}>Enterprise Coordination &amp; Workflow Scalability</div>
         </div>
       </section>
 
@@ -88,32 +88,82 @@ export default function SolutionsBusinessSystems() {
         </div>
 
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "36px", marginBottom: "30px" }}>
-          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", borderTop: "4px solid var(--color-accent)" }}>
+        {/* Editorial Split Flow (No Boxes) */}
+        <div style={{ 
+          display: "grid", 
+          gridTemplateColumns: "1fr 1fr", 
+          gap: "80px", 
+          marginBottom: "60px",
+          padding: "60px 0",
+          borderTop: "1.5px solid rgba(17, 35, 48, 0.08)",
+          borderBottom: "1.5px solid rgba(17, 35, 48, 0.08)"
+        }}>
+          {/* Left: What We Deliver */}
+          <div style={{ position: "relative" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
-              <div style={{ width: "52px", height: "52px", borderRadius: "14px", background: "rgba(19,170,179,0.1)", color: "var(--color-accent)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem" }}><i className="fas fa-cubes" /></div>
-              <h3 style={{ fontSize: "1.5rem", color: "var(--color-primary)", margin: 0, fontWeight: "700" }}>What We Deliver</h3>
+              <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(16, 185, 129, 0.08)", color: "#10B981", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem" }}>
+                <i className="fas fa-cogs"></i>
+              </div>
+              <h3 style={{ fontSize: "1.8rem", color: "var(--color-primary)", margin: 0, fontWeight: "700", letterSpacing: "-0.5px" }}>What We Deliver</h3>
             </div>
-            <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "14px" }}>
+            
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {deliverables.map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "14px", color: "#395568", fontSize: "1.05rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "var(--color-accent)", marginTop: "3px", flexShrink: 0 }}><i className="fas fa-check-circle" /></span>{item}
-                </li>
+                <div key={i} className="editorial-item" style={{ 
+                  display: "flex", 
+                  gap: "20px", 
+                  paddingBottom: "20px", 
+                  borderBottom: "1px dashed rgba(17, 35, 48, 0.06)",
+                  transition: "all 0.25s ease"
+                }}>
+                  <span style={{ 
+                    fontFamily: "monospace", 
+                    fontSize: "0.95rem", 
+                    color: "#10B981", 
+                    fontWeight: "700", 
+                    paddingTop: "2px",
+                    letterSpacing: "1px" 
+                  }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span style={{ fontSize: "1.1rem", color: "#395568", lineHeight: "1.5", fontWeight: "500" }}>{item}</span>
+                </div>
               ))}
-            </ul>
-          </div>
-          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", borderTop: "4px solid #2980B9" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
-              <div style={{ width: "52px", height: "52px", borderRadius: "14px", background: "rgba(41,128,185,0.1)", color: "#2980B9", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem" }}><i className="fas fa-chart-line" /></div>
-              <h3 style={{ fontSize: "1.5rem", color: "var(--color-primary)", margin: 0, fontWeight: "700" }}>Business Outcomes</h3>
             </div>
-            <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "14px" }}>
+          </div>
+
+          {/* Right: Business Outcomes */}
+          <div style={{ position: "relative", borderLeft: "1.5px solid rgba(17, 35, 48, 0.08)", paddingLeft: "80px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
+              <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(13, 148, 136, 0.08)", color: "#0D9488", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem" }}>
+                <i className="fas fa-chart-line"></i>
+              </div>
+              <h3 style={{ fontSize: "1.8rem", color: "var(--color-primary)", margin: 0, fontWeight: "700", letterSpacing: "-0.5px" }}>Business Outcomes</h3>
+            </div>
+            
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {outcomes.map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "14px", color: "#395568", fontSize: "1.05rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#2980B9", marginTop: "3px", flexShrink: 0 }}><i className="fas fa-arrow-alt-circle-up" /></span>{item}
-                </li>
+                <div key={i} className="editorial-item" style={{ 
+                  display: "flex", 
+                  gap: "20px", 
+                  paddingBottom: "20px", 
+                  borderBottom: "1px dashed rgba(17, 35, 48, 0.06)",
+                  transition: "all 0.25s ease"
+                }}>
+                  <span style={{ 
+                    fontFamily: "monospace", 
+                    fontSize: "0.95rem", 
+                    color: "#0D9488", 
+                    fontWeight: "700", 
+                    paddingTop: "2px",
+                    letterSpacing: "1px" 
+                  }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span style={{ fontSize: "1.1rem", color: "#395568", lineHeight: "1.5", fontWeight: "500" }}>{item}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 

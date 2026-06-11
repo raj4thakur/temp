@@ -13,7 +13,7 @@ export default function Company() {
         setTeam(sorted);
       } catch(e) {
         setTeam([
-          { name: "Dr. Elena Rostova", role: "Chief Synthesist", bio: "Leading AI architecture.", photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200" },
+          { name: "Dr. Elena Rostova", role: "Chief Synthesist", bio: "Leading AI architecture.", photo: "/images/careers_office_space.png" },
           { name: "Marcus Chen", role: "Head of Infrastructure", bio: "Specialist in low-latency grids.", photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200" }
         ]);
       }

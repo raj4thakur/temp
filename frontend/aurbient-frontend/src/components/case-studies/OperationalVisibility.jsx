@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function OperationalVisibility() {
   const images = {
-    hero: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80"
+    hero: "/images/operational_intel_dashboard.png"
   };
 
   // State for simulated updating live metrics
@@ -56,7 +56,7 @@ export default function OperationalVisibility() {
         
         <div className="container" style={{ position: "relative", zIndex: 2, color: "white" }}>
           <Link 
-            to="/" 
+            to="/case-studies" 
             style={{ 
               display: "inline-flex", 
               alignItems: "center", 
@@ -71,10 +71,10 @@ export default function OperationalVisibility() {
             onMouseOver={e => e.currentTarget.style.color = "#FFFFFF"}
             onMouseOut={e => e.currentTarget.style.color = "rgba(255, 255, 255, 0.75)"}
           >
-            <i className="fas fa-arrow-left"></i> Back to Home
+            <i className="fas fa-arrow-left"></i> Back to Case Studies
           </Link>
-          <span style={{ fontSize: "1rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Architecture 03</span>
-          <h1 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", marginBottom: "30px", maxWidth: "900px", lineHeight: "1.15", textShadow: "0 4px 20px rgba(0,0,0,0.4)", fontWeight: "600" }}>Operational Intelligence Systems</h1>
+          <span style={{ fontSize: "1rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Architecture 01</span>
+          <h1 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", marginBottom: "30px", maxWidth: "900px", lineHeight: "1.15", textShadow: "0 4px 20px rgba(0,0,0,0.4)", fontWeight: "600" }}>Improving Production Visibility Through Operational Digitization</h1>
           <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19, 170, 179, 0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19, 170, 179, 0.4)" }}>
             Real-Time Diagnostic Console Interface
           </div>
@@ -90,10 +90,10 @@ export default function OperationalVisibility() {
             <div>
               <h3 style={{ fontSize: "2rem", marginBottom: "24px", color: "var(--color-primary)", fontWeight: "600" }}>Section Introduction</h3>
               <p style={{ color: "#395568", marginBottom: "20px", lineHeight: "1.9", fontSize: "1.15rem" }}>
-                Businesses require centralized visibility systems capable of improving operational monitoring, workflow coordination, and strategic decision-making.
+                The organization faced operational inefficiencies caused by fragmented production tracking systems, delayed reporting workflows, and limited visibility across operational departments. Manual coordination processes reduced workflow efficiency and slowed management-level decision-making.
               </p>
               <p style={{ color: "#395568", marginBottom: "0", lineHeight: "1.9", fontSize: "1.15rem" }}>
-                Aurbient Technologies develops operational intelligence environments focused on real-time visibility, management reporting, and enterprise coordination.
+                Aurbient Technologies designed a centralized production intelligence platform designed to improve reporting accessibility and department coordination. The solution emphasized: Production visibility, Reporting digitization, Centralized operational monitoring, Department coordination, and Workflow automation.
               </p>
             </div>
             <div style={{ padding: "40px", background: "linear-gradient(135deg, var(--color-primary) 0%, #111d25 100%)", color: "white", borderRadius: "20px", boxShadow: "0 20px 40px rgba(26, 42, 53, 0.25)", position: "relative", overflow: "hidden" }}>
@@ -102,7 +102,7 @@ export default function OperationalVisibility() {
                 <i className="fas fa-lightbulb"></i> Key Insight
               </h4>
               <p style={{ fontStyle: "italic", lineHeight: "1.8", fontSize: "1.2rem", margin: 0, position: "relative", zIndex: 2 }}>
-                "Operational intelligence systems help businesses transform fragmented operational environments into connected decision ecosystems."
+                "Industrial efficiency increases significantly when production tracking systems, reporting workflows, and operational dashboards are unified into a centralized diagnostic command center."
               </p>
             </div>
           </div>
@@ -206,13 +206,12 @@ export default function OperationalVisibility() {
             </div>
             <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
               {[
-                "Management visibility systems",
-                "Operational dashboards",
-                "Reporting intelligence platforms",
-                "Data coordination systems",
-                "Workflow monitoring environments",
-                "Enterprise visibility infrastructure",
-                "Operational analytics systems"
+                "Centralized Production Intelligence Environment",
+                "Live Telemetry Console",
+                "Department Coordination Layer",
+                "Automated Reporting Pipeline",
+                "Workflow Monitoring System",
+                "Executive Visibility Dashboard"
               ].map((item, i) => (
                 <li key={i} style={{ display: "flex", gap: "16px", color: "#395568", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
                   <span style={{ color: "var(--color-accent)", fontSize: "1.2rem" }}><i className="fas fa-check-circle"></i></span>
@@ -232,12 +231,12 @@ export default function OperationalVisibility() {
             </div>
             <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
               {[
-                "Improved operational visibility",
-                "Faster management reporting access",
-                "Better workflow coordination",
-                "Enhanced enterprise monitoring",
-                "Increased operational transparency",
-                "Smarter operational decision-making"
+                "Improved real-time production visibility",
+                "Eliminated manual reporting dependency",
+                "Enhanced communication between departments",
+                "Centralized operational monitoring",
+                "Increased workflow coordination efficiency",
+                "Improved management-level decision speed"
               ].map((item, i) => (
                 <li key={i} style={{ display: "flex", gap: "16px", color: "#395568", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
                   <span style={{ color: "#2980B9", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
@@ -287,7 +286,7 @@ export default function OperationalVisibility() {
                   width: "50px",
                   height: "50px",
                   borderRadius: "12px",
-                  background: `rgba(${focus.color === "#13AAB3" ? "19,170,179" : focus.color === "#3498db" ? "52,152,219" : focus.color === "#e67e22" ? "230,126,34" : "46,204,113"}, 0.1)`,
+                  background: `rgba(${focus.color === "#13AAB3" ? "19, 170, 179" : focus.color === "#3498db" ? "52,152,219" : focus.color === "#e67e22" ? "230,126,34" : "46,204,113"}, 0.1)`,
                   color: focus.color,
                   display: "flex",
                   alignItems: "center",

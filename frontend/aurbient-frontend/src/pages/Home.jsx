@@ -37,13 +37,14 @@ export default function Home() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80", title: "Automation Ecosystems" },
-    { img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80", title: "Operational Visibility" },
-    { img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80", title: "Cloud Infrastructure" },
+    { img: "/images/ai_automation_hero.png", title: "Automation Ecosystems" },
+    { img: "/images/operational_intel_dashboard.png", title: "Operational Visibility" },
+    { img: "/images/enterprise_infra_network.png", title: "Cloud Infrastructure" },
     { img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1200&q=80", title: "AI Workflow Systems" }
   ];
 
   const [activeTestimonial, setActiveTestimonial] = useState(null);
+  const [hoveredFAQ, setHoveredFAQ] = useState(null);
   const faqs = [
     {
       question: "How do you approach a new project?",
@@ -98,8 +99,8 @@ export default function Home() {
         alignItems: 'center'
       }}>
         {/* Subtle Ambient Background Gradients */}
-        <div style={{ position: 'absolute', top: '-10%', left: '30%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(19,170,179,0.06) 0%, transparent 70%)', filter: 'blur(50px)', zIndex: 0 }}></div>
-        <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(19,170,179,0.04) 0%, transparent 70%)', filter: 'blur(60px)', zIndex: 0 }}></div>
+        <div style={{ position: 'absolute', top: '-10%', left: '30%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(19, 170, 179,0.06) 0%, transparent 70%)', filter: 'blur(50px)', zIndex: 0 }}></div>
+        <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(19, 170, 179,0.04) 0%, transparent 70%)', filter: 'blur(60px)', zIndex: 0 }}></div>
 
         <div className="container hero-flex" style={{ position: 'relative', zIndex: 2, display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: '60px', alignItems: 'center' }}>
           <div className="hero-text">
@@ -108,7 +109,7 @@ export default function Home() {
               alignItems: 'center',
               gap: '8px',
               padding: '8px 16px', 
-              background: 'rgba(19,170,179,0.08)', 
+              background: 'rgba(19, 170, 179,0.08)', 
               color: 'var(--color-accent)', 
               borderRadius: '100px', 
               fontSize: '0.85rem', 
@@ -116,7 +117,7 @@ export default function Home() {
               letterSpacing: '1.5px', 
               textTransform: 'uppercase', 
               marginBottom: '28px',
-              border: '1.5px solid rgba(19,170,179,0.15)'
+              border: '1.5px solid rgba(19, 170, 179,0.15)'
             }}>
               <i className="fas fa-microchip" style={{ fontSize: '0.9rem' }}></i> Engineering & Technology Partner
             </span>
@@ -143,19 +144,46 @@ export default function Home() {
             </p>
             
             <div style={{ display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap' }}>
-              <Link to="/contact" className="btn-premium" style={{ 
-                background: "var(--color-accent)", 
-                color: 'white', 
-                padding: "18px 48px", 
-                fontSize: '1.1rem', 
-                borderRadius: '100px', 
-                boxShadow: '0 10px 30px rgba(19,170,179,0.3)', 
-                transition: 'all 0.3s ease',
-                fontWeight: '600'
-              }}>
-                Schedule a consultation →
-              </Link>
+              <div style={{ position: 'relative', display: 'inline-block' }}>
+                <span style={{
+                  position: 'absolute',
+                  inset: '-4px',
+                  borderRadius: '100px',
+                  background: 'rgba(19, 170, 179, 0.45)',
+                  filter: 'blur(12px)',
+                  animation: 'consultationPulse 2s ease-in-out infinite',
+                  zIndex: 0,
+                  pointerEvents: 'none'
+                }} />
+                <style>{`
+                  @keyframes consultationPulse {
+                    0%, 100% { opacity: 0.6; transform: scale(1); }
+                    50% { opacity: 1; transform: scale(1.06); }
+                  }
+                  .btn-consult:hover {
+                    transform: translateY(-3px) scale(1.03) !important;
+                    box-shadow: 0 20px 50px rgba(19, 170, 179, 0.55) !important;
+                  }
+                `}</style>
+                <Link to="/contact" className="btn-premium btn-consult" style={{
+                  position: 'relative',
+                  zIndex: 1,
+                  background: "var(--color-accent)",
+                  color: 'white',
+                  padding: "18px 48px",
+                  fontSize: '1.1rem',
+                  borderRadius: '100px',
+                  boxShadow: '0 12px 36px rgba(19, 170, 179, 0.5), 0 0 0 2px rgba(19,170,179,0.25)',
+                  transition: 'all 0.3s ease',
+                  fontWeight: '700',
+                  letterSpacing: '0.01em',
+                  display: 'inline-block'
+                }}>
+                  Schedule a consultation →
+                </Link>
+              </div>
             </div>
+
           </div>
 
           {/* Interactive Slide Viewer */}
@@ -205,7 +233,7 @@ export default function Home() {
         overflow: 'hidden'
       }}>
         {/* Subtle background glow */}
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(19,170,179,0.1) 0%, transparent 60%)', filter: 'blur(60px)', pointerEvents: 'none' }}></div>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(19, 170, 179,0.1) 0%, transparent 60%)', filter: 'blur(60px)', pointerEvents: 'none' }}></div>
         
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
@@ -323,10 +351,9 @@ export default function Home() {
             >
             {[
               { icon: "fa-brain", title: "AI and Process automation", desc: "Self-healing AI workflows and automation pipelines designed to scale operations and eliminate manual friction.", path: "/solutions/ai-automation", img: "/images/cobot-psychology.jpeg" },
-              { icon: "fa-laptop-code", title: "ERP & Business Management Platforms", desc: "Mission-critical custom applications and unified management systems engineered for reliability and performance.", path: "/solutions/business-systems", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" },
-              { icon: "fa-layer-group", title: "Operational Intelligence Systems", desc: "Secure, scalable backend environments and server architectures that form the backbone of enterprise operations.", path: "/solutions/enterprise-infrastructure", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" },
-              { icon: "fa-eye", title: "Enterprise Software & Digital Systems", desc: "Centralized telemetry, data dashboards, and real-time monitoring solutions to unblock management visibility.", path: "/solutions/operational-intelligence", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" },
-              { icon: "fa-globe", title: "Website & Digital Solutions", desc: "Custom web applications and digital experiences designed to elevate your brand and drive online engagement.", path: "/solutions/digital-solutions", img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" }
+              { icon: "fa-eye", title: "Operational Intelligence Systems", desc: "Centralized telemetry, data dashboards, and real-time monitoring solutions to unblock management visibility.", path: "/solutions/operational-intelligence", img: "/images/operational_intel_dashboard.png" },
+              { icon: "fa-laptop-code", title: "ERP & Business Management Platforms", desc: "Mission-critical custom applications and unified management systems engineered for reliability and performance.", path: "/solutions/business-systems", img: "/images/business_systems_mockup.png" },
+              { icon: "fa-layer-group", title: "Enterprise Software & Digital Systems", desc: "Secure, scalable backend environments and server architectures that form the backbone of enterprise operations.", path: "/solutions/enterprise-infrastructure", img: "/images/enterprise_infra_network.png" }
             ].map((serv, idx) => (
               <div key={idx} className="service-hex-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start' }}>
                 <div className="service-hex-content" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -378,9 +405,9 @@ export default function Home() {
             </div>
             
             <div style={{ position: "relative" }}>
-              <div style={{ position: "absolute", top: "-5%", left: "-5%", width: "110%", height: "110%", background: "radial-gradient(circle, rgba(19,170,179,0.15) 0%, transparent 60%)", filter: "blur(30px)", zIndex: 0 }}></div>
+              <div style={{ position: "absolute", top: "-5%", left: "-5%", width: "110%", height: "110%", background: "radial-gradient(circle, rgba(19, 170, 179,0.15) 0%, transparent 60%)", filter: "blur(30px)", zIndex: 0 }}></div>
               <img 
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" 
+                src="/images/ai_automation_hero.png" 
                 alt="Intelligent Flow Transformation" 
                 style={{ width: "100%", height: "450px", objectFit: "cover", borderRadius: "24px", boxShadow: "0 20px 45px rgba(14,25,33,0.12)", position: "relative", zIndex: 1 }} 
               />
@@ -515,13 +542,13 @@ export default function Home() {
                 id: "02",
                 title: "Building an AI-Driven Sales & Management Ecosystem",
                 industry: "Business Operations / Sales Management",
-                img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+                img: "/images/business_systems_mockup.png"
               },
               {
                 id: "03",
                 title: "Modernizing Digital Infrastructure for Enterprise Communication",
                 industry: "Enterprise / Digital Infrastructure",
-                img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80"
+                img: "/images/enterprise_infra_network.png"
               }
             ].map((caseStudy) => (
               <Link 
@@ -566,71 +593,89 @@ export default function Home() {
 
 
       {/* 9. Testimonials (Operational Impact) */}
-      <section style={{ padding: "60px 0", background: "white" }}>
+      <section style={{ padding: "80px 0", background: "white" }}>
         <div className="container">
-          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
-            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Common Queries</span>
-            <h2 style={{ fontSize: "2.4rem", fontWeight: "700", color: "var(--color-primary)", margin: 0 }}>Frequently Asked Questions</h2>
-            <p style={{ color: "#395568", marginTop: "16px", fontSize: "1.1rem" }}>Everything you need to know about partnering with Aurbient Technologies.</p>
+          <div style={{ maxWidth: "850px", margin: "0 auto 40px", padding: "0 20px", textAlign: "left" }}>
+            <span style={{ 
+              fontSize: "0.75rem", 
+              color: "#8CABB8", 
+              textTransform: "uppercase", 
+              fontWeight: "700", 
+              letterSpacing: "1.5px", 
+              display: "block", 
+              marginBottom: "8px" 
+            }}>
+              Common Queries
+            </span>
+            <h2 style={{ fontSize: "2rem", fontWeight: "700", color: "var(--color-primary)", margin: 0 }}>
+              Frequently Asked Questions
+            </h2>
+            <p style={{ color: "#58798C", marginTop: "8px", fontSize: "1rem", lineHeight: "1.5" }}>
+              Everything you need to know about partnering with Aurbient Technologies.
+            </p>
           </div>
           
           <div style={{ maxWidth: "850px", margin: "0 auto", padding: "0 20px" }}>
-            {faqs.map((item, index) => (
-              <div 
-                key={index} 
-                style={{ 
-                  marginBottom: "16px", 
-                  borderRadius: "16px", 
-                  background: activeTestimonial === index ? "var(--color-primary)" : "#F4F9FB",
-                  border: "1px solid #E2EBE7",
-                  overflow: "hidden",
-                  transition: "all 0.3s ease"
-                }}
-              >
-                <button 
-                  onClick={() => setActiveTestimonial(activeTestimonial === index ? null : index)}
-                  style={{
-                    width: "100%",
-                    padding: "24px 32px",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    background: "transparent",
-                    border: "none",
-                    cursor: "pointer",
-                    color: activeTestimonial === index ? "white" : "var(--color-primary)",
-                    fontSize: "1.15rem",
-                    fontWeight: "600",
-                    textAlign: "left",
-                    lineHeight: "1.5"
+            {faqs.map((item, index) => {
+              const isOpen = activeTestimonial === index;
+              const isHovered = hoveredFAQ === index;
+              return (
+                <div 
+                  key={index} 
+                  style={{ 
+                    borderBottom: "1px solid #E2EBE7",
+                    borderTop: index === 0 ? "1px solid #E2EBE7" : "none",
+                    transition: "all 0.3s ease"
                   }}
                 >
-                  <span style={{ display: "flex", alignItems: "flex-start", gap: "16px" }}>
-                    <i className="fas fa-question-circle" style={{ color: activeTestimonial === index ? "var(--color-accent)" : "#CBE7E9", fontSize: "1.2rem", marginTop: "4px" }}></i>
-                    {item.question}
-                  </span>
-                  <i 
-                    className={`fas fa-chevron-down`} 
-                    style={{ 
-                      transform: activeTestimonial === index ? "rotate(180deg)" : "rotate(0)", 
-                      transition: "transform 0.3s ease",
-                      color: activeTestimonial === index ? "white" : "var(--color-primary)",
-                      marginLeft: "16px",
-                      flexShrink: 0
+                  <button 
+                    onClick={() => setActiveTestimonial(isOpen ? null : index)}
+                    onMouseEnter={() => setHoveredFAQ(index)}
+                    onMouseLeave={() => setHoveredFAQ(null)}
+                    style={{
+                      width: "100%",
+                      padding: "20px 0",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      background: "transparent",
+                      border: "none",
+                      cursor: "pointer",
+                      color: isHovered || isOpen ? "var(--color-accent)" : "var(--color-primary)",
+                      fontSize: "1.1rem",
+                      fontWeight: "600",
+                      textAlign: "left",
+                      lineHeight: "1.5",
+                      fontFamily: "inherit",
+                      transition: "color 0.2s ease"
                     }}
-                  ></i>
-                </button>
-                
-                <div style={{
-                  maxHeight: activeTestimonial === index ? "500px" : "0",
-                  opacity: activeTestimonial === index ? 1 : 0,
-                  transition: "all 0.4s ease",
-                  padding: activeTestimonial === index ? "0 32px 32px 32px" : "0 32px",
-                }}>
-                  <p style={{ color: activeTestimonial === index ? "rgba(255,255,255,0.9)" : "#395568", lineHeight: "1.8", marginBottom: "0", fontSize: "1.1rem" }}>{item.answer}</p>
+                  >
+                    <span style={{ paddingRight: "20px" }}>{item.question}</span>
+                    <i 
+                      className="fas fa-chevron-down" 
+                      style={{ 
+                        transform: isOpen ? "rotate(180deg)" : "rotate(0)", 
+                        transition: "transform 0.3s ease, color 0.3s ease",
+                        color: isOpen ? "var(--color-accent)" : "#8CABB8",
+                        marginLeft: "16px",
+                        flexShrink: 0
+                      }}
+                    />
+                  </button>
+                  
+                  <div style={{
+                    maxHeight: isOpen ? "500px" : "0",
+                    opacity: isOpen ? 1 : 0,
+                    overflow: "hidden",
+                    transition: "max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease"
+                  }}>
+                    <div style={{ padding: "0 0 20px 0", color: "#58798C", lineHeight: "1.7", fontSize: "0.95rem" }}>
+                      {item.answer}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -704,7 +749,7 @@ export default function Home() {
 
       {/* 11. Final CTA Layer */}
       <section style={{ padding: "60px 0", background: "var(--color-primary)", color: "white", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', background: 'radial-gradient(circle at 80% 20%, rgba(19,170,179,0.15) 0%, transparent 50%)', pointerEvents: 'none' }}></div>
+        <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', background: 'radial-gradient(circle at 80% 20%, rgba(19, 170, 179,0.15) 0%, transparent 50%)', pointerEvents: 'none' }}></div>
         <div className="container" id="build" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
           <div className="build-ecosystem" style={{ background: "transparent", border: "none", padding: 0 }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "20px", display: "inline-block" }}>Get Started</span>
@@ -725,7 +770,7 @@ export default function Home() {
                 transition: "all 0.3s ease",
                 fontWeight: "600"
               }}>
-                Contact Us →
+                Schedule a Strategic Call →
               </Link>
             </div>
             <p style={{ marginTop: "40px", fontSize: "0.85rem", color: "#A5C5D6", opacity: 0.8 }}>

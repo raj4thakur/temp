@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function RetailCommerce() {
-  const image = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80";
+  const image = "/images/industry_retail_commerce_hero.png";
 
   return (
     <main style={{ background: "#F4F9FB", minHeight: "100vh" }}>
@@ -69,18 +69,26 @@ export default function RetailCommerce() {
           </div>
         </div>
 
-        {/* side-by-side deliverables & focus areas */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", marginBottom: "36px" }}>
-          
-          {/* Deliverables Column */}
-          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 10px 30px rgba(0,0,0,0.02)", borderTop: "4px solid var(--color-accent)" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "20px", marginBottom: "30px" }}>
-              <div style={{ width: "56px", height: "56px", borderRadius: "16px", background: "rgba(19, 170, 179, 0.1)", color: "var(--color-accent)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.8rem" }}>
+        {/* Editorial Split Flow (No Boxes) */}
+        <div style={{ 
+          display: "grid", 
+          gridTemplateColumns: "1fr 1fr", 
+          gap: "80px", 
+          marginBottom: "60px",
+          padding: "60px 0",
+          borderTop: "1.5px solid rgba(17, 35, 48, 0.08)",
+          borderBottom: "1.5px solid rgba(17, 35, 48, 0.08)"
+        }}>
+          {/* Left: What We Deliver */}
+          <div style={{ position: "relative" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
+              <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(217, 119, 6, 0.08)", color: "#D97706", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem" }}>
                 <i className="fas fa-cogs"></i>
               </div>
-              <h4 style={{ fontSize: "1.6rem", color: "var(--color-primary)", margin: 0, fontWeight: "600" }}>What We Deliver</h4>
+              <h3 style={{ fontSize: "1.8rem", color: "var(--color-primary)", margin: 0, fontWeight: "700", letterSpacing: "-0.5px" }}>What We Deliver</h3>
             </div>
-            <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
+            
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {[
                 "Omnichannel inventory synchronization engines",
                 "Secure payment portal integrations",
@@ -90,23 +98,39 @@ export default function RetailCommerce() {
                 "Operational shopping flow auditing",
                 "POS-to-Web databases bridges"
               ].map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "16px", color: "#395568", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
-                  <span style={{ color: "var(--color-accent)", fontSize: "1.2rem" }}><i className="fas fa-check-circle"></i></span>
-                  {item}
-                </li>
+                <div key={i} className="editorial-item" style={{ 
+                  display: "flex", 
+                  gap: "20px", 
+                  paddingBottom: "20px", 
+                  borderBottom: "1px dashed rgba(17, 35, 48, 0.06)",
+                  transition: "all 0.25s ease"
+                }}>
+                  <span style={{ 
+                    fontFamily: "monospace", 
+                    fontSize: "0.95rem", 
+                    color: "#D97706", 
+                    fontWeight: "700", 
+                    paddingTop: "2px",
+                    letterSpacing: "1px" 
+                  }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span style={{ fontSize: "1.1rem", color: "#395568", lineHeight: "1.5", fontWeight: "500" }}>{item}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
-          {/* Business Outcomes Column */}
-          <div className="eco-card" style={{ background: "white", padding: "50px", borderRadius: "24px", boxShadow: "0 10px 30px rgba(0,0,0,0.02)", borderTop: "4px solid #2980B9" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "20px", marginBottom: "30px" }}>
-              <div style={{ width: "56px", height: "56px", borderRadius: "16px", background: "rgba(41, 128, 185, 0.1)", color: "#2980B9", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.8rem" }}>
+          {/* Right: Business Outcomes */}
+          <div style={{ position: "relative", borderLeft: "1.5px solid rgba(17, 35, 48, 0.08)", paddingLeft: "80px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
+              <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "rgba(220, 38, 38, 0.08)", color: "#DC2626", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem" }}>
                 <i className="fas fa-chart-line"></i>
               </div>
-              <h4 style={{ fontSize: "1.6rem", color: "var(--color-primary)", margin: 0, fontWeight: "600" }}>Business Outcomes</h4>
+              <h3 style={{ fontSize: "1.8rem", color: "var(--color-primary)", margin: 0, fontWeight: "700", letterSpacing: "-0.5px" }}>Business Outcomes</h3>
             </div>
-            <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
+            
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {[
                 "100% elimination of duplicate inventory orders",
                 "0.4-second catalog state response times",
@@ -115,12 +139,27 @@ export default function RetailCommerce() {
                 "Automated customer cart follow-ups",
                 "Highly synchronized promotional rules"
               ].map((item, i) => (
-                <li key={i} style={{ display: "flex", gap: "16px", color: "#395568", fontSize: "1.1rem", lineHeight: "1.6", alignItems: "center" }}>
-                  <span style={{ color: "#2980B9", fontSize: "1.2rem" }}><i className="fas fa-arrow-alt-circle-up"></i></span>
-                  {item}
-                </li>
+                <div key={i} className="editorial-item" style={{ 
+                  display: "flex", 
+                  gap: "20px", 
+                  paddingBottom: "20px", 
+                  borderBottom: "1px dashed rgba(17, 35, 48, 0.06)",
+                  transition: "all 0.25s ease"
+                }}>
+                  <span style={{ 
+                    fontFamily: "monospace", 
+                    fontSize: "0.95rem", 
+                    color: "#DC2626", 
+                    fontWeight: "700", 
+                    paddingTop: "2px",
+                    letterSpacing: "1px" 
+                  }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span style={{ fontSize: "1.1rem", color: "#395568", lineHeight: "1.5", fontWeight: "500" }}>{item}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
@@ -163,7 +202,7 @@ export default function RetailCommerce() {
                   width: "50px",
                   height: "50px",
                   borderRadius: "12px",
-                  background: `rgba(${focus.color === "#13AAB3" ? "19,170,179" : focus.color === "#3498db" ? "52,152,219" : focus.color === "#e67e22" ? "230,126,34" : "46,204,113"}, 0.1)`,
+                  background: `rgba(${focus.color === "#13AAB3" ? "19, 170, 179" : focus.color === "#3498db" ? "52,152,219" : focus.color === "#e67e22" ? "230,126,34" : "46,204,113"}, 0.1)`,
                   color: focus.color,
                   display: "flex",
                   alignItems: "center",

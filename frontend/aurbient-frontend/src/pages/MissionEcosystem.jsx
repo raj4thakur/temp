@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 export default function MissionEcosystem() {
   const images = {
-    hero: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
+    hero: "/images/company_mission_ecosystem_hero.png",
   };
 
   const [activeBelief, setActiveBelief] = useState(0);
 
   const beliefs = [
-    { num: "01", icon: "fa-network-wired", title: "Intelligent Systems Create Better Businesses", desc: "Businesses grow more effectively when workflows, reporting environments, operational systems, and communication layers function together as connected ecosystems.", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" },
+    { num: "01", icon: "fa-network-wired", title: "Intelligent Systems Create Better Businesses", desc: "Businesses grow more effectively when workflows, reporting environments, operational systems, and communication layers function together as connected ecosystems.", img: "/images/enterprise_infra_network.png" },
     { num: "02", icon: "fa-robot", title: "Automation Should Improve Human Efficiency", desc: "Automation should support teams by reducing repetitive operational dependency and improving execution speed.", img: "/images/cobot-psychology.jpeg" },
     { num: "03", icon: "fa-server", title: "Scalability Requires Structure", desc: "Long-term business growth requires scalable systems, operational clarity, and intelligent digital infrastructure.", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" },
-    { num: "04", icon: "fa-brain", title: "AI Should Solve Real Operational Problems", desc: "Artificial Intelligence becomes valuable when integrated into real business operations capable of improving visibility, efficiency, and decision-making.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80" },
-    { num: "05", icon: "fa-eye", title: "Operational Visibility is Essential", desc: "Leadership requires real-time insight into performance metrics. We build unified dashboards that eliminate data silos and expose core business truths.", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" },
+    { num: "04", icon: "fa-brain", title: "AI Should Solve Real Operational Problems", desc: "Artificial Intelligence becomes valuable when integrated into real business operations capable of improving visibility, efficiency, and decision-making.", img: "/images/ai_automation_hero.png" },
+    { num: "05", icon: "fa-eye", title: "Operational Visibility is Essential", desc: "Leadership requires real-time insight into performance metrics. We build unified dashboards that eliminate data silos and expose core business truths.", img: "/images/operational_intel_dashboard.png" },
     { num: "06", icon: "fa-tachometer-alt", title: "Execution Must Be Frictionless", desc: "We engineer workflow systems that remove administrative bottlenecks, ensuring your workforce can focus strictly on high-value strategic execution.", img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" }
   ];
 

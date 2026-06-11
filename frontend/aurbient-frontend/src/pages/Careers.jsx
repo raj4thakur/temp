@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Careers() {
   const images = {
-    hero: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
+    hero: "/images/company_careers_hero.png",
   };
 
   return (
@@ -43,10 +43,10 @@ export default function Careers() {
             </div>
             <h3 style={{ fontSize: "1.8rem", fontWeight: "700", color: "var(--color-primary)", marginBottom: "16px" }}>Submit Your Profile</h3>
             <p style={{ color: "#58798C", fontSize: "1.1rem", lineHeight: "1.7", marginBottom: "30px" }}>
-              Send your resume and a brief introduction about your technical background and systems thinking approach.
+              Send your resume and a brief introduction about your technical background and systems thinking approach to <strong style={{ color: "var(--color-primary)" }}>hr@aurbient.com</strong>.
             </p>
-            <a href="mailto:rajthakur.aurbient@gmail.com" className="btn-premium" style={{ background: "var(--color-primary)", color: "white", padding: "16px 40px", fontSize: "1.1rem", borderRadius: "100px", display: "inline-block", textDecoration: "none" }}>
-              Email Us
+            <a href="mailto:hr@aurbient.com" className="btn-premium" style={{ background: "var(--color-primary)", color: "white", padding: "16px 40px", fontSize: "1.1rem", borderRadius: "100px", display: "inline-block", textDecoration: "none" }}>
+              Email hr@aurbient.com
             </a>
           </div>
         </div>

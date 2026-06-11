@@ -1,30 +1,34 @@
 export const services = [
   {
-    id: "business-systems",
-    title: "Business Systems",
-    description: "Design and implementation of systems that improve operational visibility, reporting, and coordination.",
-    icon: "fa-sitemap",
-    path: "/services"
-  },
-  {
     id: "ai-automation",
-    title: "AI Automation",
-    description: "Workflow automation, process optimization, and intelligent business operations.",
+    title: "AI and Process automation",
+    description: "Self-healing AI workflows and automation pipelines designed to scale operations and eliminate manual friction.",
     icon: "fa-brain",
-    path: "/services"
+    path: "/solutions/ai-automation",
+    img: "/images/cobot-psychology.jpeg"
   },
   {
-    id: "process-optimization",
-    title: "Process Optimization",
-    description: "Identify bottlenecks, streamline workflows, and improve operational efficiency.",
-    icon: "fa-cogs",
-    path: "/services"
+    id: "operational-intelligence",
+    title: "Operational Intelligence Systems",
+    description: "Centralized telemetry, data dashboards, and real-time monitoring solutions to unblock management visibility.",
+    icon: "fa-eye",
+    path: "/solutions/operational-intelligence",
+    img: "/images/operational_intel_dashboard.png"
   },
   {
-    id: "system-integration",
-    title: "System Integration",
-    description: "Connect ERP, databases, software platforms, and business tools into a unified ecosystem.",
-    icon: "fa-network-wired",
-    path: "/services"
+    id: "business-systems",
+    title: "ERP & Business Management Platforms",
+    description: "Mission-critical custom applications and unified management systems engineered for reliability and performance.",
+    icon: "fa-laptop-code",
+    path: "/solutions/business-systems",
+    img: "/images/business_systems_mockup.png"
+  },
+  {
+    id: "enterprise-infrastructure",
+    title: "Enterprise Software & Digital Systems",
+    description: "Secure, scalable backend environments and server architectures that form the backbone of enterprise operations.",
+    icon: "fa-layer-group",
+    path: "/solutions/enterprise-infrastructure",
+    img: "/images/enterprise_infra_network.png"
   }
 ];

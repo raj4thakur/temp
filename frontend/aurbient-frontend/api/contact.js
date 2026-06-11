@@ -62,7 +62,7 @@ export default async function handler(req, res) {
 
   const mailOptions = {
     from: `"Aurbient Lead System" <${EMAIL_USER}>`,
-    to: EMAIL_USER,
+    to: process.env.LEAD_RECIPIENTS || 'rajthakur@aurbient.com, support@aurbient.com',
     subject: `⚡ New Lead: ${name} (${company || 'Individual'})`,
     replyTo: email,
     text: `New Lead: ${name} (${email}) | Company: ${company || 'N/A'}\n\nMessage:\n${message}`,

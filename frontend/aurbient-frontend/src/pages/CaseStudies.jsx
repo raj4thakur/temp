@@ -5,38 +5,38 @@ import AIWorkflowSystems from "../components/case-studies/AIWorkflowSystems";
 import BusinessOperatingLayer from "../components/case-studies/BusinessOperatingLayer";
 import AutomationEcosystems from "../components/case-studies/AutomationEcosystems";
 import ERPIntelligence from "../components/case-studies/ERPIntelligence";
-import Logistics from "./Logistics";
+import MultiRegionLogistics from "../components/case-studies/MultiRegionLogistics";
 
 const fallbackImages = {
   "01": [
     "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+    "/images/ai_automation_hero.png",
+    "/images/operational_intel_dashboard.png"
   ],
   "02": [
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    "/images/business_systems_mockup.png",
+    "/images/enterprise_infra_network.png",
     "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80"
   ],
   "03": [
-    "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80",
+    "/images/enterprise_infra_network.png",
+    "/images/business_systems_mockup.png",
     "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
   ],
   "04": [
     "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "/images/ai_automation_hero.png",
     "https://images.unsplash.com/photo-1531746790731-6c087fecd7c3?auto=format&fit=crop&w=1200&q=80"
   ],
   "05": [
-    "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=1200&q=80",
+    "/images/case_study_05_erp_hero.png",
     "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
     "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80"
   ],
   "06": [
     "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80"
+    "/images/operational_intel_dashboard.png",
+    "/images/ai_automation_hero.png"
   ]
 };
 
@@ -290,8 +290,8 @@ export default function CaseStudies() {
       insight: "Localized vector processing allows for real-time dispatch decisions that traditional relational databases cannot support.",
       images: [
         "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1600&q=80",
-        "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80"
+        "/images/operational_intel_dashboard.png",
+        "/images/ai_automation_hero.png"
       ]
     }
   ];
@@ -310,12 +310,12 @@ export default function CaseStudies() {
       img.src = selectedCase.images[0];
       img.onload = () => setHeroImage(selectedCase.images[0]);
       img.onerror = () => {
-        setHeroImage(fallbackImages[selectedCase.id]?.[0] || "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80");
+        setHeroImage(fallbackImages[selectedCase.id]?.[0] || "/images/ai_automation_hero.png");
       };
     }
   }, [selectedCase]);
 
-  const sliderImages = caseStudies.map(cs => fallbackImages[cs.id]?.[0] || "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80");
+  const sliderImages = caseStudies.map(cs => fallbackImages[cs.id]?.[0] || "/images/ai_automation_hero.png");
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   useEffect(() => {
@@ -347,7 +347,7 @@ export default function CaseStudies() {
       case "05":
         return <ERPIntelligence />;
       case "06":
-        return <Logistics />;
+        return <MultiRegionLogistics />;
       default:
         return null;
     }
@@ -458,7 +458,7 @@ export default function CaseStudies() {
                   alt={caseStudy.title} 
                   style={{ width: "100%", height: "220px", objectFit: "cover" }} 
                   onError={(e) => {
-                    e.target.src = fallbackImages[caseStudy.id]?.[0] || "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80";
+                    e.target.src = fallbackImages[caseStudy.id]?.[0] || "/images/ai_automation_hero.png";
                   }}
                 />
                 <div style={{ padding: "30px", flex: 1, display: "flex", flexDirection: "column" }}>
@@ -479,7 +479,7 @@ export default function CaseStudies() {
             Aurbient Technologies focuses on building intelligent operational systems that help businesses improve workflow visibility, automation, scalability, and operational efficiency through modern digital infrastructure and AI-driven transformation.
           </p>
           <Link to="/contact" className="btn-premium" style={{ background: "white", color: "var(--color-primary)" }}>
-            Contact Us →
+            Schedule a Strategic Call →
           </Link>
         </div>
       </section>

@@ -90,7 +90,7 @@ const MOCK_TEAM = [
     name: "Dr. Elena Rostova",
     role: "Chief Intelligence Officer",
     bio: "Former lead researcher at Max Planck Institute. Elena specializes in hyper-dimensional vector embeddings and multi-agent synergy systems.",
-    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+    photo: "/images/careers_office_space.png",
     linkedin: "https://linkedin.com/in/elena-rostova-demo",
     order: 1
   },
