@@ -145,41 +145,21 @@ export default function Home() {
             
             <div style={{ display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap' }}>
               <div style={{ position: 'relative', display: 'inline-block' }}>
-                <span style={{
-                  position: 'absolute',
-                  inset: '-4px',
-                  borderRadius: '100px',
-                  background: 'rgba(19, 170, 179, 0.45)',
-                  filter: 'blur(12px)',
-                  animation: 'consultationPulse 2s ease-in-out infinite',
-                  zIndex: 0,
-                  pointerEvents: 'none'
-                }} />
-                <style>{`
-                  @keyframes consultationPulse {
-                    0%, 100% { opacity: 0.6; transform: scale(1); }
-                    50% { opacity: 1; transform: scale(1.06); }
-                  }
-                  .btn-consult:hover {
-                    transform: translateY(-3px) scale(1.03) !important;
-                    box-shadow: 0 20px 50px rgba(19, 170, 179, 0.55) !important;
-                  }
-                `}</style>
-                <Link to="/contact" className="btn-premium btn-consult" style={{
+                <Link to="/contact" className="btn-premium" style={{
                   position: 'relative',
                   zIndex: 1,
-                  background: "var(--color-accent)",
+                  background: "#26B7D6",
                   color: 'white',
                   padding: "18px 48px",
                   fontSize: '1.1rem',
                   borderRadius: '100px',
-                  boxShadow: '0 12px 36px rgba(19, 170, 179, 0.5), 0 0 0 2px rgba(19,170,179,0.25)',
+                  boxShadow: '0 8px 24px rgba(14, 25, 33, 0.15)',
                   transition: 'all 0.3s ease',
                   fontWeight: '700',
                   letterSpacing: '0.01em',
                   display: 'inline-block'
                 }}>
-                  Schedule a consultation →
+                  Schedule a Strategic Consultation
                 </Link>
               </div>
             </div>
@@ -353,9 +333,9 @@ export default function Home() {
               { icon: "fa-brain", title: "AI and Process automation", desc: "Self-healing AI workflows and automation pipelines designed to scale operations and eliminate manual friction.", path: "/solutions/ai-automation", img: "/images/cobot-psychology.jpeg" },
               { icon: "fa-eye", title: "Operational Intelligence Systems", desc: "Centralized telemetry, data dashboards, and real-time monitoring solutions to unblock management visibility.", path: "/solutions/operational-intelligence", img: "/images/operational_intel_dashboard.png" },
               { icon: "fa-laptop-code", title: "ERP & Business Management Platforms", desc: "Mission-critical custom applications and unified management systems engineered for reliability and performance.", path: "/solutions/business-systems", img: "/images/business_systems_mockup.png" },
-              { icon: "fa-layer-group", title: "Enterprise Software & Digital Systems", desc: "Secure, scalable backend environments and server architectures that form the backbone of enterprise operations.", path: "/solutions/enterprise-infrastructure", img: "/images/enterprise_infra_network.png" }
+              { icon: "fa-layer-group", title: "Web & Enterprise Solutions", desc: "Enterprise-grade web and digital systems focused on communication clarity, operational accessibility, and professional business presence.", path: "/solutions/enterprise-infrastructure", img: "/images/enterprise_infra_network.png" }
             ].map((serv, idx) => (
-              <div key={idx} className="service-hex-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start' }}>
+              <Link to={serv.path} key={idx} className="service-hex-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start', textDecoration: 'none' }}>
                 <div className="service-hex-content" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <div style={{ flex: 1 }}>
                     <h3 style={{ margin: "0 0 16px 0", fontSize: '1.6rem', color: 'var(--color-primary)', fontWeight: '800', lineHeight: '1.3' }}>{serv.title}</h3>
@@ -366,14 +346,14 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <Link to={serv.path} className="service-hex-overlay" style={{ backgroundImage: `url(${serv.img})` }}>
+                <div className="service-hex-overlay" style={{ backgroundImage: `url(${serv.img})` }}>
                   <div style={{ position: 'relative', zIndex: 1 }}>
                     <h3>{serv.title}</h3>
                     <p>{serv.desc}</p>
                     <span className="service-hex-link">Learn More <i className="fas fa-arrow-right"></i></span>
                   </div>
-                </Link>
-              </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -753,9 +733,9 @@ export default function Home() {
         <div className="container" id="build" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
           <div className="build-ecosystem" style={{ background: "transparent", border: "none", padding: 0 }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "20px", display: "inline-block" }}>Get Started</span>
-            <h2 style={{ fontSize: "3rem", fontWeight: "700", color: "white", marginBottom: "20px", letterSpacing: "-0.02em" }}>Let’s build your intelligent infrastructure</h2>
-            <p style={{ margin: "20px auto 40px", maxWidth: "600px", color: "#A5C5D6", fontSize: "1.25rem", lineHeight: "1.8" }}>
-              From vision to orchestrated reality. Partner with Aurbient to architect the invisible layer your business will depend on.
+            <h2 style={{ fontSize: "3rem", fontWeight: "700", color: "white", marginBottom: "20px", letterSpacing: "-0.02em" }}>Let's Build Intelligent Operations Together</h2>
+            <p style={{ margin: "20px auto 40px", maxWidth: "800px", color: "#A5C5D6", fontSize: "1.25rem", lineHeight: "1.8" }}>
+              Transform manual processes, disconnected workflows, and operational inefficiencies into intelligent systems designed for growth, visibility, and scalability.
             </p>
             <div style={{ display: "flex", justifyContent: "center", gap: "20px", flexWrap: "wrap" }}>
               <Link to="/contact" className="btn-premium" style={{ 
@@ -770,11 +750,11 @@ export default function Home() {
                 transition: "all 0.3s ease",
                 fontWeight: "600"
               }}>
-                Schedule a Strategic Call →
+                Schedule a Strategic Consultation →
               </Link>
             </div>
             <p style={{ marginTop: "40px", fontSize: "0.85rem", color: "#A5C5D6", opacity: 0.8 }}>
-              Schedule a strategic ecosystem briefing with our infrastructure architects
+              Discuss your operational challenges with our technology and automation consultants.
             </p>
           </div>
         </div>

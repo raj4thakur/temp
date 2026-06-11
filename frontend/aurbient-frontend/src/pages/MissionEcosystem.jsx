@@ -124,7 +124,7 @@ export default function MissionEcosystem() {
             <div style={{ background: "rgba(9, 32, 39, 0.7)", backdropFilter: "blur(20px)", padding: "50px", borderRadius: "30px", border: "1px solid rgba(19,170,179,0.4)", boxShadow: "0 20px 50px rgba(0,0,0,0.5), inset 0 0 30px rgba(19,170,179,0.1)" }}>
               <p style={{ fontSize: "1.3rem", lineHeight: "1.8", color: "#E4F1F3", margin: 0, fontStyle: "italic", fontWeight: "400", letterSpacing: "0.5px" }}>
                 <span style={{ color: "var(--color-accent)", fontSize: "1.8rem", lineHeight: "0", verticalAlign: "middle", marginRight: "8px" }}>"</span>
-                Aurbient Technologies develops intelligent operational ecosystems designed to improve business visibility, workflow coordination, automation efficiency, and scalable enterprise growth through modern technology infrastructure and AI-driven transformation.
+                Aurbient Technologies develops intelligent operational ecosystems designed to improve business visibility, workflow coordination, automation efficiency, and scalable enterprise growth through modern technology infrastructure.
                 <span style={{ color: "var(--color-accent)", fontSize: "1.8rem", lineHeight: "0", verticalAlign: "middle", marginLeft: "4px" }}>"</span>
               </p>
             </div>

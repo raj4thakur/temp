@@ -25,8 +25,8 @@ export const services = [
   },
   {
     id: "enterprise-infrastructure",
-    title: "Enterprise Software & Digital Systems",
-    description: "Secure, scalable backend environments and server architectures that form the backbone of enterprise operations.",
+    title: "Web & Enterprise Solutions",
+    description: "Enterprise-grade web and digital systems focused on communication clarity, operational accessibility, and professional business presence.",
     icon: "fa-layer-group",
     path: "/solutions/enterprise-infrastructure",
     img: "/images/enterprise_infra_network.png"

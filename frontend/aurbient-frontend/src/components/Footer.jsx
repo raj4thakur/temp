@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ maxWidth: "240px" }}>
             
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '16px' }}>
               <img
                 src={logoFooterImg}
                 alt="Aurbient Technologies"
@@ -137,13 +137,7 @@ export default function Footer() {
 
             {/* General Contact */}
             <div style={{ paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: "10px" }}>
-              <div style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "4px" }}>General Contact</div>
-              <a href="mailto:contact@aurbient.com" className="footer-link" style={{ fontSize: "0.83rem" }}>contact@aurbient.com</a>
-            </div>
-            {/* Help & Support */}
-            <div style={{ paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: "10px" }}>
-              <div style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "4px" }}>Help & Support</div>
-              <a href="mailto:help@aurbient.com" className="footer-link" style={{ fontSize: "0.83rem", marginBottom: "4px" }}>help@aurbient.com</a>
+              <div style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "4px" }}>Reach Out</div>
               <a href="mailto:support@aurbient.com" className="footer-link" style={{ fontSize: "0.83rem" }}>support@aurbient.com</a>
             </div>
           </div>

@@ -74,7 +74,7 @@ export default function Contact() {
               lineHeight: "1.1",
               textShadow: "0 4px 20px rgba(0,0,0,0.3)"
             }}>
-              Let's Collaborate
+              Discuss Your Operational Challenges
             </h1>
             <p style={{ 
               fontSize: "1.25rem", 
@@ -150,74 +150,11 @@ export default function Contact() {
                   </div>
                   <div>
                     <div style={{ fontSize: "0.75rem", color: "#58798C", textTransform: "uppercase", fontWeight: "700", letterSpacing: "0.5px", marginBottom: "4px" }}>General Inquiry</div>
-                    <a href="mailto:contact@aurbient.com" style={{ color: "var(--color-primary)", fontWeight: "600", fontSize: "1.05rem", textDecoration: "none" }}>contact@aurbient.com</a>
+                    <a href="mailto:support@aurbient.com" style={{ color: "var(--color-primary)", fontWeight: "600", fontSize: "1.05rem", textDecoration: "none" }}>support@aurbient.com</a>
                   </div>
                 </div>
 
-                {/* Help & Support */}
-                <div style={{ 
-                  display: 'flex', 
-                  alignItems: 'flex-start', 
-                  gap: '20px', 
-                  background: "#FFFFFF", 
-                  padding: "24px", 
-                  borderRadius: "20px", 
-                  border: "1px solid #E2EBE7",
-                  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.02)"
-                }}>
-                  <div style={{ 
-                    width: "52px", 
-                    height: "52px", 
-                    borderRadius: "16px", 
-                    background: "rgba(19, 170, 179, 0.08)", 
-                    display: "flex", 
-                    alignItems: "center", 
-                    justifyContent: "center", 
-                    color: "var(--color-accent)", 
-                    fontSize: "1.3rem",
-                    flexShrink: 0
-                  }}>
-                    <i className="fas fa-headset"></i>
-                  </div>
-                  <div>
-                    <div style={{ fontSize: "0.75rem", color: "#58798C", textTransform: "uppercase", fontWeight: "700", letterSpacing: "0.5px", marginBottom: "4px" }}>Help & Support</div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                      <a href="mailto:help@aurbient.com" style={{ color: "var(--color-primary)", fontWeight: "600", fontSize: "1.05rem", textDecoration: "none" }}>help@aurbient.com</a>
-                      <a href="mailto:support@aurbient.com" style={{ color: "var(--color-primary)", fontWeight: "600", fontSize: "1.05rem", textDecoration: "none" }}>support@aurbient.com</a>
-                    </div>
-                  </div>
-                </div>
 
-                {/* Careers & Hiring */}
-                <div style={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  gap: '20px', 
-                  background: "#FFFFFF", 
-                  padding: "24px", 
-                  borderRadius: "20px", 
-                  border: "1px solid #E2EBE7",
-                  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.02)"
-                }}>
-                  <div style={{ 
-                    width: "52px", 
-                    height: "52px", 
-                    borderRadius: "16px", 
-                    background: "rgba(19, 170, 179, 0.08)", 
-                    display: "flex", 
-                    alignItems: "center", 
-                    justifyContent: "center", 
-                    color: "var(--color-accent)", 
-                    fontSize: "1.3rem",
-                    flexShrink: 0
-                  }}>
-                    <i className="fas fa-user-tie"></i>
-                  </div>
-                  <div>
-                    <div style={{ fontSize: "0.75rem", color: "#58798C", textTransform: "uppercase", fontWeight: "700", letterSpacing: "0.5px", marginBottom: "4px" }}>Careers & Hiring</div>
-                    <a href="mailto:hr@aurbient.com" style={{ color: "var(--color-primary)", fontWeight: "600", fontSize: "1.05rem", textDecoration: "none" }}>hr@aurbient.com</a>
-                  </div>
-                </div>
 
                 <div style={{ 
                   display: 'flex', 

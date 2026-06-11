@@ -1,29 +1,29 @@
 import { Link } from "react-router-dom";
 
 const deliverables = [
-  "Cloud-connected infrastructure systems",
-  "Scalable backend environments",
-  "Enterprise deployment architecture",
-  "Integrated operational ecosystems",
-  "Digital scalability systems",
-  "Infrastructure optimization environments",
-  "Connected enterprise platforms",
+  "Enterprise website systems",
+  "Operational communication platforms",
+  "Scalable web environments",
+  "Business accessibility systems",
+  "Digital enterprise ecosystems",
+  "Integrated inquiry systems",
+  "Professional digital infrastructure",
 ];
 
 const focusAreas = [
-  { icon: "fa-layer-group", color: "#13AAB3", bg: "rgba(19, 170, 179,0.1)", title: "Scalable System Architecture", desc: "Building modern infrastructure capable of supporting operational growth and digital scalability." },
-  { icon: "fa-server", color: "#2980B9", bg: "rgba(41,128,185,0.1)", title: "Enterprise Infrastructure Systems", desc: "Developing connected digital environments for operational continuity and performance." },
-  { icon: "fa-cloud-upload-alt", color: "#E67E22", bg: "rgba(230,126,34,0.1)", title: "Cloud & Deployment Environments", desc: "Creating scalable deployment systems designed for enterprise-grade reliability." },
-  { icon: "fa-plug", color: "#27AE60", bg: "rgba(39,174,96,0.1)", title: "Operational Connectivity", desc: "Integrating infrastructure layers that support intelligent operational workflows." },
+  { icon: "fa-laptop", color: "#13AAB3", bg: "rgba(19, 170, 179,0.1)", title: "Enterprise Digital Presence", desc: "Designing professional digital environments capable of supporting business visibility and credibility." },
+  { icon: "fa-comments", color: "#2980B9", bg: "rgba(41,128,185,0.1)", title: "Communication Infrastructure", desc: "Creating systems that improve operational communication and customer accessibility." },
+  { icon: "fa-server", color: "#E67E22", bg: "rgba(230,126,34,0.1)", title: "Scalable Web Platforms", desc: "Developing scalable web architectures designed for long-term operational growth." },
+  { icon: "fa-project-diagram", color: "#27AE60", bg: "rgba(39,174,96,0.1)", title: "Integrated Business Ecosystems", desc: "Building connected digital systems that support business workflows and enterprise communication." },
 ];
 
 const outcomes = [
-  "Improved system scalability",
-  "Better operational continuity",
-  "Enhanced infrastructure reliability",
-  "Scalable digital growth support",
-  "Stronger operational connectivity",
-  "Future-ready enterprise systems",
+  "Improved business visibility",
+  "Better customer accessibility",
+  "Enhanced communication flow",
+  "Professional enterprise presence",
+  "Scalable digital operations",
+  "Structured online business ecosystems",
 ];
 
 export default function SolutionsEnterpriseInfrastructure() {
@@ -36,8 +36,8 @@ export default function SolutionsEnterpriseInfrastructure() {
             <i className="fas fa-arrow-left" /> Back to Home
           </Link>
           <span style={{ fontSize: "0.9rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Ecosystem 04</span>
-          <h1 style={{ fontSize: "clamp(2.8rem, 6vw, 4.5rem)", marginBottom: "28px", maxWidth: "860px", lineHeight: "1.1", fontWeight: "700" }}>Enterprise Software & Digital Systems</h1>
-          <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19, 170, 179,0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19, 170, 179,0.4)" }}>Cloud Architecture &amp; Enterprise-Grade Deployment</div>
+          <h1 style={{ fontSize: "clamp(2.8rem, 6vw, 4.5rem)", marginBottom: "28px", maxWidth: "860px", lineHeight: "1.1", fontWeight: "700" }}>Web & Enterprise Solutions</h1>
+          <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19, 170, 179,0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19, 170, 179,0.4)" }}>Operational Communication & Digital Presence</div>
         </div>
       </section>
 
@@ -48,14 +48,14 @@ export default function SolutionsEnterpriseInfrastructure() {
               <span style={{ fontSize: "0.8rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Section Overview</span>
               <h2 style={{ fontSize: "2rem", marginBottom: "20px", color: "var(--color-primary)", fontWeight: "700" }}>Section Introduction</h2>
               <p style={{ color: "#395568", lineHeight: "1.9", fontSize: "1.1rem" }}>
-                Enterprise software and digital systems form the foundation of modern operational ecosystems. Aurbient Technologies develops enterprise-grade software and digital systems designed to support scalability, performance, operational continuity, and intelligent system integration.
+                Enterprise digital environments should function as operational communication ecosystems rather than only online platforms. Aurbient Technologies develops enterprise-grade web and digital systems focused on communication clarity, operational accessibility, and professional business presence.
               </p>
             </div>
             <div style={{ padding: "44px", background: "linear-gradient(135deg, var(--color-primary) 0%, #0a141b 100%)", color: "white", borderRadius: "20px", position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", top: "-20px", right: "-10px", opacity: "0.05", fontSize: "140px" }}><i className="fas fa-quote-right" /></div>
               <h4 style={{ marginBottom: "16px", color: "var(--color-accent)", fontSize: "1rem", textTransform: "uppercase", letterSpacing: "1px", display: "flex", alignItems: "center", gap: "10px" }}><i className="fas fa-lightbulb" /> Key Insight</h4>
               <p style={{ fontStyle: "italic", lineHeight: "1.8", fontSize: "1.15rem", margin: 0, position: "relative", zIndex: 2 }}>
-                "Modern businesses require enterprise software and digital systems capable of supporting intelligent operations, automation ecosystems, and long-term growth."
+                "Modern enterprise websites should function as intelligent communication ecosystems connected to broader operational systems and business workflows."
               </p>
             </div>
           </div>

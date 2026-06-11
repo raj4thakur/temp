@@ -341,7 +341,7 @@ export default function About() {
               <h3 style={{ fontSize: "1.6rem", fontWeight: "700", margin: "0 0 20px 0", color: "white", textShadow: "0 2px 10px rgba(0,0,0,0.1)" }}>Final Company Statement</h3>
               <p style={{ fontSize: "1.2rem", lineHeight: "1.8", color: "#E4F1F3", margin: 0, fontStyle: "italic", fontWeight: "400", letterSpacing: "0.5px" }}>
                 <span style={{ color: "var(--color-accent)", fontSize: "1.8rem", lineHeight: "0", verticalAlign: "middle", marginRight: "8px" }}>"</span>
-                Aurbient Technologies develops intelligent operational ecosystems designed to improve business visibility, workflow coordination, automation efficiency, and scalable enterprise growth through modern technology infrastructure and AI-driven transformation.
+                Aurbient Technologies develops intelligent operational ecosystems designed to improve business visibility, workflow coordination, automation efficiency, and scalable enterprise growth through modern technology infrastructure.
                 <span style={{ color: "var(--color-accent)", fontSize: "1.8rem", lineHeight: "0", verticalAlign: "middle", marginLeft: "4px" }}>"</span>
               </p>
             </div>
