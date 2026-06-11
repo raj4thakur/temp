@@ -112,8 +112,6 @@ export default function Footer() {
                 { label: "Operational Intelligence", to: "/solutions/operational-intelligence" },
                 { label: "Business Systems", to: "/solutions/business-systems" },
                 { label: "Enterprise Infrastructure", to: "/solutions/enterprise-infrastructure" },
-                { label: "Process Optimization", to: "/solutions/ai-automation" },
-                { label: "System Integration", to: "/solutions/enterprise-infrastructure" },
               ].map((item) => (
                 <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>
               ))}
