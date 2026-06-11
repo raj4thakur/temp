@@ -62,8 +62,6 @@ export default function Footer() {
                 { label: "Vision & Philosophy", to: "/company/vision-philosophy" },
                 { label: "Mission & Ecosystem", to: "/company/mission-ecosystem" },
                 { label: "Engineering Culture", to: "/company/engineering-culture" },
-                { label: "Insights", to: "/insights" },
-                { label: "Case Studies", to: "/case-studies" },
                 { label: "Careers", to: "/company/careers" },
               ].map((item) => (
                 <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>
@@ -88,9 +86,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Systems */}
+          {/* Case Studies */}
           <div>
-            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Systems</h4>
+            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Case Studies</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {[
                 { label: "Automation Ecosystems", to: "/case-studies/04" },

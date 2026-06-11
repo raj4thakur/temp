@@ -4,7 +4,7 @@ import logoImg from "../assets/logo.png";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null); // 'solutions' | 'industries' | 'systems' | 'insights' | 'company' | null
+  const [activeDropdown, setActiveDropdown] = useState(null); // 'solutions' | 'industries' | 'company' | null
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -73,26 +73,9 @@ export default function Navbar() {
                 </div>
 
 
-                {/* INSIGHTS */}
-                <div className={`nav-item dropdown-item ${activeDropdown === 'insights' ? 'active' : ''}`}>
-                    <a href="#" className="nav-link" onClick={e => { e.preventDefault(); toggleDropdown('insights'); }}>
-                      Insights <i className="fas fa-chevron-down dropdown-icon"></i>
-                    </a>
-                    <div className="mega-menu" style={{ left: 'auto', right: '0', width: '280px' }}>
-                        <div className="mega-grid" style={{ gridTemplateColumns: "1fr", gap: "24px" }}>
-                            <div className="mega-col">
-                                <h4>Resources</h4>
-                                <Link to="/insights" state={{ tab: "articles" }} onClick={closeAll} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '600' }}>
-                                  <i className="fas fa-th-large" style={{ color: 'var(--color-accent)', fontSize: '0.85rem' }}></i>
-                                  Articles
-                                </Link>
-                                <Link to="/case-studies" onClick={closeAll} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '600' }}>
-                                  <i className="fas fa-chart-line" style={{ color: 'var(--color-accent)', fontSize: '0.85rem' }}></i>
-                                  Case Studies
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+                {/* CASE STUDIES */}
+                <div className="nav-item">
+                    <Link to="/case-studies" className="nav-link" onClick={closeAll}>Case Studies</Link>
                 </div>
 
                 {/* COMPANY */}
