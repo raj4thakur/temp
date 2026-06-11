@@ -25,7 +25,7 @@ export const services = [
   },
   {
     id: "enterprise-infrastructure",
-    title: "Web & Enterprise Solutions",
+    title: "Enterprise Software & Digital Systems",
     description: "Enterprise-grade web and digital systems focused on communication clarity, operational accessibility, and professional business presence.",
     icon: "fa-layer-group",
     path: "/solutions/enterprise-infrastructure",
