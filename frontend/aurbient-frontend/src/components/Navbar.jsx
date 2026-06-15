@@ -73,9 +73,17 @@ export default function Navbar() {
                 </div>
 
 
-                {/* CASE STUDIES */}
-                <div className="nav-item">
-                    <Link to="/case-studies" className="nav-link" onClick={closeAll}>Case Studies</Link>
+                {/* INSIGHTS */}
+                <div className={`nav-item dropdown-item ${activeDropdown === 'insights' ? 'active' : ''}`}>
+                    <a href="#" className="nav-link" onClick={e => { e.preventDefault(); toggleDropdown('insights'); }}>
+                      Insights <i className="fas fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <div className="mega-menu" style={{ left: '-40px', width: '200px' }}>
+                        <div className="mega-col">
+                            <Link to="/case-studies" onClick={closeAll}>Case Studies</Link>
+                            <Link to="/insights" onClick={closeAll}>Articles</Link>
+                        </div>
+                    </div>
                 </div>
 
                 {/* COMPANY */}

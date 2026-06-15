@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoFooterImg from "../assets/logo-footer.png";
+import latestLogoImg from "../assets/latest-logo.png";
 
 export default function Footer() {
   return (
@@ -10,22 +10,17 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ maxWidth: "240px" }}>
             
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
               <img
-                src={logoFooterImg}
+                src={latestLogoImg}
                 alt="Aurbient Technologies"
                 style={{
-                  height: '38px',
+                  height: '42px',
                   width: 'auto',
                   objectFit: 'contain',
-                  display: 'block',
-                  flexShrink: 0
+                  display: 'block'
                 }}
               />
-              <div style={{ lineHeight: 1.15 }}>
-                <div style={{ color: '#ffffff', fontWeight: '700', fontSize: '1.1rem', letterSpacing: '0.01em' }}>Aurbient</div>
-                <div style={{ color: '#ffffff', fontWeight: '600', fontSize: '0.65rem', letterSpacing: '0.18em', textTransform: 'uppercase', opacity: 0.85 }}>Technologies</div>
-              </div>
             </div>
 
             <div style={{ lineHeight: "1.55", fontSize: "0.88rem", color: "#8CABB8" }}>
@@ -86,32 +81,16 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Case Studies */}
-          <div>
-            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Case Studies</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {[
-                { label: "Automation Ecosystems", to: "/case-studies/04" },
-                { label: "ERP Intelligence", to: "/case-studies/05" },
-                { label: "AI Workflow Systems", to: "/case-studies/02" },
-                { label: "Operational Visibility", to: "/case-studies/01" },
-                { label: "Cloud Infrastructure", to: "/case-studies/06" },
-                { label: "Business Operating Layer", to: "/case-studies/03" },
-              ].map((item) => (
-                <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>
-              ))}
-            </div>
-          </div>
 
-          {/* Solutions */}
+          {/* Services */}
           <div>
-            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Solutions</h4>
+            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Services</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {[
-                { label: "AI Automation", to: "/solutions/ai-automation" },
-                { label: "Operational Intelligence", to: "/solutions/operational-intelligence" },
-                { label: "Business Systems", to: "/solutions/business-systems" },
-                { label: "Enterprise Infrastructure", to: "/solutions/enterprise-infrastructure" },
+                { label: "AI and Process automation", to: "/solutions/ai-automation" },
+                { label: "Operational Intelligence Systems", to: "/solutions/operational-intelligence" },
+                { label: "ERP & Business Management Platforms", to: "/solutions/business-systems" },
+                { label: "Enterprise Software & Digital Systems", to: "/solutions/enterprise-infrastructure" },
               ].map((item) => (
                 <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>
               ))}
@@ -122,7 +101,7 @@ export default function Footer() {
           <div>
             <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Get In Touch With Us</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <Link to="/contact" style={{ color: "white", textDecoration: "none", fontWeight: "600", fontSize: "0.88rem", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: "2px", width: "fit-content", marginBottom: "4px" }}>Connect with us →</Link>
+              <Link to="/contact" style={{ color: "white", textDecoration: "none", fontWeight: "600", fontSize: "0.88rem", width: "fit-content", marginBottom: "4px" }}>Connect with us →</Link>
               
               <a href="tel:+918629919873" className="footer-link" style={{ fontSize: "0.85rem" }}>+91 8629919873</a>
               
