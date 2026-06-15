@@ -99,7 +99,7 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Get In Touch With Us</h4>
+
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <Link to="/contact" style={{ color: "white", textDecoration: "none", fontWeight: "600", fontSize: "0.88rem", width: "fit-content", marginBottom: "4px" }}>Connect with us →</Link>
               
