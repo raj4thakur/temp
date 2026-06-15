@@ -159,7 +159,7 @@ export default function Home() {
                   letterSpacing: '0.01em',
                   display: 'inline-block'
                 }}>
-                  Schedule a Strategic Consultation
+                  Schedule a Free Operations Assessment
                 </Link>
               </div>
             </div>
@@ -750,7 +750,7 @@ export default function Home() {
                 transition: "all 0.3s ease",
                 fontWeight: "600"
               }}>
-                Schedule a Strategic Consultation →
+                Schedule a Free Operations Assessment →
               </Link>
             </div>
             <p style={{ marginTop: "40px", fontSize: "0.85rem", color: "#A5C5D6", opacity: 0.8 }}>
