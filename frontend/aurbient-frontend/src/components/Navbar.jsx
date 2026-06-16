@@ -84,7 +84,7 @@ export default function Navbar() {
 
                 {/* CTA */}
                 <div className="nav-item cta-nav-item">
-                  <Link to="/contact" className="btn-premium" onClick={closeAll}>Schedule a Consultation</Link>
+                  <Link to="/contact" className="btn-premium" onClick={closeAll}>Contact</Link>
                 </div>
             </div>
         </div>
