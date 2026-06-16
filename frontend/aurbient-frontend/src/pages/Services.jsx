@@ -34,7 +34,7 @@ export default function Services() {
                 fontSize: "1.15rem", borderRadius: "100px", boxShadow: "0 10px 30px rgba(19, 170, 179, 0.3)", 
                 textDecoration: "none", display: "inline-block", transition: "all 0.3s ease", fontWeight: "600"
               }}>
-                Schedule a Consultation
+                Book a Free Strategy Call
               </Link>
             </div>
           </div>

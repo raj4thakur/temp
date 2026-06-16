@@ -472,17 +472,7 @@ export default function CaseStudies() {
         </div>
       </section>
 
-      <section style={{ padding: "80px 0", background: "var(--color-primary)", color: "white", textAlign: "center" }}>
-        <div className="container" style={{ maxWidth: "800px" }}>
-          <h2 style={{ fontSize: "2.5rem", marginBottom: "24px" }}>Final Positioning Statement</h2>
-          <p style={{ fontSize: "1.2rem", lineHeight: "1.8", opacity: 0.9, marginBottom: "40px" }}>
-            Aurbient Technologies focuses on building intelligent operational systems that help businesses improve workflow visibility, automation, scalability, and operational efficiency through modern digital infrastructure and AI-driven transformation.
-          </p>
-          <Link to="/contact" className="btn-premium" style={{ background: "white", color: "var(--color-primary)" }}>
-            Schedule a Strategic Call →
-          </Link>
-        </div>
-      </section>
+
     </main>
   );
 }

@@ -742,16 +742,7 @@ export default function Insights() {
                   return null;
                 })}
 
-                {/* Bottom CTA Banner */}
-                <div className="article-modal-footer-cta" style={{ marginTop: "52px", background: "linear-gradient(135deg, var(--color-primary) 0%, #1A3344 100%)", borderRadius: "20px", padding: "36px 40px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "20px" }}>
-                  <div>
-                    <div style={{ color: "var(--color-accent)", fontSize: "0.8rem", fontWeight: "700", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px" }}>Ready to Transform Your Operations?</div>
-                    <div style={{ color: "white", fontSize: "1.15rem", fontWeight: "600" }}>Talk to our engineering team about implementing these strategies.</div>
-                  </div>
-                  <a href="#/contact" onClick={() => setActiveArticle(null)} style={{ background: "var(--color-accent)", color: "var(--color-primary)", padding: "12px 28px", borderRadius: "30px", fontWeight: "700", textDecoration: "none", fontSize: "0.95rem", whiteSpace: "nowrap", flexShrink: 0 }}>
-                    Get in Touch <i className="fas fa-arrow-right" style={{ marginLeft: "8px" }}></i>
-                  </a>
-                </div>
+
 
                 {/* Next Article Suggestion */}
                 {(() => {
@@ -1354,32 +1345,7 @@ export default function Insights() {
         </div>
       </section>
 
-      {/* Modern Industrial Call-to-action bottom panel */}
-      <section style={{ background: "linear-gradient(135deg, #112330 0%, #0E1A22 100%)", padding: "80px 0", color: "white", textAlign: "center" }}>
-        <div className="container" style={{ maxWidth: "800px" }}>
-          <h2 style={{ fontSize: "2.4rem", fontWeight: "700", marginBottom: "20px", letterSpacing: "-0.01em" }}>Transform Fragmented Software into Intelligence</h2>
-          <p style={{ color: "#A7BCC7", fontSize: "1.1rem", lineHeight: "1.7", marginBottom: "40px" }}>
-            Ready to design high-performance architectures, automate self-healing workflows, or deploy custom intelligence layers inside your operational environment?
-          </p>
-          <Link to="/contact" style={{
-            background: "var(--color-accent)",
-            color: "var(--color-primary)",
-            padding: "16px 40px",
-            borderRadius: "30px",
-            fontWeight: "700",
-            fontSize: "1rem",
-            textDecoration: "none",
-            boxShadow: "0 10px 25px rgba(19, 170, 179,0.2)",
-            display: "inline-block",
-            transition: "all 0.2s"
-          }}
-          onMouseOver={(e) => e.currentTarget.style.boxShadow = "0 15px 35px rgba(19, 170, 179,0.3)"}
-          onMouseOut={(e) => e.currentTarget.style.boxShadow = "0 10px 25px rgba(19, 170, 179,0.2)"}
-          >
-            Let's Collaborate &rarr;
-          </Link>
-        </div>
-      </section>
+
     </main>
   );
 }

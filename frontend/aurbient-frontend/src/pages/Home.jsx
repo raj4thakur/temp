@@ -148,7 +148,7 @@ export default function Home() {
                 <Link to="/contact" className="btn-premium" style={{
                   position: 'relative',
                   zIndex: 1,
-                  background: "#26B7D6",
+                  background: "var(--color-accent)",
                   color: 'white',
                   padding: "18px 48px",
                   fontSize: '1.1rem',
@@ -158,8 +158,11 @@ export default function Home() {
                   fontWeight: '700',
                   letterSpacing: '0.01em',
                   display: 'inline-block'
-                }}>
-                  Schedule a Consultation
+                }}
+                onMouseOver={(e) => e.currentTarget.style.background = "var(--color-primary)"}
+                onMouseOut={(e) => e.currentTarget.style.background = "var(--color-accent)"}
+                >
+                  Book a Free Strategy Call
                 </Link>
               </div>
             </div>
@@ -464,17 +467,7 @@ export default function Home() {
       <section style={{ padding: "50px 0", background: "white" }}>
         <div className="container">
           <div style={{ maxWidth: "850px", margin: "0 auto 30px", padding: "0 20px", textAlign: "left" }}>
-            <span style={{ 
-              fontSize: "0.75rem", 
-              color: "#8CABB8", 
-              textTransform: "uppercase", 
-              fontWeight: "700", 
-              letterSpacing: "1.5px", 
-              display: "block", 
-              marginBottom: "8px" 
-            }}>
-              Common Queries
-            </span>
+
             <h2 style={{ fontSize: "2rem", fontWeight: "700", color: "var(--color-primary)", margin: 0 }}>
               Frequently Asked Questions
             </h2>
