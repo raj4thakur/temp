@@ -69,7 +69,7 @@ export default function Footer() {
               <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Insights</h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 {[
-                  { label: "Articles", to: "/insights/articles" },
+                  { label: "Articles", to: "/insights" },
                   { label: "Case Studies", to: "/case-studies" },
                 ].map((item) => (
                   <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>
