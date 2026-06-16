@@ -1,29 +1,26 @@
 import { Link } from "react-router-dom";
 
 const deliverables = [
-  "AI-assisted workflow systems",
-  "Intelligent operational automation",
-  "Predictive process insights",
-  "AI-powered reporting environments",
-  "Smart business coordination systems",
-  "Decision-support infrastructures",
-  "Operational intelligence integration",
+  "Automated task execution",
+  "Approval & notification workflows",
+  "Cross-platform data syncing",
+  "Manual data entry reduction",
+  "Standardized operational pipelines",
 ];
 
 const focusAreas = [
-  { icon: "fa-project-diagram", color: "#13AAB3", bg: "rgba(19, 170, 179,0.1)", title: "Intelligent Workflow Coordination", desc: "Designing systems that connect business workflows with intelligent automation and operational visibility." },
-  { icon: "fa-chart-bar", color: "#2980B9", bg: "rgba(41,128,185,0.1)", title: "AI-Assisted Reporting", desc: "Creating reporting environments capable of improving management visibility and operational clarity." },
-  { icon: "fa-brain", color: "#E67E22", bg: "rgba(230,126,34,0.1)", title: "Intelligent Decision Systems", desc: "Integrating AI-driven operational insights to support faster and more informed business decisions." },
-  { icon: "fa-layer-group", color: "#27AE60", bg: "rgba(39,174,96,0.1)", title: "Scalable AI Infrastructure", desc: "Building scalable AI environments capable of supporting modern enterprise operations." },
+  { icon: "fa-copy", color: "#13AAB3", bg: "rgba(19, 170, 179,0.1)", title: "Automated Data Entry", desc: "Stop copying and pasting between systems. We automate data transfer instantly." },
+  { icon: "fa-check-circle", color: "#2980B9", bg: "rgba(41,128,185,0.1)", title: "Approval Pipelines", desc: "Automate request routing, approvals, and team notifications effortlessly." },
+  { icon: "fa-user-plus", color: "#E67E22", bg: "rgba(230,126,34,0.1)", title: "Customer Onboarding", desc: "Create seamless, automated journeys for new clients from sign-up to success." },
+  { icon: "fa-boxes", color: "#27AE60", bg: "rgba(39,174,96,0.1)", title: "Inventory Syncing", desc: "Keep stock levels perfectly aligned across all your sales channels." },
 ];
 
 const outcomes = [
-  "Improved operational efficiency",
-  "Faster decision-making processes",
-  "Better workflow coordination",
-  "Enhanced reporting visibility",
-  "Reduced manual process dependency",
-  "Intelligent operational scalability",
+  "Hours saved every week",
+  "Zero manual data entry errors",
+  "Faster response times",
+  "Happier, more productive teams",
+  "Scalable operational capacity"
 ];
 
 export default function SolutionsAIAutomation() {
@@ -36,8 +33,8 @@ export default function SolutionsAIAutomation() {
             <i className="fas fa-arrow-left" /> Back to Home
           </Link>
           <span style={{ fontSize: "0.9rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "3px", display: "block", marginBottom: "20px" }}>Solutions Ecosystem 01</span>
-          <h1 style={{ fontSize: "clamp(2.8rem, 6vw, 4.5rem)", marginBottom: "28px", maxWidth: "860px", lineHeight: "1.1", fontWeight: "700" }}>AI Integration &amp; Intelligent Workflows</h1>
-          <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19, 170, 179,0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19, 170, 179,0.4)" }}>Operational Automation &amp; AI-Driven Execution</div>
+          <h1 style={{ fontSize: "clamp(2.8rem, 6vw, 4.5rem)", marginBottom: "28px", maxWidth: "860px", lineHeight: "1.1", fontWeight: "700" }}>Workflow Automation</h1>
+          <div style={{ display: "inline-block", padding: "10px 28px", background: "rgba(19, 170, 179,0.15)", backdropFilter: "blur(10px)", color: "white", borderRadius: "50px", fontSize: "1rem", fontWeight: "600", border: "1px solid rgba(19, 170, 179,0.4)" }}>Eliminate Manual Work & Connect Your Tools</div>
         </div>
       </section>
 
@@ -48,28 +45,27 @@ export default function SolutionsAIAutomation() {
           <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
               <span style={{ fontSize: "0.8rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Section Overview</span>
-              <h2 style={{ fontSize: "2rem", marginBottom: "20px", color: "var(--color-primary)", fontWeight: "700" }}>Section Introduction</h2>
+              <h2 style={{ fontSize: "2rem", marginBottom: "20px", color: "var(--color-primary)", fontWeight: "700" }}>Automate Repetitive Tasks</h2>
               <p style={{ color: "#395568", lineHeight: "1.9", fontSize: "1.1rem" }}>
-                Modern businesses require intelligent systems capable of improving operational clarity, workflow coordination, and decision-making efficiency. Aurbient Technologies develops AI-integrated operational environments designed to support scalable business execution through intelligent workflows and connected digital systems.
+                Growing businesses lose countless hours to manual data entry, disconnected tools, and repetitive tasks. We build intelligent automation pipelines that seamlessly connect your existing software, routing data and triggering actions instantly. By automating the routine, your team can focus on what actually matters: scaling the business.
               </p>
             </div>
             <div style={{ padding: "44px", background: "linear-gradient(135deg, var(--color-primary) 0%, #0a141b 100%)", color: "white", borderRadius: "20px", position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", top: "-20px", right: "-10px", opacity: "0.05", fontSize: "140px" }}><i className="fas fa-quote-right" /></div>
               <h4 style={{ marginBottom: "16px", color: "var(--color-accent)", fontSize: "1rem", display: "flex", alignItems: "center", gap: "10px", textTransform: "uppercase", letterSpacing: "1px" }}><i className="fas fa-lightbulb" /> Key Insight</h4>
               <p style={{ fontStyle: "italic", lineHeight: "1.8", fontSize: "1.15rem", margin: 0, position: "relative", zIndex: 2 }}>
-                "AI becomes most valuable when integrated into real operational workflows capable of improving execution efficiency and business scalability."
+                "The most valuable asset your business has is time. Automation ensures it isn't wasted on tasks a computer can do instantly."
               </p>
             </div>
           </div>
         </div>
 
-
         {/* INTERACTIVE AI PIPELINE UI */}
         <div style={{ marginBottom: "48px", background: "white", padding: "60px", borderRadius: "24px", border: "1.5px solid #E2EBE7", boxShadow: "0 20px 40px rgba(0,0,0,0.03)" }}>
           <div style={{ textAlign: "center", marginBottom: "30px" }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", display: "block", marginBottom: "12px" }}>System Architecture</span>
-            <h3 style={{ fontSize: "2.2rem", fontWeight: "700", color: "var(--color-primary)" }}>Intelligent Automation Pipeline</h3>
-            <p style={{ color: "#58798C", fontSize: "1.1rem", maxWidth: "600px", margin: "16px auto 0" }}>How our AI systems process business data and execute automated workflows.</p>
+            <h3 style={{ fontSize: "2.2rem", fontWeight: "700", color: "var(--color-primary)" }}>How We Automate Work</h3>
+            <p style={{ color: "#58798C", fontSize: "1.1rem", maxWidth: "600px", margin: "16px auto 0" }}>A structured approach to eliminating manual friction.</p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px", position: "relative" }}>
@@ -77,10 +73,10 @@ export default function SolutionsAIAutomation() {
             <div style={{ position: "absolute", top: "40px", left: "12%", right: "12%", height: "3px", background: "linear-gradient(90deg, rgba(19, 170, 179,0.2) 0%, var(--color-accent) 50%, rgba(19, 170, 179,0.2) 100%)", zIndex: 1 }}></div>
 
             {[
-              { step: "01", title: "Data Ingestion", desc: "Aggregating structured and unstructured data from ERPs, forms, and APIs.", icon: "fa-database" },
-              { step: "02", title: "Cognitive Processing", desc: "Applying NLP and machine learning models to extract context and intent.", icon: "fa-brain" },
-              { step: "03", title: "Automated Execution", desc: "Routing decisions, updating ledgers, and triggering external API actions.", icon: "fa-cogs" },
-              { step: "04", title: "Operational Insight", desc: "Generating real-time reporting and predictive analytics for management.", icon: "fa-chart-pie" }
+              { step: "01", title: "Process Mapping", desc: "We map out your current manual processes to identify bottlenecks.", icon: "fa-project-diagram" },
+              { step: "02", title: "Tool Integration", desc: "We connect your existing CRM, ERP, and tools via APIs.", icon: "fa-plug" },
+              { step: "03", title: "Logic & Rules", desc: "We build custom automation rules, triggers, and logic.", icon: "fa-cogs" },
+              { step: "04", title: "24/7 Execution", desc: "The system runs flawlessly in the background, continuously.", icon: "fa-robot" }
             ].map((node, idx) => (
               <div key={idx} style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "20px" }}>
                 <div style={{ width: "80px", height: "80px", borderRadius: "50%", background: "white", border: "3px solid var(--color-accent)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 24px", fontSize: "1.8rem", color: "var(--color-primary)", boxShadow: "0 10px 25px rgba(19, 170, 179,0.2)", position: "relative", transition: "all 0.3s" }}>
@@ -93,7 +89,6 @@ export default function SolutionsAIAutomation() {
             ))}
           </div>
         </div>
-
 
         {/* Editorial Split Flow (No Boxes) */}
         <div style={{ 
@@ -178,8 +173,8 @@ export default function SolutionsAIAutomation() {
         <div style={{ marginBottom: "48px" }}>
           <div style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto 50px" }}>
             <span style={{ fontSize: "0.8rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "10px", display: "block" }}>Focus</span>
-            <h2 style={{ fontSize: "2.2rem", fontWeight: "700", color: "var(--color-primary)", marginBottom: "16px" }}>Operational Focus Areas</h2>
-            <p style={{ color: "#58798C", fontSize: "1.05rem" }}>Targeted operational environments designed to improve coordination, visibility, and intelligent execution.</p>
+            <h2 style={{ fontSize: "2.2rem", fontWeight: "700", color: "var(--color-primary)", marginBottom: "16px" }}>Areas of Automation</h2>
+            <p style={{ color: "#58798C", fontSize: "1.05rem" }}>Where automation can make the biggest impact on your daily operations.</p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "28px" }}>
             {focusAreas.map((area, i) => (
@@ -197,8 +192,8 @@ export default function SolutionsAIAutomation() {
         {/* CTA */}
         <section style={{ padding: "72px 0", background: "linear-gradient(135deg, var(--color-primary) 0%, #0a141b 100%)", color: "white", textAlign: "center", borderRadius: "24px", overflow: "hidden" }}>
           <div style={{ maxWidth: "760px", margin: "0 auto", padding: "0 40px" }}>
-            <h2 style={{ fontSize: "2.4rem", fontWeight: "700", marginBottom: "20px" }}>Ready to Build Intelligent Operations?</h2>
-            <p style={{ fontSize: "1.15rem", lineHeight: "1.8", color: "rgba(255,255,255,0.7)", marginBottom: "40px" }}>Connect with our team to design AI-integrated workflows tailored to your operational environment.</p>
+            <h2 style={{ fontSize: "2.4rem", fontWeight: "700", marginBottom: "20px" }}>Ready to Automate Your Business?</h2>
+            <p style={{ fontSize: "1.15rem", lineHeight: "1.8", color: "rgba(255,255,255,0.7)", marginBottom: "40px" }}>Stop wasting time on manual tasks. Let's discuss how automation can scale your operations.</p>
             <Link to="/contact" className="btn-premium" style={{ background: "white", color: "var(--color-primary)", padding: "16px 40px", borderRadius: "50px", fontWeight: "700", display: "inline-block", textDecoration: "none" }}>Discuss Implementation →</Link>
           </div>
         </section>

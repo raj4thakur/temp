@@ -1,33 +1,33 @@
 export const services = [
   {
     id: "ai-automation",
-    title: "AI and Process automation",
-    description: "Self-healing AI workflows and automation pipelines designed to scale operations and eliminate manual friction.",
-    icon: "fa-brain",
+    title: "Workflow Automation",
+    description: "Automate repetitive tasks, approvals, notifications, and processes to save time and reduce manual work.",
+    icon: "fa-project-diagram",
     path: "/solutions/ai-automation",
     img: "/images/cobot-psychology.jpeg"
   },
   {
     id: "operational-intelligence",
-    title: "Operational Intelligence Systems",
-    description: "Centralized telemetry, data dashboards, and real-time monitoring solutions to unblock management visibility.",
-    icon: "fa-eye",
+    title: "Business Visibility & Reporting",
+    description: "Real-time dashboards and reports that help you track performance and make faster, data-driven decisions.",
+    icon: "fa-chart-bar",
     path: "/solutions/operational-intelligence",
     img: "/images/operational_intel_dashboard.png"
   },
   {
     id: "business-systems",
-    title: "ERP & Business Management Platforms",
-    description: "Mission-critical custom applications and unified management systems engineered for reliability and performance.",
-    icon: "fa-laptop-code",
+    title: "Business Management Systems",
+    description: "Custom ERP and management systems that connect your inventory, production, sales, and operations on one platform.",
+    icon: "fa-desktop",
     path: "/solutions/business-systems",
     img: "/images/business_systems_mockup.png"
   },
   {
     id: "enterprise-infrastructure",
-    title: "Enterprise Software & Digital Systems",
-    description: "Enterprise-grade web and digital systems focused on communication clarity, operational accessibility, and professional business presence.",
-    icon: "fa-layer-group",
+    title: "Custom Software & Digital Solutions",
+    description: "Websites, web applications, customer portals, and custom software built around your business and customers.",
+    icon: "fa-code",
     path: "/solutions/enterprise-infrastructure",
     img: "/images/enterprise_infra_network.png"
   }

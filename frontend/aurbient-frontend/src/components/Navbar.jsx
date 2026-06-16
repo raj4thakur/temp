@@ -4,7 +4,7 @@ import logoImg from "../assets/logo.png";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null); // 'solutions' | 'industries' | 'company' | null
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -46,32 +46,14 @@ export default function Navbar() {
                         <div className="mega-grid" style={{ gridTemplateColumns: "1fr" }}>
                             <div className="mega-col">
                                 <h4>Core Offerings</h4>
-                                <Link to="/solutions/ai-automation" onClick={closeAll}>AI and Process automation</Link>
-                                <Link to="/solutions/operational-intelligence" onClick={closeAll}>Operational Intelligence Systems</Link>
-                                <Link to="/solutions/business-systems" onClick={closeAll}>ERP & Business Management Platforms</Link>
-                                <Link to="/solutions/enterprise-infrastructure" onClick={closeAll}>Enterprise Software & Digital Systems</Link>
+                                <Link to="/solutions/ai-automation" onClick={closeAll}>Workflow Automation</Link>
+                                <Link to="/solutions/operational-intelligence" onClick={closeAll}>Business Visibility & Reporting</Link>
+                                <Link to="/solutions/business-systems" onClick={closeAll}>Business Management Systems</Link>
+                                <Link to="/solutions/enterprise-infrastructure" onClick={closeAll}>Custom Software & Digital Solutions</Link>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* INDUSTRIES */}
-                <div className={`nav-item dropdown-item ${activeDropdown === 'industries' ? 'active' : ''}`}>
-                    <a href="#" className="nav-link" onClick={e => { e.preventDefault(); toggleDropdown('industries'); }}>
-                      Industries <i className="fas fa-chevron-down dropdown-icon"></i>
-                    </a>
-                    <div className="mega-menu" style={{ left: '-80px', width: '260px' }}>
-                        <div className="mega-col">
-                            <Link to="/industries/manufacturing" onClick={closeAll}>Manufacturing</Link>
-                            <Link to="/industries/industrial-operations" onClick={closeAll}>Industrial Operations</Link>
-                            <Link to="/industries/retail-commerce" onClick={closeAll}>Retail & Commerce</Link>
-                            <Link to="/industries/logistics" onClick={closeAll}>Logistics</Link>
-                            <Link to="/industries/enterprise-operations" onClick={closeAll}>Enterprise Operations</Link>
-                            <Link to="/industries/smes" onClick={closeAll}>SMEs</Link>
-                        </div>
-                    </div>
-                </div>
-
 
                 {/* INSIGHTS */}
                 <div className={`nav-item dropdown-item ${activeDropdown === 'insights' ? 'active' : ''}`}>
@@ -80,29 +62,29 @@ export default function Navbar() {
                     </a>
                     <div className="mega-menu" style={{ left: '-40px', width: '200px' }}>
                         <div className="mega-col">
-                            <Link to="/case-studies" onClick={closeAll}>Case Studies</Link>
                             <Link to="/insights" onClick={closeAll}>Articles</Link>
+                            <Link to="/case-studies" onClick={closeAll}>Case Studies</Link>
                         </div>
                     </div>
                 </div>
 
-                {/* COMPANY */}
-                <div className={`nav-item dropdown-item ${activeDropdown === 'company' ? 'active' : ''}`}>
-                    <a href="#" className="nav-link" onClick={e => { e.preventDefault(); toggleDropdown('company'); }}>
-                      Company <i className="fas fa-chevron-down dropdown-icon"></i>
-                    </a>
-                    <div className="mega-menu" style={{ left: '-40px', width: '260px' }}>
-                        <div className="mega-col">
-                            <Link to="/company/vision-philosophy" onClick={closeAll}>Vision & Philosophy</Link>
-                            <Link to="/company/engineering-culture" onClick={closeAll}>Engineering Culture</Link>
-                            <Link to="/company/mission-ecosystem" onClick={closeAll}>Mission & Ecosystem</Link>
-                            <Link to="/company/careers" onClick={closeAll}>Careers</Link>
-                        </div>
-                    </div>
+                {/* ABOUT */}
+                <div className="nav-item">
+                    <Link to="/about" className="nav-link" onClick={closeAll}>
+                      About
+                    </Link>
                 </div>
 
+                {/* CAREERS (Button Style) */}
+                <div className="nav-item">
+                    <Link to="/company/careers" className="nav-link" onClick={closeAll}>
+                      Careers
+                    </Link>
+                </div>
+
+                {/* CTA */}
                 <div className="nav-item cta-nav-item">
-                  <Link to="/contact" className="btn-premium" onClick={closeAll}>Contact Us</Link>
+                  <Link to="/contact" className="btn-premium" onClick={closeAll}>Schedule a Consultation</Link>
                 </div>
             </div>
         </div>

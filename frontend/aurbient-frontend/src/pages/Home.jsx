@@ -94,7 +94,7 @@ export default function Home() {
         position: 'relative', 
         overflow: 'hidden', 
         background: 'linear-gradient(180deg, #FDFEFE 0%, #F4F9FB 100%)', 
-        padding: '100px 0 80px',
+        padding: '60px 0 40px',
         display: 'flex',
         alignItems: 'center'
       }}>
@@ -130,7 +130,7 @@ export default function Home() {
               marginBottom: '24px',
               letterSpacing: '-0.03em'
             }}>
-              Architecting the <span style={{ color: 'var(--color-accent)' }}>Intelligent Enterprise</span>
+              Build a Business That Runs <span style={{ color: 'var(--color-accent)' }}>Smoother, Faster, and Smarter.</span>
             </h1>
             
             <p style={{ 
@@ -140,7 +140,7 @@ export default function Home() {
               maxWidth: '90%', 
               lineHeight: '1.75' 
             }}>
-              We engineer mission-critical software, unified digital infrastructure, and AI-driven automation workflows that scale your business operations and eliminate friction.
+              We design custom software, AI automation, and business systems that eliminate manual work, connect operations, and help growing companies scale with confidence.
             </p>
             
             <div style={{ display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -159,7 +159,7 @@ export default function Home() {
                   letterSpacing: '0.01em',
                   display: 'inline-block'
                 }}>
-                  Schedule a Free Operations Assessment
+                  Schedule a Consultation
                 </Link>
               </div>
             </div>
@@ -204,44 +204,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Deep Midnight Blue Stat Break (Philosophy Section) */}
+      {/* 2. The Problems We Solve Section */}
       <section style={{ 
-        padding: "60px 0", 
-        background: "linear-gradient(135deg, var(--color-primary) 0%, #0C171F 100%)", 
+        padding: "50px 0", 
+        background: "linear-gradient(135deg, #0C171F 0%, var(--color-primary) 100%)", 
         color: "white",
         position: 'relative',
         overflow: 'hidden'
       }}>
-        {/* Subtle background glow */}
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(19, 170, 179,0.1) 0%, transparent 60%)', filter: 'blur(60px)', pointerEvents: 'none' }}></div>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(19, 170, 179,0.08) 0%, transparent 60%)', filter: 'blur(60px)', pointerEvents: 'none' }}></div>
         
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
-            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "16px", display: "block" }}>The Friction Gap</span>
+          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 40px" }}>
+            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "16px", display: "block" }}>The Problems We Solve</span>
             <h2 style={{ fontSize: "2.5rem", fontWeight: "700", margin: "0 0 20px 0", lineHeight: "1.25", color: 'white' }}>
-              Fragmented workflows, disconnected systems, operational blind spots.
+              Growing Businesses Face the Same Operational Challenges
             </h2>
-            <p style={{ color: "#A5C5D6", fontSize: "1.15rem", lineHeight: "1.8", margin: 0 }}>
-              Modern enterprises are built on fragile connective tissue — data silos, manual handoffs, invisible inefficiencies. The cost is not just time, but strategic inertia.
-            </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', maxWidth: '900px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', maxWidth: '1100px', margin: '0 auto' }}>
             {[
-              { stat: "73%", desc: "of leaders report disjointed systems block real-time decisions" },
-              { stat: "58%", desc: "operational data never reaches execution layers" },
-              { stat: "2.4x", desc: "faster scaling with orchestrated intelligence" }
-            ].map((stat, i) => (
-              <div key={i} className="eco-card" style={{ 
-                background: "rgba(255, 255, 255, 0.03)", 
-                border: "1px solid rgba(255, 255, 255, 0.08)", 
-                padding: "40px", 
-                borderRadius: "24px", 
-                textAlign: "center",
-                backdropFilter: "blur(10px)"
+              { title: "Disconnected Systems", desc: "Information scattered across spreadsheets and tools.", icon: "fa-network-wired" },
+              { title: "Manual Processes", desc: "Teams wasting time on repetitive work.", icon: "fa-hand-paper" },
+              { title: "Limited Visibility", desc: "No real-time understanding of operations.", icon: "fa-eye-slash" },
+              { title: "Scaling Bottlenecks", desc: "Growth creates more complexity than efficiency.", icon: "fa-chart-line" }
+            ].map((prob, i) => (
+              <div key={i} style={{ 
+                background: "rgba(255, 255, 255, 0.02)", 
+                border: "1px solid rgba(255, 255, 255, 0.06)", 
+                padding: "24px 20px", 
+                borderRadius: "16px", 
+                backdropFilter: "blur(10px)",
+                transition: "transform 0.3s ease"
               }}>
-                <h3 style={{ fontSize: "3.5rem", fontWeight: "800", color: "var(--color-accent)", margin: "0 0 12px 0", lineHeight: 1 }}>{stat.stat}</h3>
-                <p style={{ color: "#E4F1F3", fontSize: "1.05rem", lineHeight: "1.6", margin: 0, opacity: 0.85 }}>{stat.desc}</p>
+                <div style={{ 
+                  width: "40px", height: "40px", borderRadius: "10px", background: "rgba(38, 183, 214, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "16px"
+                 }}>
+                  <i className={`fas ${prob.icon}`} style={{ color: "var(--color-accent)", fontSize: "1.2rem" }}></i>
+                </div>
+                <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "white", margin: "0 0 8px 0", lineHeight: 1.3 }}>{prob.title}</h3>
+                <p style={{ color: "#A5C5D6", fontSize: "0.9rem", lineHeight: "1.5", margin: 0 }}>{prob.desc}</p>
               </div>
             ))}
           </div>
@@ -249,100 +251,32 @@ export default function Home() {
       </section>
 
       {/* 3. Core Services Grid */}
-      <section style={{ padding: "60px 0", background: "white" }}>
+      <section style={{ padding: "50px 0", background: "white" }}>
         <div className="container">
-          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
-            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>High-Performance Architecture</span>
-            <h2 style={{ fontSize: "2.4rem", fontWeight: "700", color: "var(--color-primary)", margin: "0 0 16px 0" }}>Our Core Services</h2>
-            <p style={{ color: "#58798C", fontSize: "1.1rem", margin: 0 }}>High-performance engineering designed to unify your enterprise operations.</p>
+          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 40px" }}>
+            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Solutions That Drive Real Impact</span>
+            <h2 style={{ fontSize: "2.5rem", fontWeight: "700", color: "var(--color-primary)", margin: "0 0 16px 0" }}>What We Build</h2>
+            <p style={{ color: "#58798C", fontSize: "1.15rem", margin: 0, lineHeight: "1.6" }}>Practical solutions designed to simplify operations, reduce manual work, and give you complete control of your business.</p>
           </div>
 
-          <div style={{ position: 'relative', margin: '0 auto', maxWidth: '100%', padding: '0 20px' }}>
-            <button 
-              className="testimonial-arrow"
-              onClick={() => scrollServices('left')}
-              aria-label="Scroll left"
-              style={{ 
-                position: "absolute", 
-                left: "-30px", 
-                top: "50%", 
-                transform: "translateY(-50%)", 
-                width: "50px", 
-                height: "50px", 
-                borderRadius: "50%", 
-                background: "white", 
-                border: "1px solid #E2EBE7", 
-                color: "var(--color-primary)", 
-                fontSize: "1.1rem", 
-                display: "flex", 
-                alignItems: "center", 
-                justifyContent: "center", 
-                cursor: "pointer", 
-                boxShadow: "0 4px 15px rgba(0,0,0,0.05)",
-                zIndex: 10,
-                transition: "all 0.3s ease",
-                outline: "none"
-              }}
-            >
-              <i className="fas fa-chevron-left"></i>
-            </button>
-
-            <button 
-              className="testimonial-arrow"
-              onClick={() => scrollServices('right')}
-              aria-label="Scroll right"
-              style={{ 
-                position: "absolute", 
-                right: "-30px", 
-                top: "50%", 
-                transform: "translateY(-50%)", 
-                width: "50px", 
-                height: "50px", 
-                borderRadius: "50%", 
-                background: "white", 
-                border: "1px solid #E2EBE7", 
-                color: "var(--color-primary)", 
-                fontSize: "1.1rem", 
-                display: "flex", 
-                alignItems: "center", 
-                justifyContent: "center", 
-                cursor: "pointer", 
-                boxShadow: "0 4px 15px rgba(0,0,0,0.05)",
-                zIndex: 10,
-                transition: "all 0.3s ease",
-                outline: "none"
-              }}
-            >
-              <i className="fas fa-chevron-right"></i>
-            </button>
-
-            <div 
-              ref={servicesSliderRef}
-              className="hide-scrollbar"
-              style={{ 
-                display: 'flex', 
-                gap: '30px', 
-                overflowX: 'auto', 
-                scrollSnapType: 'x mandatory',
-                paddingBottom: '20px',
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none'
-              }}
-            >
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
             {[
-              { icon: "fa-brain", title: "AI and Process automation", desc: "Self-healing AI workflows and automation pipelines designed to scale operations and eliminate manual friction.", path: "/solutions/ai-automation", img: "/images/cobot-psychology.jpeg" },
-              { icon: "fa-eye", title: "Operational Intelligence Systems", desc: "Centralized telemetry, data dashboards, and real-time monitoring solutions to unblock management visibility.", path: "/solutions/operational-intelligence", img: "/images/operational_intel_dashboard.png" },
-              { icon: "fa-laptop-code", title: "ERP & Business Management Platforms", desc: "Mission-critical custom applications and unified management systems engineered for reliability and performance.", path: "/solutions/business-systems", img: "/images/business_systems_mockup.png" },
-              { icon: "fa-layer-group", title: "Enterprise Software & Digital Systems", desc: "Enterprise-grade web and digital systems focused on communication clarity, operational accessibility, and professional business presence.", path: "/solutions/enterprise-infrastructure", img: "/images/enterprise_infra_network.png" }
+              { icon: "fa-project-diagram", title: "Workflow Automation", desc: "Automate repetitive tasks, approvals, notifications, and processes to save time and reduce manual work.", path: "/solutions/ai-automation", img: "/images/cobot-psychology.jpeg" },
+              { icon: "fa-chart-bar", title: "Business Visibility & Reporting", desc: "Real-time dashboards and reports that help you track performance and make faster, data-driven decisions.", path: "/solutions/operational-intelligence", img: "/images/operational_intel_dashboard.png" },
+              { icon: "fa-desktop", title: "Business Management Systems", desc: "Custom ERP and management systems that connect your inventory, production, sales, and operations on one platform.", path: "/solutions/business-systems", img: "/images/business_systems_mockup.png" },
+              { icon: "fa-code", title: "Custom Software & Digital Solutions", desc: "Websites, web applications, customer portals, and custom software built around your business and customers.", path: "/solutions/enterprise-infrastructure", img: "/images/enterprise_infra_network.png" }
             ].map((serv, idx) => (
-              <Link to={serv.path} key={idx} className="service-hex-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start', textDecoration: 'none' }}>
+              <Link to={serv.path} key={idx} className="service-hex-card" style={{ textDecoration: 'none', padding: '40px 30px' }}>
                 <div className="service-hex-content" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <div style={{ flex: 1 }}>
-                    <h3 style={{ margin: "0 0 16px 0", fontSize: '1.6rem', color: 'var(--color-primary)', fontWeight: '800', lineHeight: '1.3' }}>{serv.title}</h3>
-                    <p style={{ color: "#58798C", margin: 0, fontSize: '1.05rem', lineHeight: '1.75' }}>{serv.desc}</p>
+                    <div style={{ width: "60px", height: "60px", borderRadius: "16px", border: "1.5px solid #E2EBE7", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "24px" }}>
+                      <i className={`fas ${serv.icon}`} style={{ fontSize: "1.5rem", color: "var(--color-accent)" }}></i>
+                    </div>
+                    <h3 style={{ fontSize: "1.3rem", fontWeight: "700", color: "var(--color-primary)", margin: "0 0 16px 0", lineHeight: "1.3" }}>{serv.title}</h3>
+                    <p style={{ color: "#58798C", margin: 0, fontSize: "1rem", lineHeight: "1.6" }}>{serv.desc}</p>
                   </div>
-                  <div style={{ marginTop: '32px', display: 'flex', alignItems: 'center', color: 'var(--color-accent)', fontWeight: '700', fontSize: '0.9rem', letterSpacing: '1px', textTransform: 'uppercase' }}>
-                    Explore <i className="fas fa-arrow-right" style={{ marginLeft: '10px' }}></i>
+                  <div style={{ marginTop: "30px", color: "var(--color-accent)", fontWeight: "700", fontSize: "0.95rem", display: "flex", alignItems: "center" }}>
+                    Learn More <i className="fas fa-arrow-right" style={{ marginLeft: "8px" }}></i>
                   </div>
                 </div>
                 
@@ -357,160 +291,114 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-      {/* 4. Transformation Layer Section */}
-      <section style={{ padding: "60px 0", background: "#F4F9FB" }}>
+      {/* 4. Impact You Can Expect */}
+      <section style={{ background: "#0B161F", color: "white", padding: "50px 0" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
-            <div>
-              <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Operational Harmony</span>
-              <h2 style={{ fontSize: "2.6rem", fontWeight: "700", color: "var(--color-primary)", margin: "0 0 24px 0", lineHeight: "1.25" }}>
-                From operational friction to intelligent flow
-              </h2>
-              <p style={{ color: "#395568", lineHeight: "1.8", fontSize: "1.15rem", marginBottom: "30px" }}>
-                The transformation isn’t incremental — it’s a re-architecture of how work propagates through your organization. Aurbient designs the invisible layer that aligns systems, data, and teams into a singular intelligent motion.
-              </p>
-              <div style={{ display: "flex", gap: "20px" }}>
-                <div style={{ flex: 1, padding: "20px", background: "white", borderRadius: "16px", border: "1px solid #E2EBE7" }}>
-                  <h4 style={{ fontWeight: 700, margin: "0 0 8px 0", color: "var(--color-primary)" }}><i className="fas fa-bolt" style={{ color: "var(--color-accent)", marginRight: "8px" }}></i> Speed</h4>
-                  <p style={{ margin: 0, color: "#58798C", fontSize: "0.95rem" }}>Removing manual latency and bottleneck dependency.</p>
+          <div style={{ textAlign: "center", marginBottom: "30px" }}>
+            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px" }}>Impact You Can Expect</span>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '40px' }}>
+            {[
+              { title: "30-70% Less Manual Work", desc: "Automate repetitive tasks and boost team productivity.", icon: "fa-bolt" },
+              { title: "Faster Decisions", desc: "Real-time visibility helps you act faster and stay ahead.", icon: "fa-chart-pie" },
+              { title: "Better Coordination", desc: "Align teams, workflows, and information in one system.", icon: "fa-users" },
+              { title: "Scalable Growth", desc: "Systems that grow with your business, without complexity.", icon: "fa-chart-line" }
+            ].map((impact, i) => (
+              <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "16px" }}>
+                <div style={{ width: "48px", height: "48px", borderRadius: "50%", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <i className={`fas ${impact.icon}`} style={{ color: "var(--color-accent)", fontSize: "1.1rem" }}></i>
                 </div>
-                <div style={{ flex: 1, padding: "20px", background: "white", borderRadius: "16px", border: "1px solid #E2EBE7" }}>
-                  <h4 style={{ fontWeight: 700, margin: "0 0 8px 0", color: "var(--color-primary)" }}><i className="fas fa-bullseye" style={{ color: "var(--color-accent)", marginRight: "8px" }}></i> Precision</h4>
-                  <p style={{ margin: 0, color: "#58798C", fontSize: "0.95rem" }}>Ensuring every data transmission has total integrity.</p>
+                <div>
+                  <h4 style={{ fontSize: "1.1rem", fontWeight: "700", margin: "0 0 8px 0", color: "white" }}>{impact.title}</h4>
+                  <p style={{ color: "#A5C5D6", margin: 0, fontSize: "0.95rem", lineHeight: "1.5" }}>{impact.desc}</p>
                 </div>
               </div>
-            </div>
-            
-            <div style={{ position: "relative" }}>
-              <div style={{ position: "absolute", top: "-5%", left: "-5%", width: "110%", height: "110%", background: "radial-gradient(circle, rgba(19, 170, 179,0.15) 0%, transparent 60%)", filter: "blur(30px)", zIndex: 0 }}></div>
-              <img 
-                src="/images/ai_automation_hero.png" 
-                alt="Intelligent Flow Transformation" 
-                style={{ width: "100%", height: "450px", objectFit: "cover", borderRadius: "24px", boxShadow: "0 20px 45px rgba(14,25,33,0.12)", position: "relative", zIndex: 1 }} 
-              />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
 
 
-      {/* 6. Industries as Living Ecosystems */}
-      <section style={{ padding: "60px 0", background: "#F4F9FB", borderTop: "1px solid #E2EBE7" }}>
+      {/* 6. Industries We Serve */}
+      <section style={{ padding: "50px 0", background: "#F4F9FB" }}>
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "36px" }}>
-            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Cross-Industry Domain Mastery</span>
-            <h2 style={{ fontSize: "2.4rem", fontWeight: "700", color: "var(--color-primary)", margin: 0 }}>Industries as living ecosystems</h2>
-            <p style={{ color: "#395568", marginTop: "16px", fontSize: "1.1rem" }}>Connected workflows, operational depth, and intelligence scaled across domains</p>
+          <div style={{ textAlign: "center", marginBottom: "40px" }}>
+            <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Industries We Serve</span>
+            <h2 style={{ fontSize: "2.5rem", fontWeight: "700", color: "var(--color-primary)", margin: 0 }}>Built For Operationally Intensive Businesses</h2>
           </div>
 
-          <div style={{ position: 'relative', margin: '0 auto', maxWidth: '100%', padding: '0 20px' }}>
-            <button 
-              className="testimonial-arrow"
-              onClick={() => scrollIndustries('left')}
-              aria-label="Scroll left"
-              style={{ 
-                position: "absolute", 
-                left: "-30px", 
-                top: "50%", 
-                transform: "translateY(-50%)", 
-                width: "50px", 
-                height: "50px", 
-                borderRadius: "50%", 
-                background: "white", 
-                border: "1px solid #E2EBE7", 
-                color: "var(--color-primary)", 
-                fontSize: "1.1rem", 
-                display: "flex", 
-                alignItems: "center", 
-                justifyContent: "center", 
-                cursor: "pointer", 
-                boxShadow: "0 4px 15px rgba(0,0,0,0.05)",
-                zIndex: 10,
-                transition: "all 0.3s ease",
-                outline: "none"
-              }}
-            >
-              <i className="fas fa-chevron-left"></i>
-            </button>
-
-            <button 
-              className="testimonial-arrow"
-              onClick={() => scrollIndustries('right')}
-              aria-label="Scroll right"
-              style={{ 
-                position: "absolute", 
-                right: "-30px", 
-                top: "50%", 
-                transform: "translateY(-50%)", 
-                width: "50px", 
-                height: "50px", 
-                borderRadius: "50%", 
-                background: "white", 
-                border: "1px solid #E2EBE7", 
-                color: "var(--color-primary)", 
-                fontSize: "1.1rem", 
-                display: "flex", 
-                alignItems: "center", 
-                justifyContent: "center", 
-                cursor: "pointer", 
-                boxShadow: "0 4px 15px rgba(0,0,0,0.05)",
-                zIndex: 10,
-                transition: "all 0.3s ease",
-                outline: "none"
-              }}
-            >
-              <i className="fas fa-chevron-right"></i>
-            </button>
-
-            <div 
-              ref={industrySliderRef}
-              className="hide-scrollbar"
-              style={{ 
-                display: 'flex', 
-                gap: '30px', 
-                overflowX: 'auto', 
-                scrollSnapType: 'x mandatory',
-                padding: '20px 20px 80px 20px',
-                margin: '-20px -20px 0 -20px',
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none'
-              }}
-            >
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', marginBottom: "50px" }}>
             {[
-              { path: "/industries/manufacturing", title: "Manufacturing", desc: "Intelligent production flow, IIoT synchronization, autonomous quality layers.", img: "/images/industry_manufacturing.png" },
-              { path: "/industries/logistics", title: "Logistics", desc: "Orchestrated supply chains, demand intelligence, real-time fleet adaptation.", img: "/images/industry_logistics.png" },
-              { path: "/industries/retail-commerce", title: "Retail", desc: "Inventory ecosystems, unified commerce, predictive customer operations.", img: "/images/industry_retail.png" },
-              { path: "/industries/enterprise-operations", title: "Enterprise", desc: "Finance & HR automation, cognitive processes, enterprise operating layer.", img: "/images/industry_enterprise.png" }
+              { title: "Manufacturing", desc: "Production visibility, inventory management, process control, and shop-floor automation.", img: "/images/industry_manufacturing.png", icon: "fa-industry" },
+              { title: "Logistics", desc: "Fleet management, route optimization, tracking, and workflow automation.", img: "/images/industry_logistics.png", icon: "fa-truck" },
+              { title: "Retail", desc: "Inventory, sales, customer management, and operational workflows.", img: "/images/industry_retail.png", icon: "fa-store" },
+              { title: "Enterprises", desc: "Custom systems for complex operations, departments, and large teams.", img: "/images/industry_enterprise.png", icon: "fa-building" }
             ].map((ind, i) => (
-              <Link key={i} to={ind.path} className="industry-card" style={{ flex: '0 0 auto', width: '350px', scrollSnapAlign: 'start', backgroundImage: `url(${ind.img})` }}>
-                <div className="industry-card-content">
-                  <h3>{ind.title}</h3>
-                  <p>{ind.desc}</p>
-                  <span className="industry-card-link">
-                    Explore <i className="fas fa-arrow-right" style={{ marginLeft: '10px' }}></i>
-                  </span>
+              <div key={i} style={{ 
+                background: "white", 
+                borderRadius: "20px", 
+                overflow: "hidden", 
+                boxShadow: "0 10px 30px rgba(14,25,33,0.04)",
+                border: "1px solid #E2EBE7",
+                display: "flex",
+                flexDirection: "column",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease"
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-5px)'; e.currentTarget.style.boxShadow = '0 15px 40px rgba(14,25,33,0.08)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(14,25,33,0.04)'; }}
+              >
+                <img src={ind.img} alt={ind.title} style={{ width: "100%", height: "180px", objectFit: "cover" }} />
+                <div style={{ padding: "30px", flex: 1, display: "flex", flexDirection: "column", position: "relative" }}>
+                  <div style={{ position: "absolute", top: "-24px", left: "30px", width: "48px", height: "48px", background: "white", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 15px rgba(0,0,0,0.08)" }}>
+                    <i className={`fas ${ind.icon}`} style={{ color: "var(--color-accent)", fontSize: "1.2rem" }}></i>
+                  </div>
+                  <h3 style={{ fontSize: "1.3rem", fontWeight: "700", color: "var(--color-primary)", margin: "16px 0 12px 0" }}>{ind.title}</h3>
+                  <p style={{ color: "#58798C", margin: "0", fontSize: "0.95rem", lineHeight: "1.6" }}>{ind.desc}</p>
                 </div>
-              </Link>
+              </div>
             ))}
+          </div>
+
+          {/* Why Businesses Choose Aurbient */}
+          <div style={{ background: "white", borderRadius: "24px", padding: "50px", boxShadow: "0 15px 40px rgba(14,25,33,0.03)", border: "1px solid #E2EBE7", display: "flex", flexWrap: "wrap", gap: "50px", alignItems: "center" }}>
+            <div style={{ flex: "1 1 300px" }}>
+              <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "1px", marginBottom: "16px", display: "block" }}>Why Businesses Choose Aurbient</span>
+              <h3 style={{ fontSize: "2rem", fontWeight: "700", color: "var(--color-primary)", margin: "0 0 20px 0", lineHeight: "1.2" }}>Your Success is Our Priority</h3>
+              <p style={{ color: "#58798C", fontSize: "1.05rem", lineHeight: "1.6", margin: 0 }}>We focus on understanding your business, solving your problems, and building systems that deliver measurable results.</p>
+            </div>
+            <div style={{ flex: "2 1 400px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "30px" }}>
+              {[
+                { title: "Business-First Approach", desc: "We build solutions that solve real business challenges.", icon: "fa-shield-alt" },
+                { title: "Custom & Scalable", desc: "Every solution is tailored to your needs and built to scale.", icon: "fa-code-branch" },
+                { title: "Transparent Process", desc: "Clear communication, timelines, and execution every step.", icon: "fa-search" },
+                { title: "Ongoing Support", desc: "We stay with you to ensure long-term success.", icon: "fa-headset" }
+              ].map((reason, i) => (
+                <div key={i} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                  <div style={{ width: "40px", height: "40px", borderRadius: "10px", background: "rgba(38, 183, 214, 0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <i className={`fas ${reason.icon}`} style={{ color: "var(--color-accent)", fontSize: "1.1rem" }}></i>
+                  </div>
+                  <h4 style={{ fontSize: "1.05rem", fontWeight: "700", color: "var(--color-primary)", margin: 0 }}>{reason.title}</h4>
+                  <p style={{ color: "#58798C", fontSize: "0.9rem", lineHeight: "1.5", margin: 0 }}>{reason.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* 7. Featured Case Studies */}
-      <section style={{ padding: "60px 0", background: "#FFFFFF" }}>
+      <section style={{ padding: "50px 0", background: "#FFFFFF" }}>
         <div className="container">
-          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px" }}>
+          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 40px" }}>
             <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", textTransform: "uppercase", fontWeight: "700", letterSpacing: "2px", marginBottom: "12px", display: "block" }}>Proven Impact</span>
             <h2 style={{ fontSize: "2.4rem", fontWeight: "600", color: "var(--color-primary)", margin: 0 }}>Featured Case Studies</h2>
             <p style={{ color: "#395568", marginTop: "16px", fontSize: "1.1rem" }}>Detailed architectural breakdowns of how we transform complex operational bottlenecks into streamlined, intelligent ecosystems.</p>
           </div>
           
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "30px", marginBottom: "48px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "30px", marginBottom: "40px" }}>
             {[
               {
                 id: "01",
@@ -573,9 +461,9 @@ export default function Home() {
 
 
       {/* 9. Testimonials (Operational Impact) */}
-      <section style={{ padding: "80px 0", background: "white" }}>
+      <section style={{ padding: "50px 0", background: "white" }}>
         <div className="container">
-          <div style={{ maxWidth: "850px", margin: "0 auto 40px", padding: "0 20px", textAlign: "left" }}>
+          <div style={{ maxWidth: "850px", margin: "0 auto 30px", padding: "0 20px", textAlign: "left" }}>
             <span style={{ 
               fontSize: "0.75rem", 
               color: "#8CABB8", 
@@ -661,8 +549,8 @@ export default function Home() {
       </section>
 
       {/* 10. Tech Integration Slider */}
-      <section style={{ padding: "60px 0", background: "#F4F9FB", borderTop: "1px solid #E2EBE7", borderBottom: "1px solid #E2EBE7" }}>
-        <div className="container" style={{ textAlign: "center", marginBottom: "30px" }}>
+      <section style={{ padding: "40px 0", background: "#F4F9FB", borderTop: "1px solid #E2EBE7", borderBottom: "1px solid #E2EBE7" }}>
+        <div className="container" style={{ textAlign: "center", marginBottom: "24px" }}>
           <span style={{ fontSize: "0.85rem", color: "#58798C", textTransform: "uppercase", fontWeight: "700", letterSpacing: "1px" }}>Seamlessly interfacing with your ecosystem</span>
         </div>
         <div className="tech-slider">
@@ -728,7 +616,7 @@ export default function Home() {
       </section>
 
       {/* 11. Final CTA Layer */}
-      <section style={{ padding: "60px 0", background: "var(--color-primary)", color: "white", position: "relative", overflow: "hidden" }}>
+      <section style={{ padding: "50px 0", background: "var(--color-primary)", color: "white", position: "relative", overflow: "hidden" }}>
         <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', background: 'radial-gradient(circle at 80% 20%, rgba(19, 170, 179,0.15) 0%, transparent 50%)', pointerEvents: 'none' }}></div>
         <div className="container" id="build" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
           <div className="build-ecosystem" style={{ background: "transparent", border: "none", padding: 0 }}>

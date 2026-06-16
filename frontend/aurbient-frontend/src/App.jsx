@@ -1,25 +1,15 @@
 // src/App.jsx
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Industries from "./pages/Industries";
 import Technology from "./pages/Technology";
 import Insights from "./pages/Insights";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import CaseStudies from "./pages/CaseStudies";
 import "./App.css";
-
-import Manufacturing from "./pages/Manufacturing";
-import IndustrialOperations from "./pages/IndustrialOperations";
-import RetailCommerce from "./pages/RetailCommerce";
-import Logistics from "./pages/Logistics";
-import EnterpriseOperations from "./pages/EnterpriseOperations";
-import SMEs from "./pages/SMEs";
-
-
 
 // Solutions Pages
 import SolutionsAIAutomation from "./pages/SolutionsAIAutomation";
@@ -28,9 +18,6 @@ import SolutionsBusinessSystems from "./pages/SolutionsBusinessSystems";
 import SolutionsEnterpriseInfrastructure from "./pages/SolutionsEnterpriseInfrastructure";
 
 // Company Subpages
-import VisionPhilosophy from "./pages/VisionPhilosophy";
-import EngineeringCulture from "./pages/EngineeringCulture";
-import MissionEcosystem from "./pages/MissionEcosystem";
 import Careers from "./pages/Careers";
 
 // ScrollToTop utility that triggers on route shifts
@@ -47,16 +34,6 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-            <Route path="/industries" element={<Industries />} />
-      
-      {/* Specific Industry Pages */}
-      <Route path="/industries/manufacturing" element={<Manufacturing />} />
-      <Route path="/industries/industrial-operations" element={<IndustrialOperations />} />
-      <Route path="/industries/retail-commerce" element={<RetailCommerce />} />
-      <Route path="/industries/logistics" element={<Logistics />} />
-      <Route path="/industries/enterprise-operations" element={<EnterpriseOperations />} />
-      <Route path="/industries/smes" element={<SMEs />} />
-
       <Route path="/technology" element={<Technology />} />
       
       {/* Specific Solutions Pages */}
@@ -66,9 +43,6 @@ function AppRoutes() {
       <Route path="/solutions/enterprise-infrastructure" element={<SolutionsEnterpriseInfrastructure />} />
 
       {/* Specific Company Pages */}
-      <Route path="/company/vision-philosophy" element={<VisionPhilosophy />} />
-      <Route path="/company/engineering-culture" element={<EngineeringCulture />} />
-      <Route path="/company/mission-ecosystem" element={<MissionEcosystem />} />
       <Route path="/company/careers" element={<Careers />} />
 
       <Route path="/insights" element={<Insights />} />

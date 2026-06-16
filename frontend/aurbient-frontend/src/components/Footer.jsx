@@ -5,10 +5,10 @@ export default function Footer() {
   return (
     <footer style={{ padding: "40px 0 0" }}>
       <div className="container">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "2rem", paddingBottom: "28px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "4rem", paddingBottom: "40px" }}>
 
           {/* Brand */}
-          <div style={{ maxWidth: "240px" }}>
+          <div style={{ flex: "1 1 280px", maxWidth: "340px" }}>
             
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
               <img
@@ -48,73 +48,69 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company */}
-          <div>
-            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Company</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {[
-                { label: "About Us", to: "/about" },
-                { label: "Vision & Philosophy", to: "/company/vision-philosophy" },
-                { label: "Mission & Ecosystem", to: "/company/mission-ecosystem" },
-                { label: "Engineering Culture", to: "/company/engineering-culture" },
-                { label: "Careers", to: "/company/careers" },
-              ].map((item) => (
-                <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Industries */}
-          <div>
-            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Industries</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {[
-                { label: "Manufacturing", to: "/industries/manufacturing" },
-                { label: "Industrial Operations", to: "/industries/industrial-operations" },
-                { label: "Logistics & Supply Chain", to: "/industries/logistics" },
-                { label: "Retail & Commerce", to: "/industries/retail-commerce" },
-                { label: "Enterprise Operations", to: "/industries/enterprise-operations" },
-                { label: "SME Transformation", to: "/industries/smes" },
-              ].map((item) => (
-                <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>
-              ))}
-            </div>
-          </div>
-
-
-          {/* Services */}
-          <div>
-            <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Services</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {[
-                { label: "AI and Process automation", to: "/solutions/ai-automation" },
-                { label: "Operational Intelligence Systems", to: "/solutions/operational-intelligence" },
-                { label: "ERP & Business Management Platforms", to: "/solutions/business-systems" },
-                { label: "Enterprise Software & Digital Systems", to: "/solutions/enterprise-infrastructure" },
-              ].map((item) => (
-                <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Connect */}
-          <div>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <Link to="/contact" style={{ color: "white", textDecoration: "none", fontWeight: "600", fontSize: "0.88rem", width: "fit-content", marginBottom: "4px" }}>Connect with us →</Link>
-              
-              <a href="tel:+918629919873" className="footer-link" style={{ fontSize: "0.85rem" }}>+91 8629919873</a>
-              
-              <div style={{ fontSize: "0.82rem", color: "#8CABB8", lineHeight: "1.4", marginBottom: "4px" }}>
-                Indore, Madhya Pradesh-452001, India
+          {/* Links Grid */}
+          <div style={{ flex: "2 1 600px", display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "2rem" }}>
+            
+            {/* Company */}
+            <div style={{ flex: "1 1 100px" }}>
+              <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Company</h4>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {[
+                  { label: "About", to: "/about" },
+                  { label: "Careers", to: "/company/careers" },
+                ].map((item) => (
+                  <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>
+                ))}
               </div>
             </div>
 
-            {/* General Contact */}
-            <div style={{ paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: "10px" }}>
-              <div style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "4px" }}>Reach Out</div>
-              <a href="mailto:support@aurbient.com" className="footer-link" style={{ fontSize: "0.83rem" }}>support@aurbient.com</a>
+            {/* Insights */}
+            <div style={{ flex: "1 1 100px" }}>
+              <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Insights</h4>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {[
+                  { label: "Articles", to: "/insights/articles" },
+                  { label: "Case Studies", to: "/case-studies" },
+                ].map((item) => (
+                  <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>
+                ))}
+              </div>
             </div>
+
+            {/* Services */}
+            <div style={{ flex: "1 1 200px" }}>
+              <h4 style={{ color: "white", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Services</h4>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {[
+                  { label: "Workflow Automation", to: "/solutions/ai-automation" },
+                  { label: "Business Visibility & Reporting", to: "/solutions/operational-intelligence" },
+                  { label: "Business Management Systems", to: "/solutions/business-systems" },
+                  { label: "Custom Software & Digital Solutions", to: "/solutions/enterprise-infrastructure" },
+                ].map((item) => (
+                  <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Connect */}
+            <div style={{ flex: "1 1 200px" }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <Link to="/contact" style={{ color: "white", textDecoration: "none", fontWeight: "600", fontSize: "0.88rem", width: "fit-content", marginBottom: "4px" }}>Connect with us →</Link>
+                
+                <a href="tel:+918629919873" className="footer-link" style={{ fontSize: "0.85rem" }}>+91 8629919873</a>
+                
+                <div style={{ fontSize: "0.82rem", color: "#8CABB8", lineHeight: "1.4", marginBottom: "4px" }}>
+                  Indore, Madhya Pradesh-452001, India
+                </div>
+              </div>
+
+              {/* General Contact */}
+              <div style={{ paddingTop: "10px", borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: "10px" }}>
+                <div style={{ fontSize: "0.75rem", color: "var(--color-accent)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "4px" }}>Reach Out</div>
+                <a href="mailto:support@aurbient.com" className="footer-link" style={{ fontSize: "0.83rem" }}>support@aurbient.com</a>
+              </div>
+            </div>
+
           </div>
 
         </div>
