@@ -40,7 +40,7 @@ export default function Navbar() {
                 {/* SERVICES */}
                 <div className={`nav-item dropdown-item ${activeDropdown === 'solutions' ? 'active' : ''}`}>
                     <a href="#" className="nav-link" onClick={e => { e.preventDefault(); toggleDropdown('solutions'); }}>
-                      Services <i className="fas fa-chevron-down dropdown-icon"></i>
+                      Services
                     </a>
                     <div className="mega-menu" style={{ width: '320px', left: '-20px' }}>
                         <div className="mega-grid" style={{ gridTemplateColumns: "1fr" }}>
@@ -58,7 +58,7 @@ export default function Navbar() {
                 {/* INSIGHTS */}
                 <div className={`nav-item dropdown-item ${activeDropdown === 'insights' ? 'active' : ''}`}>
                     <a href="#" className="nav-link" onClick={e => { e.preventDefault(); toggleDropdown('insights'); }}>
-                      Insights <i className="fas fa-chevron-down dropdown-icon"></i>
+                      Insights
                     </a>
                     <div className="mega-menu" style={{ left: '-40px', width: '200px' }}>
                         <div className="mega-col">
